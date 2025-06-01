@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+@theme {
+  --color-*: initial;
+
+  /* Brand colors */
+  --color-pink-dark: #cc0070;
+  --color-green-dark: #235753;
+  --color-blue-light: #a9d8d8;
+  --color-pink-light: #f5cde2;
+  --color-green-neon: #c8ff00;
+  --color-white: #ffffff;
+
+  /* Brand tints */
+  --color-pink-dark-80: #e43997;
+  --color-green-dark-80: #40827d;
+  --color-blue-light-80: #c8f7f7;
+  --color-green-neon-80: #e5ff89;
+
+  /* Utility colors */
+  --color-focus: #539eff;
+  --color-grey: #b8b8b8;
+  --color-error: #de252e;
+  --color-success: #49c654;
+
+  /* Text */
+  --text-*: initial;
+
+  --text-tiny: 0.75rem; /* 12 px */
+  --text-tiny--line-height: 1rem; /* 16 px */
+
+  --text-base: 1rem; /* 16 px */
+  --text-base--line-height: 1.5rem; /* 24 px */
+
+  --text-lg: 1.625rem; /* 26 px */
+  --text-lg--line-height: 1.75rem; /* 28 px */
+
+  --text-xl: 1.75rem; /* 28 px */
+  --text-xl--line-height: 2rem; /* 32 px */
+
+  --text-2xl: 2rem; /* 32 px */
+  --text-2xl--line-height: 2.25rem; /* 36 px */
+
+  --text-3xl: 2.25rem; /* 36 px */
+  --text-3xl--line-height: 2.625rem; /* 42 px */
+
+  --text-4xl: 2.5rem; /* 40 px */
+  --text-4xl--line-height: 2.875rem; /* 46 px */
+
+  --text-5xl: 3rem; /* 48 px */
+  --text-5xl--line-height: 3.625rem; /* 58 px */
+
+  --text-menu: 1rem; /* 16 px */
+  --text-menu--line-height: 1.1875rem; /* 19 px */
+}
+
+@theme inline {
+  --font-heading: var(--font-veneer);
+  --font-body: var(--font-inter);
+}
+
+@layer components {
+  .prose h1,
+  .h1 {
+    @apply font-heading text-4xl sm:text-5xl;
+  }
+
+  .prose h2,
+  .h2 {
+    @apply font-heading text-2xl sm:text-3xl;
+  }
+
+  .prose h3,
+  .h3 {
+    @apply font-heading text-lg sm:text-xl;
+  }
+
+  .prose strong, .prose b {
+    @apply font-bold;
+  }
+
+  .prose small {
+    @apply text-tiny;
+  }
+
+  .button {
+    @apply text-menu text-white font-semibold px-3 py-3.5;
+
+    &:not(.primary) {
+      @apply bg-green-dark hover:bg-green-dark-80;
+    }
+
+    &.primary {
+      @apply bg-pink-dark hover:bg-pink-dark-80;
+    }
+  }
+}
+
+body {
+  @apply font-body text-base bg-white text-green-dark;
+}
