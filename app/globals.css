@@ -59,32 +59,19 @@
   --font-body: var(--font-inter);
 }
 
+@utility container {
+  @apply max-w-7xl mx-auto px-3 lg:px-12;
+}
+
+@utility has-underline {
+  &::after {
+    @apply content-[''] left-1/2 transform -translate-x-1/2 inset-y-0 absolute bg-bottom bg-no-repeat;
+  }
+}
+
 @layer components {
-  .prose h1,
-  .h1 {
-    @apply font-heading text-4xl sm:text-5xl;
-  }
-
-  .prose h2,
-  .h2 {
-    @apply font-heading text-2xl sm:text-3xl;
-  }
-
-  .prose h3,
-  .h3 {
-    @apply font-heading text-lg sm:text-xl;
-  }
-
-  .prose strong, .prose b {
-    @apply font-bold;
-  }
-
-  .prose small {
-    @apply text-tiny;
-  }
-
   .button {
-    @apply text-menu text-white font-semibold px-3 py-3.5;
+    @apply inline-block text-menu text-white font-semibold px-3 py-3.5;
 
     &:not(.primary) {
       @apply bg-green-dark hover:bg-green-dark-80;
@@ -92,6 +79,57 @@
 
     &.primary {
       @apply bg-pink-dark hover:bg-pink-dark-80;
+    }
+  }
+
+  .markdown h1,
+  .h1 {
+    @apply font-heading text-4xl lg:text-5xl;
+  }
+
+  .markdown h2,
+  .h2 {
+    @apply font-heading text-2xl lg:text-3xl;
+  }
+
+  .markdown h3,
+  .h3 {
+    @apply font-heading text-lg lg:text-xl;
+  }
+
+  .markdown strong, .markdown b {
+    @apply font-bold;
+  }
+
+  .markdown small {
+    @apply text-tiny;
+  }
+
+  .markdown h1, .h1, .markdown h2, .h2, .markdown h3, .h3 {
+    mark {
+      @apply bg-transparent text-inherit relative has-underline;
+
+      &::after {
+        @apply bg-[url(/shapes/underline-short.png)];
+        @apply w-[234px] bg-size-[234px] lg:w-[285px] lg:bg-size-[285px];
+      }
+
+      &.short::after {
+        @apply w-[135px] bg-size-[135px_8px];
+      }
+
+      &.long::after {
+        @apply bg-[url(/shapes/underline-long.png)];
+        @apply w-[300px] bg-size-[300px_8px] lg:w-[523px] lg:bg-size-[523px];
+      }
+    }
+  }
+
+  .underline-karl {
+    @apply relative has-underline pb-4 lg:pb-6;
+
+    &::after {
+      @apply w-[350px] bg-size-[350px] lg:w-[607px] lg:bg-size-[607px] bg-[url(/shapes/underline-karl.png)];
     }
   }
 }

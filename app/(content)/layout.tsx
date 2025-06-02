@@ -7,7 +7,7 @@ export default function MainLayout({
 }>) {
   return (
     <>
-      <header className="bg-green-dark px-6 py-12 text-white">
+      <header className="bg-green-dark py-3 sm:py-6 text-white">
         <div className="container m-auto">
           <Image
             src="/logo.svg"
@@ -18,12 +18,8 @@ export default function MainLayout({
           />
         </div>
       </header>
-      <main className="m-auto px-6 py-12">
-        <div className="container m-auto flex flex-col gap-4 prose">
-          {children}
-        </div>
-      </main>
-      <footer className="bg-blue-light px-6 py-12">
+      {children}
+      <footer className="bg-blue-light py-3 sm:py-6">
         <ul className="container m-auto text-menu flex gap-4 justify-center">
           <li>FAQ</li>
           <li>Presse</li>
