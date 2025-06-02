@@ -24,6 +24,7 @@ export default function HomePage() {
                 className="h-7 w-auto inline sm:h-11"
                 aria-hidden="true"
                 alt=""
+                priority
               />
               <br />
               zu Hamburg
