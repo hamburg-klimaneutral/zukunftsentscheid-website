@@ -1,0 +1,57 @@
+@layer components {
+  .markdown h1 {
+    @apply h1;
+  }
+
+  .markdown h2 {
+    @apply h2;
+  }
+
+  .markdown h3 {
+    @apply h3;
+  }
+
+  .markdown strong, .markdown b {
+    @apply font-bold;
+  }
+
+  .markdown small {
+    @apply text-tiny;
+  }
+
+  .underline-1 {
+    @apply has-underline pb-4 lg:pb-6;
+
+    &::after {
+      @apply w-[350px] bg-size-[350px] lg:w-[607px] lg:bg-size-[607px] bg-[url(/shapes/underline-karl.png)];
+    }
+  }
+
+  .underline-2 {
+    @apply has-underline pb-12;
+
+    &::after {
+      @apply w-[205px] bg-size-[205px] bg-[url(/shapes/underline-frieda.png)];
+    }
+  }
+
+  .icon-claim {
+    @apply flex flex-col items-center max-w-[330px] text-center basis-full;
+
+    img {
+      @apply mb-6;
+    }
+
+    h3 {
+      @apply h3 mb-2.5;
+    }
+
+    p {
+      @apply mb-10;
+    }
+
+    a {
+      @apply hidden sm:button;
+    }
+  }
+}

@@ -1,0 +1,68 @@
+@utility container {
+  @apply max-w-7xl mx-auto px-3 lg:px-12;
+}
+
+/* Utility class that provides the base styling for decorative image underlines beneath text elements */
+@utility has-underline {
+  @apply relative;
+
+  &::after {
+    @apply content-[''] left-1/2 transform -translate-x-1/2 inset-y-0 absolute bg-bottom bg-no-repeat;
+  }
+}
+
+@utility button {
+  @apply inline-flex text-menu font-semibold px-3 cursor-pointer items-center;
+
+  &:not(.primary):not(.secondary) {
+    @apply text-green-dark relative py-1;
+
+    &:hover:before {
+      @apply translate-x-1.5;
+    }
+
+    &:before {
+      @apply content-[''] w-6 h-6 mr-2.5 transition-transform bg-[url(/icons/arrow-right.svg)] pointer-events-none;
+    }
+  }
+
+  &.secondary {
+    @apply text-white bg-green-dark hover:bg-green-dark-80 py-3.5;
+  }
+
+  &.primary {
+    @apply text-white bg-pink-dark hover:bg-pink-dark-80 py-3.5;
+  }
+}
+
+@utility h1 {
+  @apply font-heading text-4xl sm:text-5xl underline-marks;
+}
+
+@utility h2 {
+  @apply font-heading text-2xl sm:text-3xl underline-marks;
+}
+
+@utility h3 {
+  @apply font-heading text-lg sm:text-xl underline-marks;
+}
+
+@utility underline-marks {
+  mark {
+    @apply bg-transparent text-inherit has-underline;
+
+    &::after {
+      @apply bg-[url(/shapes/underline-short.png)];
+      @apply w-[234px] bg-size-[234px] sm:w-[285px] sm:bg-size-[285px];
+    }
+
+    &.short::after {
+      @apply w-[135px] bg-size-[135px_8px];
+    }
+
+    &.long::after {
+      @apply bg-[url(/shapes/underline-long.png)];
+      @apply w-[300px] bg-size-[300px_8px] sm:w-[523px] sm:bg-size-[523px];
+    }
+  }
+}

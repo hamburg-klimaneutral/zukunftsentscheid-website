@@ -10,7 +10,7 @@ module.exports = {
       assertions: {
         "is-crawlable": "off", // Vercel keeps preview URLs non-crawlable and it should stay that way.
         "unused-css-rules": ["error", { maxLength: 1 }], // can happen with tailwind if some class appears as a string in code that is not actually a css class
-        "categories:performance": ["error", { minScore: 0.5 }],
+        "categories:performance": ["error", { minScore: 0.8 }],
       },
     },
     upload: {
