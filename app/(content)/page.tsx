@@ -16,7 +16,7 @@ export default function HomePage() {
               alt="Das Team von Zukunftsentscheid Hamburg präsentiert den Termin der Volksabstimmung am 12.10.2025 vor der Kulisse des Hamburger Rathauses."
               priority
             />
-            <div className="right-10 sm:-right-2 -rotate-12 absolute top-4 sm:top-1/4 bg-white h3 p-1 text-green-dark transform">
+            <div className="right-10 sm:-right-2 -rotate-12 absolute top-4 sm:top-1/4 bg-white h3 px-2.5 py-1 text-green-dark transform">
               Sag ja
               <Image
                 src={Icon}
