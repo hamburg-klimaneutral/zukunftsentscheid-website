@@ -63,6 +63,7 @@
   @apply max-w-7xl mx-auto px-3 lg:px-12;
 }
 
+/* Utility class that provides the base styling for decorative image underlines beneath text elements */
 @utility has-underline {
   &::after {
     @apply content-[''] left-1/2 transform -translate-x-1/2 inset-y-0 absolute bg-bottom bg-no-repeat;
