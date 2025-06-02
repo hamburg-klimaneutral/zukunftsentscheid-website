@@ -1,0 +1,17 @@
+name: Benchmark
+on: deployment_status
+
+jobs:
+  lighthouse:
+    # only runs this job on successful deploy
+    if: github.event.deployment_status.state == 'success'
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+      - run: bun install
+      - run: bun lhci autorun
+        env:
+          LHCI_TARGET_URL: ${{ github.event.deployment_status.target_url }}
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
