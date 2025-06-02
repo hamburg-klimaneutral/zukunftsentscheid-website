@@ -1,7 +1,8 @@
-import HeroImage from "@/public/pictures/12.10.png";
 import Image from "next/image";
 import Link from "next/link";
-import Icon from "@/app/icon.svg";
+import Icon from "@/app/icon.png";
+
+import HeroImage from "@/app/pictures/12.10.png";
 
 export default function HomePage() {
   return (
@@ -48,11 +49,39 @@ export default function HomePage() {
       </section>
 
       <section className="bg-blue-light">
-        <div className="container flex flex-col items-center py-12 text-center">
-          <h2 className="h2 max-w-xl underline-karl">
+        <div className="container flex flex-col items-center py-12 text-center gap-10">
+          <h2 className="h2 max-w-xl underline-1">
             Gemeinsam machen wir Hamburgs Klimapolitik sozial, planbar und
             verantwortungsbewusst.
           </h2>
+          <ul className="flex flex-col sm:flex-row items-center gap-10 justify-between w-full">
+            <li className="icon-claim">
+              <Image src="/icons/check.svg" alt="" width={80} height={80} aria-hidden />
+              <h3>Sozialverträglichkeit</h3>
+              <p>Fairer Klimaschutz,<br />der für alle bezahlbar bleibt.</p>
+              <Link href="/">mehr dazu</Link>
+            </li>
+            <li className="icon-claim">
+              <Image src="/icons/clock.svg" alt="" width={80} height={80} aria-hidden />
+              <h3>Jährliche Ziele</h3>
+              <p>Planbarkeit und Transparenz<br />für Menschen und Wirtschaft.</p>
+              <Link href="/">mehr dazu</Link>
+            </li>
+            <li className="icon-claim">
+              <Image src="/icons/muscle.svg" alt="" width={80} height={80} aria-hidden />
+              <h3>Klimaneutralität 2040</h3>
+              <p>Ein verantwortungsvoller und<br />wettbewerbsfähiger Beitrag unserer Stadt.</p>
+              <Link href="/">mehr dazu</Link>
+            </li>
+          </ul>
+          <Link href="/" className="button secondary">Unsere Forderungen</Link>
+        </div>
+      </section>
+
+      <section>
+        <div className="container py-12">
+          <h4 className="h2 underline-2 text-center">Über 139.000 Hamburger*innen unterstützen uns bereits.<br />Hilf mit!</h4>
+
         </div>
       </section>
     </main>
