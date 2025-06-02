@@ -43,7 +43,7 @@ export default function HomePage() {
               <mark className="long">besseres Klimaschutzgesetz!</mark>
             </h1>
             <p>Hamburg entscheidet fürs Klima - sei dabei!</p>
-            <Link className="button primary" href="/mitmachen">
+            <Link className="button primary" href="/">
               Jetzt Mitmachen
             </Link>
           </div>
