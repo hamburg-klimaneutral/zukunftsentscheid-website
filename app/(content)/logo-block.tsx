@@ -38,7 +38,7 @@ export default function LogoBlock({ className }: { className?: string }) {
         >
           <Image
             src={MietvereinLogo}
-            alt="Logo dev Mietvereins zu Hamburg"
+            alt="Logo des Mietervereins Hamburg"
             height={64}
             className="transition-transform group-hover:scale-110"
           />
@@ -68,7 +68,7 @@ export default function LogoBlock({ className }: { className?: string }) {
         >
           <Image
             src={SchauspielhausLogo}
-            alt="Logo vos Deuschen Schauspielhauses Hamburg"
+            alt="Logo des Deutschen Schauspielhauses Hamburg"
             height={64}
             className="transition-transform group-hover:scale-110"
           />
@@ -203,7 +203,7 @@ export default function LogoBlock({ className }: { className?: string }) {
         >
           <Image
             src={FarbenmeerLogo}
-            alt="Logo von farbenmeer"
+            alt="Logo von Farbenmeer"
             height={64}
             className="transition-transform group-hover:scale-110"
           />
