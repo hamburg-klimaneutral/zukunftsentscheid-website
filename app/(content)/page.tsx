@@ -3,6 +3,8 @@ import Link from "next/link";
 import Icon from "@/app/icon.png";
 
 import HeroImage from "@/app/pictures/12.10.png";
+import CollectImage from "@/app/pictures/sammeln.png";
+import SignatureImage from "@/app/pictures/unterschriften.png";
 
 export default function HomePage() {
   return (
@@ -55,34 +57,201 @@ export default function HomePage() {
             Gemeinsam machen wir Hamburgs Klimapolitik sozial, planbar und
             verantwortungsbewusst.
           </h2>
-          <ul className="flex flex-col sm:flex-row items-center gap-10 justify-between w-full">
+          <ul className="sm:grid sm:grid-cols-3 items-top gap-10 justify-between w-full">
             <li className="icon-claim">
-              <Image src="/icons/check.svg" alt="" width={80} height={80} aria-hidden />
+              <Image
+                src="/icons/check.svg"
+                alt=""
+                width={80}
+                height={80}
+                aria-hidden
+              />
               <h3>Sozialverträglichkeit</h3>
-              <p>Fairer Klimaschutz,<br />der für alle bezahlbar bleibt.</p>
+              <p>
+                Fairer Klimaschutz,
+                <br />
+                der für alle bezahlbar bleibt.
+              </p>
               <Link href="/">mehr dazu</Link>
             </li>
             <li className="icon-claim">
-              <Image src="/icons/clock.svg" alt="" width={80} height={80} aria-hidden />
+              <Image
+                src="/icons/clock.svg"
+                alt=""
+                width={80}
+                height={80}
+                aria-hidden
+              />
               <h3>Jährliche Ziele</h3>
-              <p>Planbarkeit und Transparenz<br />für Menschen und Wirtschaft.</p>
+              <p>
+                Planbarkeit und Transparenz
+                <br />
+                für Menschen und Wirtschaft.
+              </p>
               <Link href="/">mehr dazu</Link>
             </li>
             <li className="icon-claim">
-              <Image src="/icons/muscle.svg" alt="" width={80} height={80} aria-hidden />
+              <Image
+                src="/icons/muscle.svg"
+                alt=""
+                width={80}
+                height={80}
+                aria-hidden
+              />
               <h3>Klimaneutralität 2040</h3>
-              <p>Ein verantwortungsvoller und<br />wettbewerbsfähiger Beitrag unserer Stadt.</p>
+              <p>
+                Ein verantwortungsvoller und
+                <br />
+                wettbewerbsfähiger Beitrag unserer Stadt.
+              </p>
               <Link href="/">mehr dazu</Link>
             </li>
           </ul>
-          <Link href="/" className="button secondary">Unsere Forderungen</Link>
+          <Link href="/" className="button secondary">
+            Unsere Forderungen
+          </Link>
         </div>
       </section>
 
       <section>
         <div className="container py-12">
-          <h4 className="h2 underline-2 text-center">Über 139.000 Hamburger*innen unterstützen uns bereits.<br />Hilf mit!</h4>
+          <h4 className="h2 underline-2 text-center">
+            Über 139.000 Hamburger*innen unterstützen uns bereits.
+            <br />
+            Hilf mit!
+          </h4>
 
+          <div className="flex flex-col">
+            <div className="flex flex-col justify-between items-center gap-8 sm:gap-24 -mt-6 sm:flex-row sm:mt-0">
+              <figure className="max-w-[532px]">
+                <Image
+                  src={CollectImage}
+                  alt="Das Team von Zukunftsentscheid Hamburg bei der Unterschriftensammlung"
+                />
+              </figure>
+              <div className="flex flex-col gap-6 items-start">
+                <h4 className="h3">Was ist noch zu tun?</h4>
+                <p>
+                  Nur mit deiner Unterstützung können wir den Entscheid zum
+                  Erfolg führen. Ob beim Haustürwahlkampf, auf Veranstaltungen,
+                  Plakate kleben, Flyer verteilen und in der
+                  Öffentlichkeitsarbeit - jede Hilfe ist wertvoll!
+                </p>
+              </div>
+            </div>
+            <div className="flex flex-col justify-between items-center gap-24 sm:flex-row-reverse">
+              <figure className="max-w-[532px] hidden sm:block">
+                <Image
+                  src={SignatureImage}
+                  alt="Zwei Mitglieder vom Zukunftsentscheid Hamburg präsentieren gesammelte Unterschriften"
+                />
+              </figure>
+              <div className="flex flex-col gap-6 items-start">
+                <h4 className="h3">Wie kannst du helfen?</h4>
+                <p>
+                  Komm zu einem unserer Infotreffen - jeden Mittwoch um 18:30
+                  Uhr in der Kampstraße 15. Oder unterstütze uns bei Aktionen!
+                </p>
+                <Link href="/" className="button primary">
+                  Mitmach-Möglichkeiten
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-green-dark text-white">
+        <div className="container py-12">
+          <h5 className="h2 text-center mb-20">6 gute Gründe für dein Ja!</h5>
+
+          <ul className="sm:grid sm:grid-cols-3 items-top gap-10 justify-between w-full">
+            <li className="icon-claim">
+              <Image
+                src="/icons/vote.svg"
+                alt=""
+                width={80}
+                height={80}
+                aria-hidden
+              />
+              <h3>Deine Stimme zählt</h3>
+              <p>
+                Unser Gesetzvorschlag wird bei einem Volksentscheid am 12.10.
+                abgestimmt. Gewinnen wir, tritt unser verbessertes
+                Klimaschutzgesetz in Kraft.
+              </p>
+            </li>
+            <li className="icon-claim">
+              <Image
+                src="/icons/shake.svg"
+                alt=""
+                width={80}
+                height={80}
+                aria-hidden
+              />
+              <h3>Wirtschaft & Wissenschaft an Board</h3>
+              <p>
+                Unser Gesetz wurde gemeinsam mit Expertise aus Wissenschaft,
+                Sozialverbänden und Wirtschaft entwickelt. Auch OECD und
+                Handelskammer stellen in einer Studie fest: Klimaneutralität bis
+                2040 ist möglich!
+              </p>
+            </li>
+            <li className="icon-claim">
+              <Image
+                src="/icons/for-all.svg"
+                alt=""
+                width={80}
+                height={80}
+                aria-hidden
+              />
+              <h3>Klimaschutz, der alle mitnimmt</h3>
+              <p>
+                Klimaschutz, Wohlstand und soziale Gerechtigkeit sind keine
+                Gegensätze. Unser Gesetz sorgt dafür, dass vom Klimaschutz alle
+                profitieren.
+              </p>
+            </li>
+            <li className="icon-claim">
+              <Image
+                src="/icons/globe.svg"
+                alt=""
+                width={80}
+                height={80}
+                aria-hidden
+              />
+              <h3>Klimaschutz macht dein Leben besser</h3>
+              <p>
+                Solaranlagen und Sanierungen sparen Energie und Geld. Ein
+                zuverlässiger ÖPNV bringt dich schneller ans Ziel.
+              </p>
+            </li>
+            <li className="icon-claim">
+              <Image
+                src="/icons/hamburg.svg"
+                alt=""
+                width={80}
+                height={80}
+                aria-hidden
+              />
+              <h3>Gemeinsam für Hamburg</h3>
+              <p>Mehr als 160 Verbände und Unternehmen stehen hinter uns.</p>
+            </li>
+            <li className="icon-claim">
+              <Image
+                src="/icons/heart-hand.svg"
+                alt=""
+                width={80}
+                height={80}
+                aria-hidden
+              />
+              <h3>Was wir wollen, bewegt viele</h3>
+              <p>
+                Über 139.000 Hamburger*innen haben den Zukunftsentscheid bereits
+                unterstützt. Jetzt kommt es auf dich an!
+              </p>
+            </li>
+          </ul>
         </div>
       </section>
     </main>

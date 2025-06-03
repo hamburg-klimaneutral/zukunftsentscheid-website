@@ -36,7 +36,7 @@
   }
 
   .icon-claim {
-    @apply flex flex-col items-center max-w-[330px] text-center basis-full;
+    @apply flex flex-col items-center max-w-[330px] text-center basis-full mx-auto;
 
     img {
       @apply mb-6;
