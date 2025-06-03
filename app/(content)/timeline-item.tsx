@@ -7,7 +7,7 @@ export default function TimelineItem({
   children,
 }: {
   title: string;
-  completed?: true;
+  completed?: boolean;
   children: React.ReactNode;
 }) {
   return (

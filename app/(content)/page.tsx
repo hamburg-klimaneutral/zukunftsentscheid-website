@@ -264,25 +264,45 @@ export default function HomePage() {
       <section>
         <div className="container py-12 flex flex-col sm:flex-row gap-12 justify-around">
           <div className="flex flex-col max-w-[400px] gap-6 items-start">
-            <h2 className="h2">Kurz vor Klimaschutzgesetz: Lasst uns den letzten Schritt zuSammen gehen</h2>
-            <p>Damit ein Gesetz ein einer Volksabstimmung beschlossen werden kann, muss es drei Phasen durchlaufen: Die Volksinitiative, das Volksbegehren und den Volksentscheid.</p>
-            <p>Dabei müssen immer mehr Menschen in immer kürzerer Zeit den Hamburger Zukunftsentscheid unterstützen. Schon seit Juni 2023 arbeiten viele Menschen daran, dass wir das schaffen.</p>
-            <Link className="button secondary" href="/">So funktionierts</Link>
+            <h2 className="h2">
+              Kurz vor Klimaschutzgesetz: Lasst uns den letzten Schritt zusammen
+              gehen
+            </h2>
+            <p>
+              Damit ein Gesetz ein einer Volksabstimmung beschlossen werden
+              kann, muss es drei Phasen durchlaufen: Die Volksinitiative, das
+              Volksbegehren und den Volksentscheid.
+            </p>
+            <p>
+              Dabei müssen immer mehr Menschen in immer kürzerer Zeit den
+              Hamburger Zukunftsentscheid unterstützen. Schon seit Juni 2023
+              arbeiten viele Menschen daran, dass wir das schaffen.
+            </p>
+            <Link className="button secondary" href="/">
+              So funktionierts
+            </Link>
           </div>
 
           <ul className="flex flex-col gap-20">
             <TimelineItem completed title="Volksinitiative">
-              <strong>Vorgabe:</strong> 10.000 Unterschriften in 6 Monaten<br/>
+              <strong>Vorgabe:</strong> 10.000 Unterschriften in 6 Monaten
+              <br />
               <strong>Ergebnis:</strong> 23.316 Unterschriften in 4 Wochen
             </TimelineItem>
             <TimelineItem completed title="Volksbegehren">
-              <strong>Vorgabe:</strong> 65.835 Unterschriften<br/>
+              <strong>Vorgabe:</strong> 65.835 Unterschriften
+              <br />
               <strong>Ergebnis:</strong> 106.374 Unterschriften nach 3 Wochen
             </TimelineItem>
             <TimelineItem title="Volksentscheid">
-              <strong>Vorgabe:</strong> Die Mehrheit der Hamburgerinnen und Hamburger, die zur Bürgerschaft wahlberechtigt sind, stimmt dafür. Stimmt die Mehrheit für den Gesetzestext, tritt er innerhalb eines Monats in Kraft.
+              <strong>Vorgabe:</strong> Die Mehrheit der Hamburgerinnen und
+              Hamburger, die zur Bürgerschaft wahlberechtigt sind, stimmt dafür.
+              Stimmt die Mehrheit für den Gesetzestext, tritt er innerhalb eines
+              Monats in Kraft.
             </TimelineItem>
           </ul>
+        </div>
+      </section>
 
         </div>
       </section>
