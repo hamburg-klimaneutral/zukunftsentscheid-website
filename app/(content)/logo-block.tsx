@@ -18,6 +18,89 @@ import NabuLogo from "@/app/logos/nabu.png";
 import GoldeimerLogo from "@/app/logos/goldeimer.png";
 import { twMerge } from "tailwind-merge";
 
+const LOGOS = [
+  {
+    src: MietvereinLogo,
+    alt: "Logo des Mietervereins Hamburg",
+    href: "https://www.mieterverein-hamburg.de/",
+  },
+  {
+    src: StPauliLogo,
+    alt: "Logo des FC St. Pauli",
+    href: "https://www.fcstpauli.com/",
+  },
+  {
+    src: SchauspielhausLogo,
+    alt: "Logo des Deutschen Schauspielhauses Hamburg",
+    href: "https://schauspielhaus.de/",
+  },
+  {
+    src: CaritasLogo,
+    alt: "Logo der Caritas im Norden",
+    href: "https://www.caritas-im-norden.de/",
+  },
+  {
+    src: VerdiLogo,
+    alt: "Logo von ver.di",
+    href: "https://www.verdi.de/",
+  },
+  {
+    src: FffLogo,
+    alt: "Logo von Fridays for Future",
+    href: "https://fridaysforfuture.org/",
+  },
+  {
+    src: DibLogo,
+    alt: "Logo des deutschen Ingenieurinnenbunds",
+    href: "https://dibev.de/",
+  },
+  {
+    src: PatgoniaLogo,
+    alt: "Logo von Patagonia",
+    href: "https://eu.patagonia.com",
+  },
+  {
+    src: SkhLogo,
+    alt: "Logo der Schüler:innenkammer Hamburg",
+    href: "https://www.skh.de/",
+  },
+  {
+    src: KunsthalleLogo,
+    alt: "Logo der Hamburger Kunsthalle",
+    href: "https://www.hamburger-kunsthalle.de",
+  },
+  {
+    src: DavLogo,
+    alt: "Logo des Deutschen Alpenvereins Hamburg",
+    href: "https://www.dav-hamburg.de",
+  },
+  {
+    src: FarbenmeerLogo,
+    alt: "Logo von Farbenmeer",
+    href: "https://farbenmeer.de/",
+  },
+  {
+    src: CampactLogo,
+    alt: "Logo von Campact",
+    href: "https://www.campact.de/",
+  },
+  {
+    src: GreenpeaceLogo,
+    alt: "Logo von Greenpeace Hamburg",
+    href: "https://www.greenpeace-hamburg.de/",
+  },
+  {
+    src: NabuLogo,
+    alt: "Logo des NABU",
+    href: "https://www.nabu.de/",
+  },
+  {
+    src: GoldeimerLogo,
+    alt: "Logo von Goldeimer",
+    href: "https://goldeimer.de/",
+  },
+] as const;
+
 export default function LogoBlock({ className }: { className?: string }) {
   return (
     <ul
@@ -29,246 +112,23 @@ export default function LogoBlock({ className }: { className?: string }) {
       <li>
         <p className="w-[150px]">Wir werden u.a. unterstützt von</p>
       </li>
-      <li>
-        <Link
-          href="https://www.mieterverein-hamburg.de/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group"
-        >
-          <Image
-            src={MietvereinLogo}
-            alt="Logo des Mietervereins Hamburg"
-            height={64}
-            className="transition-transform group-hover:scale-110"
-          />
-        </Link>
-      </li>
-      <li>
-        <Link
-          href="https://www.fcstpauli.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group"
-        >
-          <Image
-            src={StPauliLogo}
-            alt="Logo des FC St. Pauli"
-            height={64}
-            className="transition-transform group-hover:scale-110"
-          />
-        </Link>
-      </li>
-      <li>
-        <Link
-          href="https://schauspielhaus.de/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group"
-        >
-          <Image
-            src={SchauspielhausLogo}
-            alt="Logo des Deutschen Schauspielhauses Hamburg"
-            height={64}
-            className="transition-transform group-hover:scale-110"
-          />
-        </Link>
-      </li>
-      <li>
-        <Link
-          href="https://www.caritas-im-norden.de/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group"
-        >
-          <Image
-            src={CaritasLogo}
-            alt="Logo der Caritas im Norden"
-            height={64}
-            className="transition-transform group-hover:scale-110"
-          />
-        </Link>
-      </li>
-      <li>
-        <Link
-          href="https://www.verdi.de/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group"
-        >
-          <Image
-            src={VerdiLogo}
-            alt="Logo von ver.di"
-            height={64}
-            className="transition-transform group-hover:scale-110"
-          />
-        </Link>
-      </li>
-      <li>
-        <Link
-          href="https://fridaysforfuture.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group"
-        >
-          <Image
-            src={FffLogo}
-            alt="Logo von Fridays for Future"
-            height={64}
-            className="transition-transform group-hover:scale-110"
-          />
-        </Link>
-      </li>
-      <li>
-        <Link
-          href="https://dibev.de/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group"
-        >
-          <Image
-            src={DibLogo}
-            alt="Logo des deutschen Ingenieurinnenbunds"
-            height={64}
-            className="transition-transform group-hover:scale-110"
-          />
-        </Link>
-      </li>
-      <li>
-        <Link
-          href="https://eu.patagonia.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group"
-        >
-          <Image
-            src={PatgoniaLogo}
-            alt="Logo von Patagonia"
-            height={64}
-            className="transition-transform group-hover:scale-110"
-          />
-        </Link>
-      </li>
-      <li>
-        <Link
-          href="https://www.skh.de/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group"
-        >
-          <Image
-            src={SkhLogo}
-            alt="Logo der Schüler:innenkammer Hamburg"
-            height={64}
-            className="transition-transform group-hover:scale-110"
-          />
-        </Link>
-      </li>
-      <li>
-        <Link
-          href="https://www.hamburger-kunsthalle.de"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group"
-        >
-          <Image
-            src={KunsthalleLogo}
-            alt="Logo der Hamburger Kunsthalle"
-            height={64}
-            className="transition-transform group-hover:scale-110"
-          />
-        </Link>
-      </li>
-      <li>
-        <Link
-          href="https://www.dav-hamburg.de"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group"
-        >
-          <Image
-            src={DavLogo}
-            alt="Logo des Deutschen Alpenvereins Hamburg"
-            height={64}
-            className="transition-transform group-hover:scale-110"
-          />
-        </Link>
-      </li>
-      <li>
-        <Link
-          href="https://farbenmeer.de/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group"
-        >
-          <Image
-            src={FarbenmeerLogo}
-            alt="Logo von Farbenmeer"
-            height={64}
-            className="transition-transform group-hover:scale-110"
-          />
-        </Link>
-      </li>
-      <li>
-        <Link
-          href="https://www.campact.de/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group"
-        >
-          <Image
-            src={CampactLogo}
-            alt="Logo von Campact"
-            height={64}
-            className="transition-transform group-hover:scale-110"
-          />
-        </Link>
-      </li>
-      <li>
-        <Link
-          href="https://www.greenpeace-hamburg.de/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group"
-        >
-          <Image
-            src={GreenpeaceLogo}
-            alt="Logo von Greenpeace Hamburg"
-            height={64}
-            className="transition-transform group-hover:scale-110"
-          />
-        </Link>
-      </li>
-      <li>
-        <Link
-          href="https://www.nabu.de/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group"
-        >
-          <Image
-            src={NabuLogo}
-            alt="Logo des NABU"
-            height={64}
-            className="transition-transform group-hover:scale-110"
-          />
-        </Link>
-      </li>
-      <li>
-        <Link
-          href="https://goldeimer.de/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group"
-        >
-          <Image
-            src={GoldeimerLogo}
-            alt="Logo von Goldeimer"
-            height={64}
-            className="transition-transform group-hover:scale-110"
-          />
-        </Link>
-      </li>
+      {LOGOS.map((logo) => (
+        <li key={logo.href}>
+          <Link
+            href={logo.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group"
+          >
+            <Image
+              src={logo.src}
+              alt={logo.alt}
+              height={64}
+              className="transition-transform group-hover:scale-110"
+            />
+          </Link>
+        </li>
+      ))}
     </ul>
   );
 }
