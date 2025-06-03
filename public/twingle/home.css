@@ -4,6 +4,11 @@
     background-color: transparent;
 }
 
+h1, h2, h3, h4, h5, h6, a, p, label {
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+}
+
 h1 {
     display: none;
 }
@@ -14,21 +19,36 @@ body {
 
 label[for="transaction-amount"] {
     color: white;
+    margin-bottom: 16px;
 }
 
 /* amount buttons */
+
+.amount-wrapper {
+    margin-bottom: 32px;
+}
+
+form {
+    margin-bottom: 48px;
+}
 
 *:focus-visible {
     outline: 2px solid #539EFF;
     outline-offset: 2px;
 }
 
-.non-touch input[type="radio"] + label:hover, .button-wrapper button.button:hover {
+.amount-wrapper .button-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.amount-wrapper input[type=radio]:checked + label:hover, .amount-wrapper input[type="radio"] + label:hover, .button-wrapper button.button:hover {
     background: #40827D;
     color: #fff;
 }
 
-.non-touch input[type=radio] + label, .button-wrapper button.button {
+.amount-wrapper input[type=radio] + label, .button-wrapper button.button {
     background: #A9D8D8;
     color: #235753;
     border-radius: 2px;
@@ -41,8 +61,8 @@ label[for="transaction-amount"] {
     font-weight: 600;
 }
 
-.non-touch input[type=radio]:checked + label {
-    background: #C8FF00;
+.amount-wrapper input[type=radio]:checked + label {
+    background: white;
     color: #235753;
 }
 
@@ -70,6 +90,8 @@ button.button.arrow[type="submit"]:hover {
 
 .footer-gls {
     background: transparent !important;
+    padding-top: 0 !important;
+    padding-bottom: 0;
 }
 
 .footer-gls > span {
@@ -87,10 +109,9 @@ button.button.arrow[type="submit"]:hover {
 
 .footer-gls img {
     filter: brightness(0) invert(1);
-
 }
 
-.payment-preview-wrapper {
+footer .payment-preview-wrapper {
     background-color: white;
     border-radius: 32px;
     display: flex;
@@ -98,4 +119,38 @@ button.button.arrow[type="submit"]:hover {
     justify-content: center;
     align-items: center;
     gap: 12px;
+    margin-bottom: 24px;
+}
+
+/* payment-step */
+
+.widget.payment-select span {
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-size: 12px;
+}
+
+.payment-component-wrapper h2 {
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.payment-component-wrapper .method-wrapper .has-recommendation input[type=radio]+label span.recommendation {
+    background-color: #CC0070;
+    color: white;
+}
+.payment-component-wrapper .method-wrapper .has-recommendation input[type=radio]+label:hover span.recommendation {
+    background-color: #E43997;
+}
+
+.payment-component-wrapper .method-wrapper .has-recommendation input[type=radio]+label {
+    border-color: #CC0070;
+}
+.payment-component-wrapper .method-wrapper .has-recommendation input[type=radio]+label:hover {
+    border-color: #E43997;
+}
+
+.payment-component-wrapper .method-wrapper input[type=radio]+label:hover, .payment-component-wrapper .method-wrapper input[type=radio]+label:active, .payment-component-wrapper .method-wrapper input[type=radio]+label:focus {
+    border-color: #E43997
 }
