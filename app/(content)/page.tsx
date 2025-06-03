@@ -118,11 +118,11 @@ export default function HomePage() {
 
       <section>
         <div className="container py-12">
-          <h4 className="h2 underline-2 text-center">
+          <h2 className="h2 underline-2 text-center">
             Über 139.000 Hamburger*innen unterstützen uns bereits.
             <br />
             Hilf mit!
-          </h4>
+          </h2>
 
           <div className="flex flex-col">
             <div className="flex flex-col justify-between items-center gap-8 sm:gap-24 -mt-6 sm:flex-row sm:mt-0">
@@ -133,7 +133,7 @@ export default function HomePage() {
                 />
               </figure>
               <div className="flex flex-col gap-6 items-start">
-                <h4 className="h3">Was ist noch zu tun?</h4>
+                <h3 className="h3">Was ist noch zu tun?</h3>
                 <p>
                   Nur mit deiner Unterstützung können wir den Entscheid zum
                   Erfolg führen. Ob beim Haustürwahlkampf, auf Veranstaltungen,
@@ -150,7 +150,7 @@ export default function HomePage() {
                 />
               </figure>
               <div className="flex flex-col gap-6 items-start">
-                <h4 className="h3">Wie kannst du helfen?</h4>
+                <h3 className="h3">Wie kannst du helfen?</h3>
                 <p>
                   Komm zu einem unserer Infotreffen - jeden Mittwoch um 18:30
                   Uhr in der Kampstraße 15. Oder unterstütze uns bei Aktionen!
@@ -166,7 +166,7 @@ export default function HomePage() {
 
       <section className="bg-green-dark text-white">
         <div className="container py-12">
-          <h5 className="h2 text-center mb-20">6 gute Gründe für dein Ja!</h5>
+          <h2 className="h2 text-center mb-20">6 gute Gründe für dein Ja!</h2>
 
           <ul className="sm:grid sm:grid-cols-3 items-top gap-10 justify-between w-full">
             <li className="icon-claim">

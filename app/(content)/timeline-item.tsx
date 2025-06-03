@@ -24,7 +24,7 @@ export default function TimelineItem({
         {completed && <div className="flex-1 w-1.5 -mt-1 -mb-11 bg-green-dark group-last:hidden" />}
       </figure>
       <div className="flex flex-col gap-2">
-        <h6 className="h3">{title}</h6>
+        <h3 className="h3">{title}</h3>
         <p className="max-w-[400px]">
           {children}
         </p>
