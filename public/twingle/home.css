@@ -1,54 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 .widget-header.widget {
-  background-color: transparent;
+    background-color: transparent;
 }
 
 h1 {
-  display: none;
-}
-
-.start.widget {
-  margin-top: 2px;
+    display: none;
 }
 
 body {
-  background: transparent !important;
+    background: transparent !important;
 }
 
 label[for="transaction-amount"] {
-  color: #235753 !important;
+    color: white;
 }
 
-h2 {
-  color: #235753 !important;
+/* amount buttons */
+
+*:focus-visible {
+    outline: 2px solid #539EFF;
+    outline-offset: 2px;
 }
+
+.non-touch input[type="radio"] + label:hover, .button-wrapper button.button:hover {
+    background: #40827D;
+    color: #fff;
+}
+
+.non-touch input[type=radio] + label, .button-wrapper button.button {
+    background: #A9D8D8;
+    color: #235753;
+    border-radius: 2px;
+}
+
+.amount-wrapper .button-wrapper label strong, .button-wrapper button.button {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.non-touch input[type=radio]:checked + label {
+    background: #C8FF00;
+    color: #235753;
+}
+
+/* cta */
+
+button.button.arrow[type="submit"]::after {
+    display: none;
+}
+
+button.button.arrow[type="submit"] {
+    width: 100% !important;
+    text-transform: none;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    border-radius: 2px;
+}
+
+button.button.arrow[type="submit"]:hover {
+    background-color: #E43997;
+}
+
+/* footer */
 
 .footer-gls {
-  background: transparent !important;
+    background: transparent !important;
 }
 
-footer span,
-footer a {
-  color: #235753 !important;
+.footer-gls > span {
+    color: white;
 }
 
-.non-touch input[type="radio"] + label:hover {
-  background: #cc0070;
-  color: #fff;
+.footer-gls .impress-wrapper a {
+    color: white;
+    text-decoration: underline;
 }
 
-.non-touch button.button:hover,
-.non-touch a.button:hover {
-  background: #cc0070;
-  color: #fff;
+.footer-gls .impress-wrapper a:hover {
+    color: #A9D8D8;
 }
 
-.non-touch button.button.arrow:hover:after,
-.non-touch a.button.arrow:hover:after {
-  border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #cc0070;
+.footer-gls img {
+    filter: brightness(0) invert(1);
+
 }
 
-@media screen and (min-width: 36.25em) {
-  .non-touch .step-navigation:hover span {
-    background: #cc0070;
-  }
+.payment-preview-wrapper {
+    background-color: white;
+    border-radius: 32px;
+    display: flex;
+    padding: 8px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
 }
