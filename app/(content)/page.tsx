@@ -7,7 +7,7 @@ import CollectImage from "@/app/pictures/sammeln.png";
 import SignatureImage from "@/app/pictures/unterschriften.png";
 import LogoBlock from "./logo-block";
 import TimelineItem from "./timeline-item";
-import Script from "next/script";
+import {TwingleWidget} from "@/app/_components/TwingleWidget";
 
 export default function HomePage() {
   return (
@@ -314,15 +314,13 @@ export default function HomePage() {
               und Förderungen finanziert. Mit deiner Spende machst du ein
               besseres Klimaschutzgesetz für Hamburg möglich!
             </p>
-            <Link className="button secondary alt" href="/">
+            <Link className="button secondary alt" href="/spenden">
               Mehr erfahren
             </Link>
           </div>
-          <Script
-            src="https://spenden.twingle.de/embed/hamburg-klimaneutral/testprojekt/tw67beebe41b6eb/widget/foo"
-            strategy="lazyOnload"
-          />
-          <div id="twingle-public-embed-foo" className="w-full max-w-[450px]" aria-label="Spenden Widget" />
+
+          {/* @TODO: use old project name to keep history */}
+          <TwingleWidget projectName="next-test-startseite" projectId="tw683f2b611d1ed" className="max-w-[450px]" />
         </div>
       </section>
     </main>
