@@ -6,6 +6,8 @@ import HeroImage from "@/app/pictures/12.10.png";
 import CollectImage from "@/app/pictures/sammeln.png";
 import SignatureImage from "@/app/pictures/unterschriften.png";
 import LogoBlock from "./logo-block";
+import TimelineItem from "./timeline-item";
+import Script from "next/script";
 
 export default function HomePage() {
   return (
@@ -116,11 +118,11 @@ export default function HomePage() {
 
       <section>
         <div className="container py-12">
-          <h4 className="h2 underline-2 text-center">
+          <h2 className="h2 underline-2 text-center">
             Über 139.000 Hamburger*innen unterstützen uns bereits.
             <br />
             Hilf mit!
-          </h4>
+          </h2>
 
           <div className="flex flex-col">
             <div className="flex flex-col justify-between items-center gap-8 sm:gap-24 -mt-6 sm:flex-row sm:mt-0">
@@ -131,7 +133,7 @@ export default function HomePage() {
                 />
               </figure>
               <div className="flex flex-col gap-6 items-start">
-                <h4 className="h3">Was ist noch zu tun?</h4>
+                <h3 className="h3">Was ist noch zu tun?</h3>
                 <p>
                   Nur mit deiner Unterstützung können wir den Entscheid zum
                   Erfolg führen. Ob beim Haustürwahlkampf, auf Veranstaltungen,
@@ -148,7 +150,7 @@ export default function HomePage() {
                 />
               </figure>
               <div className="flex flex-col gap-6 items-start">
-                <h4 className="h3">Wie kannst du helfen?</h4>
+                <h3 className="h3">Wie kannst du helfen?</h3>
                 <p>
                   Komm zu einem unserer Infotreffen - jeden Mittwoch um 18:30
                   Uhr in der Kampstraße 15. Oder unterstütze uns bei Aktionen!
@@ -164,7 +166,7 @@ export default function HomePage() {
 
       <section className="bg-green-dark text-white">
         <div className="container py-12">
-          <h5 className="h2 text-center mb-20">6 gute Gründe für dein Ja!</h5>
+          <h2 className="h2 text-center mb-20">6 gute Gründe für dein Ja!</h2>
 
           <ul className="sm:grid sm:grid-cols-3 items-top gap-10 justify-between w-full">
             <li className="icon-claim">
@@ -258,6 +260,70 @@ export default function HomePage() {
 
       <section className="bg-blue-light">
         <LogoBlock className="container py-12" />
+      </section>
+
+      <section>
+        <div className="container py-12 flex flex-col sm:flex-row gap-12 justify-around">
+          <div className="flex flex-col max-w-[400px] gap-6 items-start">
+            <h2 className="h2">
+              Kurz vor Klimaschutzgesetz: Lasst uns den letzten Schritt zusammen
+              gehen
+            </h2>
+            <p>
+              Damit ein Gesetz ein einer Volksabstimmung beschlossen werden
+              kann, muss es drei Phasen durchlaufen: Die Volksinitiative, das
+              Volksbegehren und den Volksentscheid.
+            </p>
+            <p>
+              Dabei müssen immer mehr Menschen in immer kürzerer Zeit den
+              Hamburger Zukunftsentscheid unterstützen. Schon seit Juni 2023
+              arbeiten viele Menschen daran, dass wir das schaffen.
+            </p>
+            <Link className="button secondary" href="/">
+              So funktionierts
+            </Link>
+          </div>
+
+          <ul className="flex flex-col gap-20">
+            <TimelineItem completed title="Volksinitiative">
+              <strong>Vorgabe:</strong> 10.000 Unterschriften in 6 Monaten
+              <br />
+              <strong>Ergebnis:</strong> 23.316 Unterschriften in 4 Wochen
+            </TimelineItem>
+            <TimelineItem completed title="Volksbegehren">
+              <strong>Vorgabe:</strong> 65.835 Unterschriften
+              <br />
+              <strong>Ergebnis:</strong> 106.374 Unterschriften nach 3 Wochen
+            </TimelineItem>
+            <TimelineItem title="Volksentscheid">
+              <strong>Vorgabe:</strong> Die Mehrheit der Hamburgerinnen und
+              Hamburger, die zur Bürgerschaft wahlberechtigt sind, stimmt dafür.
+              Stimmt die Mehrheit für den Gesetzestext, tritt er innerhalb eines
+              Monats in Kraft.
+            </TimelineItem>
+          </ul>
+        </div>
+      </section>
+
+      <section className="bg-green-dark text-white">
+        <div className="container py-12 flex flex-col sm:flex-row gap-12 justify-around items-center">
+          <div className="flex flex-col gap-6 max-w-[400px] items-start">
+            <h2 className="h2">Spenden</h2>
+            <p>
+              Der Hamburger Zukunftsentscheid wird ausschließlich durch Spenden
+              und Förderungen finanziert. Mit deiner Spende machst du ein
+              besseres Klimaschutzgesetz für Hamburg möglich!
+            </p>
+            <Link className="button secondary alt" href="/">
+              Mehr erfahren
+            </Link>
+          </div>
+          <Script
+            src="https://spenden.twingle.de/embed/hamburg-klimaneutral/testprojekt/tw67beebe41b6eb/widget/foo"
+            strategy="lazyOnload"
+          />
+          <div id="twingle-public-embed-foo" className="w-full max-w-[450px]" aria-label="Spenden Widget" />
+        </div>
       </section>
     </main>
   );

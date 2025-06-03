@@ -28,6 +28,10 @@
 
   &.secondary {
     @apply text-white bg-green-dark hover:bg-green-dark-80 py-3.5;
+
+    &.alt {
+      @apply bg-blue-light hover:bg-blue-light-80 text-green-dark;
+    }
   }
 
   &.primary {
