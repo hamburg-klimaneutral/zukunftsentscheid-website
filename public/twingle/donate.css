@@ -1,0 +1,9 @@
+.widget-header.widget {
+  background-color: transparent;
+}
+h1 {
+  display: none;
+}
+.start.widget {
+  margin-top: 2px;
+}

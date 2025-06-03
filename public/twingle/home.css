@@ -1,0 +1,54 @@
+.widget-header.widget {
+  background-color: transparent;
+}
+
+h1 {
+  display: none;
+}
+
+.start.widget {
+  margin-top: 2px;
+}
+
+body {
+  background: transparent !important;
+}
+
+label[for="transaction-amount"] {
+  color: #235753 !important;
+}
+
+h2 {
+  color: #235753 !important;
+}
+
+.footer-gls {
+  background: transparent !important;
+}
+
+footer span,
+footer a {
+  color: #235753 !important;
+}
+
+.non-touch input[type="radio"] + label:hover {
+  background: #cc0070;
+  color: #fff;
+}
+
+.non-touch button.button:hover,
+.non-touch a.button:hover {
+  background: #cc0070;
+  color: #fff;
+}
+
+.non-touch button.button.arrow:hover:after,
+.non-touch a.button.arrow:hover:after {
+  border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #cc0070;
+}
+
+@media screen and (min-width: 36.25em) {
+  .non-touch .step-navigation:hover span {
+    background: #cc0070;
+  }
+}
