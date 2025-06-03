@@ -322,7 +322,7 @@ export default function HomePage() {
             src="https://spenden.twingle.de/embed/hamburg-klimaneutral/testprojekt/tw67beebe41b6eb/widget/foo"
             strategy="lazyOnload"
           />
-          <div id="twingle-public-embed-foo" className="w-full max-w-[450px]" />
+          <div id="twingle-public-embed-foo" className="w-full max-w-[450px]" aria-label="Spenden Widget" />
         </div>
       </section>
     </main>
