@@ -150,8 +150,7 @@ export default function HomePage() {
                 <h4 className="h3">Wie kannst du helfen?</h4>
                 <p>
                   Komm zu einem unserer Infotreffen - jeden Mittwoch um 18:30
-                  Uhr in der Kampstraße 15. Oder oder unterstütze uns bei
-                  Aktionen!
+                  Uhr in der Kampstraße 15. Oder unterstütze uns bei Aktionen!
                 </p>
                 <Link href="/" className="button primary">
                   Mitmach-Möglichkeiten
@@ -164,99 +163,95 @@ export default function HomePage() {
 
       <section className="bg-green-dark text-white">
         <div className="container py-12">
-        <h5 className="h2 text-center mb-20">6 gute Gründe für dein Ja!</h5>
+          <h5 className="h2 text-center mb-20">6 gute Gründe für dein Ja!</h5>
 
-        <ul className="sm:grid sm:grid-cols-3 items-top gap-10 justify-between w-full">
-          <li className="icon-claim">
-            <Image
-              src="/icons/vote.svg"
-              alt=""
-              width={80}
-              height={80}
-              aria-hidden
-            />
-            <h3>Deine Stimme zählt</h3>
-            <p>
-              Unser Gesetzvorschlag wird bei einem Volksentscheid am 12.10.
-              abgestimmt. Gewinnen wir, tritt unser verbessertes
-              Klimaschutzgesetz in Kraft.
-            </p>
-          </li>
-          <li className="icon-claim">
-            <Image
-              src="/icons/shake.svg"
-              alt=""
-              width={80}
-              height={80}
-              aria-hidden
-            />
-            <h3>Wirtschaft & Wissenschaft an Board</h3>
-            <p>
-              Unser Gesetz wurde gemeinsam mit Expertise aus Wissenschaft,
-              Sozialverbänden und Wirtschaft entwickelt. Auch OECD und
-              Handelskammer stellen in einer Studie fest: Klimaneutralität bis
-              2040 ist möglich!
-            </p>
-          </li>
-          <li className="icon-claim">
-            <Image
-              src="/icons/for-all.svg"
-              alt=""
-              width={80}
-              height={80}
-              aria-hidden
-            />
-            <h3>Klimaschutz, der alle mitnimmt</h3>
-            <p>
-              Klimaschutz, Wohlstand und soziale Gerechtigkeit sind keine
-              Gegensätze. Unser Gesetz sorgt dafür, dass vom Klimaschutz alle
-              profitieren.
-            </p>
-          </li>
-          <li className="icon-claim">
-            <Image
-              src="/icons/globe.svg"
-              alt=""
-              width={80}
-              height={80}
-              aria-hidden
-            />
-            <h3>Klimaschutz macht dein Leben besser</h3>
-            <p>
-              Solaranlagen und Sanierungen sparen Energie
-              und Geld. Ein zuverlässiger ÖPNV bringt dich
-              schneller ans Ziel.
-            </p>
-          </li>
-          <li className="icon-claim">
-            <Image
-              src="/icons/hamburg.svg"
-              alt=""
-              width={80}
-              height={80}
-              aria-hidden
-            />
-            <h3>Gemeinsam für Hamburg</h3>
-            <p>
-              Mehr als 160 Verbände und Unternehmen stehen hinter uns.
-            </p>
-          </li>
-          <li className="icon-claim">
-            <Image
-              src="/icons/heart-hand.svg"
-              alt=""
-              width={80}
-              height={80}
-              aria-hidden
-            />
-            <h3>Was wir wollen, bewegt viele</h3>
-            <p>
-              Über 139.000 Hamburger*innen haben den
-              Zukunftsentscheid bereits unterstützt. Jetzt
-              kommt es auf dich an!
-            </p>
-          </li>
-        </ul>
+          <ul className="sm:grid sm:grid-cols-3 items-top gap-10 justify-between w-full">
+            <li className="icon-claim">
+              <Image
+                src="/icons/vote.svg"
+                alt=""
+                width={80}
+                height={80}
+                aria-hidden
+              />
+              <h3>Deine Stimme zählt</h3>
+              <p>
+                Unser Gesetzvorschlag wird bei einem Volksentscheid am 12.10.
+                abgestimmt. Gewinnen wir, tritt unser verbessertes
+                Klimaschutzgesetz in Kraft.
+              </p>
+            </li>
+            <li className="icon-claim">
+              <Image
+                src="/icons/shake.svg"
+                alt=""
+                width={80}
+                height={80}
+                aria-hidden
+              />
+              <h3>Wirtschaft & Wissenschaft an Board</h3>
+              <p>
+                Unser Gesetz wurde gemeinsam mit Expertise aus Wissenschaft,
+                Sozialverbänden und Wirtschaft entwickelt. Auch OECD und
+                Handelskammer stellen in einer Studie fest: Klimaneutralität bis
+                2040 ist möglich!
+              </p>
+            </li>
+            <li className="icon-claim">
+              <Image
+                src="/icons/for-all.svg"
+                alt=""
+                width={80}
+                height={80}
+                aria-hidden
+              />
+              <h3>Klimaschutz, der alle mitnimmt</h3>
+              <p>
+                Klimaschutz, Wohlstand und soziale Gerechtigkeit sind keine
+                Gegensätze. Unser Gesetz sorgt dafür, dass vom Klimaschutz alle
+                profitieren.
+              </p>
+            </li>
+            <li className="icon-claim">
+              <Image
+                src="/icons/globe.svg"
+                alt=""
+                width={80}
+                height={80}
+                aria-hidden
+              />
+              <h3>Klimaschutz macht dein Leben besser</h3>
+              <p>
+                Solaranlagen und Sanierungen sparen Energie und Geld. Ein
+                zuverlässiger ÖPNV bringt dich schneller ans Ziel.
+              </p>
+            </li>
+            <li className="icon-claim">
+              <Image
+                src="/icons/hamburg.svg"
+                alt=""
+                width={80}
+                height={80}
+                aria-hidden
+              />
+              <h3>Gemeinsam für Hamburg</h3>
+              <p>Mehr als 160 Verbände und Unternehmen stehen hinter uns.</p>
+            </li>
+            <li className="icon-claim">
+              <Image
+                src="/icons/heart-hand.svg"
+                alt=""
+                width={80}
+                height={80}
+                aria-hidden
+              />
+              <h3>Was wir wollen, bewegt viele</h3>
+              <p>
+                Über 139.000 Hamburger*innen haben den Zukunftsentscheid bereits
+                unterstützt. Jetzt kommt es auf dich an!
+              </p>
+            </li>
+          </ul>
         </div>
       </section>
     </main>
