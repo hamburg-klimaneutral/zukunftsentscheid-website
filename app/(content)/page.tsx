@@ -5,6 +5,7 @@ import Icon from "@/app/icon.png";
 import HeroImage from "@/app/pictures/12.10.png";
 import CollectImage from "@/app/pictures/sammeln.png";
 import SignatureImage from "@/app/pictures/unterschriften.png";
+import LogoBlock from "./logo-block";
 
 export default function HomePage() {
   return (
@@ -253,6 +254,10 @@ export default function HomePage() {
             </li>
           </ul>
         </div>
+      </section>
+
+      <section className="bg-blue-light">
+        <LogoBlock className="container py-12" />
       </section>
     </main>
   );
