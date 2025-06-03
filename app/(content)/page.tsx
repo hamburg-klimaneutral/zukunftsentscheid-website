@@ -7,6 +7,7 @@ import CollectImage from "@/app/pictures/sammeln.png";
 import SignatureImage from "@/app/pictures/unterschriften.png";
 import LogoBlock from "./logo-block";
 import TimelineItem from "./timeline-item";
+import Script from "next/script";
 
 export default function HomePage() {
   return (
@@ -304,6 +305,24 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="bg-green-dark text-white">
+        <div className="container py-12 flex flex-col sm:flex-row gap-12 justify-around items-center">
+          <div className="flex flex-col gap-6 max-w-[400px] items-start">
+            <h2 className="h2">Spenden</h2>
+            <p>
+              Der Hamburger Zukunftsentscheid wird ausschließlich durch Spenden
+              und Förderungen finanziert. Mit deiner Spende machst du ein
+              besseres Klimaschutzgesetz für Hamburg möglich!
+            </p>
+            <Link className="button secondary alt" href="/">
+              Mehr erfahren
+            </Link>
+          </div>
+          <Script
+            src="https://spenden.twingle.de/embed/hamburg-klimaneutral/testprojekt/tw67beebe41b6eb/widget/foo"
+            strategy="lazyOnload"
+          />
+          <div id="twingle-public-embed-foo" className="w-full max-w-[450px]" />
         </div>
       </section>
     </main>
