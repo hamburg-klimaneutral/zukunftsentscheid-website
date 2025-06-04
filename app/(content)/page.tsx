@@ -12,8 +12,8 @@ import Script from "next/script";
 export default function HomePage() {
   return (
     <main>
-      <section className="bg-green-dark py-12">
-        <div className="container flex flex-col-reverse md:flex-row-reverse">
+      <section className="bg-green-dark text-white">
+        <div className="container flex flex-col-reverse py-24 md:flex-row-reverse">
           <figure className="-mb-20 -mt-6 -ml-12 relative md:-my-24 md:mt-0 md:ml-0">
             <Image
               sizes="100vw"
@@ -22,7 +22,7 @@ export default function HomePage() {
               alt="Das Team von Zukunftsentscheid Hamburg präsentiert den Termin der Volksabstimmung am 12.10.2025 vor der Kulisse des Hamburger Rathauses."
               priority
             />
-            <div className="right-10 sm:-right-2 -rotate-12 absolute top-4 sm:top-1/4 bg-white h3 px-2.5 py-1 transform">
+            <div className="right-10 sm:-right-2 -rotate-12 absolute top-4 sm:top-1/4 bg-white h3 px-2.5 py-1 transform text-green-dark">
               Sag ja
               <Image
                 src={Icon}
@@ -35,7 +35,7 @@ export default function HomePage() {
               zu Hamburg
             </div>
           </figure>
-          <div className="relative flex flex-col items-start justify-center gap-8 text-white">
+          <div className="relative flex flex-col items-start justify-center gap-8">
             <h1 className="block h1 md:hidden">
               Mit dem<br /> <mark>Volksentscheid</mark> am<br /> 12.10. geben wir<br />
               Hamburg ein <mark className="short">besseres</mark><br />
@@ -54,7 +54,7 @@ export default function HomePage() {
       </section>
 
       <section className="bg-blue-light">
-        <div className="container flex flex-col items-center py-12 text-center gap-10">
+        <div className="container flex flex-col items-center py-24 text-center gap-10">
           <h2 className="h2 max-w-xl underline-1">
             Gemeinsam machen wir Hamburgs Klimapolitik sozial, planbar und
             verantwortungsbewusst.
@@ -116,7 +116,7 @@ export default function HomePage() {
       </section>
 
       <section>
-        <div className="container py-12">
+        <div className="container py-24">
           <h2 className="h2 underline-2 text-center">
             Über 139.000 Hamburger*innen unterstützen uns bereits.
             <br />
@@ -164,7 +164,7 @@ export default function HomePage() {
       </section>
 
       <section className="bg-green-dark text-white">
-        <div className="container py-12">
+        <div className="container py-24">
           <h2 className="h2 text-center mb-20">6 gute Gründe für dein Ja!</h2>
 
           <ul className="sm:grid sm:grid-cols-3 items-top gap-10 justify-between w-full">
@@ -258,11 +258,11 @@ export default function HomePage() {
       </section>
 
       <section className="bg-blue-light">
-        <LogoBlock className="container py-12" />
+        <LogoBlock className="container py-24" />
       </section>
 
       <section>
-        <div className="container py-12 flex flex-col sm:flex-row gap-12 justify-around">
+        <div className="container py-24 flex flex-col sm:flex-row gap-12 justify-around">
           <div className="flex flex-col gap-6 items-start sm:basis-[400px]">
             <h2 className="h2">
               Kurz vor Klimaschutzgesetz: Lasst uns den letzten Schritt zusammen
@@ -305,7 +305,7 @@ export default function HomePage() {
       </section>
 
       <section className="bg-green-dark text-white">
-        <div className="container py-12 flex flex-col sm:flex-row gap-12 justify-around items-center">
+        <div className="container py-24 flex flex-col sm:flex-row gap-12 justify-around items-center">
           <div className="flex flex-col gap-6 sm:basis-[400px] items-start">
             <h2 className="h2">Spenden</h2>
             <p>
