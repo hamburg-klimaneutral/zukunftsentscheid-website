@@ -14,7 +14,7 @@ export default function HomePage() {
     <main>
       <section className="bg-green-dark text-white">
         <div className="container flex flex-col-reverse py-24 md:flex-row-reverse">
-          <figure className="-mb-20 -mt-6 -ml-12 relative md:-my-24 md:mt-0 md:ml-0">
+          <figure className="-mb-32 -mt-6 -ml-12 relative">
             <Image
               sizes="100vw"
               className="h-auto w-full"
