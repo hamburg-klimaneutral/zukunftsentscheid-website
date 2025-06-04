@@ -45,6 +45,9 @@ export function TwingleWidget(
             <Script
                 src={scriptSrc.href}
                 strategy="lazyOnload"
+                onLoad={() => {
+                    document.querySelector(`#twingle-public-embed-${id} iframe`)?.setAttribute('title', 'Spenden Widget')
+                }}
             />
             <div id={containerId} className={twMerge('w-full', className)}
                  aria-label="Spenden Widget" {...props} />
