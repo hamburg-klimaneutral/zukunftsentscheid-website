@@ -134,7 +134,7 @@ export default function HomePage() {
               </figure>
               <div className="flex flex-col gap-6 items-start">
                 <h3 className="h3">Was ist noch zu tun?</h3>
-                <p>
+                <p className="max-w-[520px]">
                   Nur mit deiner Unterstützung können wir den Entscheid zum
                   Erfolg führen. Ob beim Haustürwahlkampf, auf Veranstaltungen,
                   Plakate kleben, Flyer verteilen und in der
@@ -151,7 +151,7 @@ export default function HomePage() {
               </figure>
               <div className="flex flex-col gap-6 items-start">
                 <h3 className="h3">Wie kannst du helfen?</h3>
-                <p>
+                <p className="max-w-[520px]">
                   Komm zu einem unserer Infotreffen - jeden Mittwoch um 18:30
                   Uhr in der Kampstraße 15. Oder unterstütze uns bei Aktionen!
                 </p>
