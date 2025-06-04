@@ -3,6 +3,33 @@
 @import "./utils.css";
 @import "./components.css";
 
-body {
-  @apply font-body text-base bg-white text-green-dark;
+@layer base {
+  body {
+    @apply font-body text-base bg-white text-green-dark;
+  }
+
+  a:focus {
+    @apply outline-2 outline-offset-2 outline-focus;
+  }
+
+  form {
+    [type="text"],
+    input:where(:not([type])),
+    [type="email"],
+    [type="url"],
+    [type="password"],
+    [type="number"],
+    [type="date"],
+    [type="datetime-local"],
+    [type="month"],
+    [type="search"],
+    [type="tel"],
+    [type="time"],
+    [type="week"],
+    [multiple],
+    textarea,
+    select {
+      @apply form-input;
+    }
+  }
 }

@@ -264,7 +264,7 @@ export default function HomePage() {
 
       <section>
         <div className="container py-12 flex flex-col sm:flex-row gap-12 justify-around">
-          <div className="flex flex-col max-w-[400px] gap-6 items-start">
+          <div className="flex flex-col gap-6 items-start sm:basis-[400px]">
             <h2 className="h2">
               Kurz vor Klimaschutzgesetz: Lasst uns den letzten Schritt zusammen
               gehen
@@ -307,7 +307,7 @@ export default function HomePage() {
 
       <section className="bg-green-dark text-white">
         <div className="container py-12 flex flex-col sm:flex-row gap-12 justify-around items-center">
-          <div className="flex flex-col gap-6 max-w-[400px] items-start">
+          <div className="flex flex-col gap-6 sm:basis-[400px] items-start">
             <h2 className="h2">Spenden</h2>
             <p>
               Der Hamburger Zukunftsentscheid wird ausschließlich durch Spenden
@@ -322,7 +322,7 @@ export default function HomePage() {
             src="https://spenden.twingle.de/embed/hamburg-klimaneutral/testprojekt/tw67beebe41b6eb/widget/foo"
             strategy="lazyOnload"
           />
-          <div id="twingle-public-embed-foo" className="w-full max-w-[450px]" aria-label="Spenden Widget" />
+          <div id="twingle-public-embed-foo" className="w-full sm:max-w-[450px]" aria-label="Spenden Widget" />
         </div>
       </section>
     </main>
