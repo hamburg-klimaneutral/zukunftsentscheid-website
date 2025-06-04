@@ -13,8 +13,8 @@ export default function HomePage() {
   return (
     <main>
       <section className="bg-green-dark text-white">
-        <div className="container flex flex-col-reverse py-24 md:flex-row-reverse">
-          <figure className="-mb-32 -mt-6 -ml-12 relative">
+        <div className="container flex flex-col-reverse py-24 md:flex-row-reverse justify-between">
+          <figure className="-mb-32 -mt-6 -ml-12 relative sm:-ml-0">
             <Image
               sizes="100vw"
               className="h-auto w-full"
@@ -36,14 +36,17 @@ export default function HomePage() {
             </div>
           </figure>
           <div className="relative flex flex-col items-start justify-center gap-8">
-            <h1 className="block h1 md:hidden">
-              Mit dem<br /> <mark>Volksentscheid</mark> am<br /> 12.10. geben wir<br />
-              Hamburg ein <mark className="short">besseres</mark><br />
+            <h1 className="block h1 lg:hidden whitespace-pre-line">
+              Mit dem{'\n'}
+              <mark>Volksentscheid</mark> am{'\n'}
+              12.10. geben wir{'\n'}
+              Hamburg ein <mark className="short">besseres</mark>{'\n'}
               <mark className="long">Klimaschutzgesetz!</mark>
             </h1>
-            <h1 className="hidden h1 md:block max-w-[530px]">
-              Mit dem <mark>Volksentscheid</mark> am 12.10. geben wir Hamburg
-              ein <mark className="long text-nowrap">besseres Klimaschutzgesetz!</mark>
+            <h1 className="hidden h1 lg:block whitespace-pre-line">
+              Mit dem <mark>Volksentscheid</mark> am{'\n'}
+              12.10. geben wir Hamburg ein
+              {'\n'}<mark className="long text-nowrap">besseres Klimaschutzgesetz!</mark>
             </h1>
             <p>Hamburg entscheidet fürs Klima - sei dabei!</p>
             <Link className="button primary" href="/">
