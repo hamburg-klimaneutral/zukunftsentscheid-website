@@ -21,7 +21,7 @@ export default function MainLayout({
       </header>
       {children}
       <footer className="bg-blue-light">
-        <div className="container m-auto py-12 flex flex-col gap-14">
+        <div className="container m-auto py-24 flex flex-col gap-14">
           <div className="flex flex-col sm:flex-row justify-between gap-14">
             <figure className="sm:basis-[213px]">
               <Image
