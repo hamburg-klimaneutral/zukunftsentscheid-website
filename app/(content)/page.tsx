@@ -13,8 +13,8 @@ export default function HomePage() {
   return (
     <main>
       <section className="bg-green-dark py-12">
-        <div className="container m-auto flex flex-col-reverse text-white md:flex-row-reverse">
-          <figure className="-mb-20 -mt-6 -ml-12 relative grow md:-my-24 md:mt-0 md:ml-0">
+        <div className="container flex flex-col-reverse md:flex-row-reverse">
+          <figure className="-mb-20 -mt-6 -ml-12 relative md:-my-24 md:mt-0 md:ml-0">
             <Image
               sizes="100vw"
               className="h-auto w-full"
@@ -22,7 +22,7 @@ export default function HomePage() {
               alt="Das Team von Zukunftsentscheid Hamburg präsentiert den Termin der Volksabstimmung am 12.10.2025 vor der Kulisse des Hamburger Rathauses."
               priority
             />
-            <div className="right-10 sm:-right-2 -rotate-12 absolute top-4 sm:top-1/4 bg-white h3 px-2.5 py-1 text-green-dark transform">
+            <div className="right-10 sm:-right-2 -rotate-12 absolute top-4 sm:top-1/4 bg-white h3 px-2.5 py-1 transform">
               Sag ja
               <Image
                 src={Icon}
@@ -35,16 +35,15 @@ export default function HomePage() {
               zu Hamburg
             </div>
           </figure>
-          <div className="relative flex flex-col items-start justify-center gap-8">
-            <h1 className="block h1 max-w-[230px] sm:max-w-[420px] lg:hidden">
-              Mit dem <mark>Volksentscheid</mark> am 12.10. geben wir Hamburg
-              ein <mark className="short">besseres</mark>{" "}
+          <div className="relative flex flex-col items-start justify-center gap-8 text-white">
+            <h1 className="block h1 md:hidden">
+              Mit dem<br /> <mark>Volksentscheid</mark> am<br /> 12.10. geben wir<br />
+              Hamburg ein <mark className="short">besseres</mark><br />
               <mark className="long">Klimaschutzgesetz!</mark>
             </h1>
-            <h1 className="hidden h1 max-w-[530px] lg:block">
+            <h1 className="hidden h1 md:block max-w-[530px]">
               Mit dem <mark>Volksentscheid</mark> am 12.10. geben wir Hamburg
-              ein <br />
-              <mark className="long">besseres Klimaschutzgesetz!</mark>
+              ein <mark className="long text-nowrap">besseres Klimaschutzgesetz!</mark>
             </h1>
             <p>Hamburg entscheidet fürs Klima - sei dabei!</p>
             <Link className="button primary" href="/">
