@@ -12,7 +12,7 @@ interface TwingleWidgetProps {
 const TWINGLE_BASE_URL = new URL('https://spenden.twingle.de/embed/hamburg-klimaneutral/')
 
 function generateRandomTwingleId() {
-    // algorithm as from twingle
+    // Use the exact same ID format as in Twingle's code snippet.
     return '_' + Math.random().toString(36).substring(2, 11)
 }
 

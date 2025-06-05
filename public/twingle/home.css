@@ -1,4 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+/*
+ * This file is loaded by the donation iframe from a fixed URL configured in Twingle.
+ * To test changes to this file, replace the contents of the CSS file using the Sources panel in Chrome DevTools.
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap');
 
 .widget-header.widget {
     background-color: transparent;
@@ -134,22 +139,24 @@ footer .payment-preview-wrapper {
     font-weight: 600;
 }
 
-.payment-component-wrapper .method-wrapper .has-recommendation input[type=radio]+label span.recommendation {
+.payment-component-wrapper .method-wrapper .has-recommendation input[type=radio] + label span.recommendation {
     background-color: #CC0070;
     color: white;
 }
-.payment-component-wrapper .method-wrapper .has-recommendation input[type=radio]+label:hover span.recommendation {
+
+.payment-component-wrapper .method-wrapper .has-recommendation input[type=radio] + label:hover span.recommendation {
     background-color: #E43997;
 }
 
-.payment-component-wrapper .method-wrapper .has-recommendation input[type=radio]+label {
+.payment-component-wrapper .method-wrapper .has-recommendation input[type=radio] + label {
     border-color: #CC0070;
 }
-.payment-component-wrapper .method-wrapper .has-recommendation input[type=radio]+label:hover {
+
+.payment-component-wrapper .method-wrapper .has-recommendation input[type=radio] + label:hover {
     border-color: #E43997;
 }
 
-.payment-component-wrapper .method-wrapper input[type=radio]+label:hover, .payment-component-wrapper .method-wrapper input[type=radio]+label:active, .payment-component-wrapper .method-wrapper input[type=radio]+label:focus {
+.payment-component-wrapper .method-wrapper input[type=radio] + label:hover, .payment-component-wrapper .method-wrapper input[type=radio] + label:active, .payment-component-wrapper .method-wrapper input[type=radio] + label:focus {
     border-color: #E43997
 }
 
@@ -200,12 +207,12 @@ input[type=text], input[type=tel], input[type=email], input[type=number], input[
 
 /* sepa */
 
-.input-wrapper.info>i {
+.input-wrapper.info > i {
     background-color: #A9D8D8;
     color: #235753;
 }
 
-.non-touch .input-wrapper.info>i:hover {
+.non-touch .input-wrapper.info > i:hover {
     background-color: #C8F7F7;
 }
 
@@ -222,7 +229,7 @@ button.button.grey, a.button.grey {
     background-color: #E43997;
 }
 
-button.button.grey+.hint, a.button.grey+.hint, button.button+.hint, a.button+.hint {
+button.button.grey + .hint, a.button.grey + .hint, button.button + .hint, a.button + .hint {
     background-color: white;
     color: #235753;
 }
