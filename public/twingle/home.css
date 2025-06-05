@@ -4,7 +4,7 @@
     background-color: transparent;
 }
 
-h1, h2, h3, h4, h5, h6, a, p, label {
+body, h1, h2, h3, h4, h5, h6, a, p, label {
     font-family: "Inter", sans-serif;
     font-style: normal;
 }
@@ -124,9 +124,7 @@ footer .payment-preview-wrapper {
 
 /* payment-step */
 
-.widget.payment-select span {
-    font-family: "Inter", sans-serif;
-    font-style: normal;
+.widget.payment-select span, .step-navigation span {
     font-size: 12px;
 }
 
@@ -153,4 +151,100 @@ footer .payment-preview-wrapper {
 
 .payment-component-wrapper .method-wrapper input[type=radio]+label:hover, .payment-component-wrapper .method-wrapper input[type=radio]+label:active, .payment-component-wrapper .method-wrapper input[type=radio]+label:focus {
     border-color: #E43997
+}
+
+/* anderer betrag */
+
+.amount-wrapper .input-wrapper .currency-symbol {
+    background-color: #A9D8D8;
+    color: #235753;
+}
+
+.amount-wrapper input[type=number], .amount-wrapper input[type=text], .amount-wrapper input[type=tel] {
+    border-color: #A9D8D8;
+    color: #235753;
+    border-width: 2px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+
+.amount-wrapper .slider-wrapper {
+    background-color: #A9D8D8;
+}
+
+.amount-wrapper .slider-wrapper {
+    border-radius: 0 2px 2px 0;
+}
+
+.amount-wrapper .input-wrapper {
+    margin-bottom: 0;
+}
+
+/* errors */
+
+.payment-component-wrapper h2.error {
+    color: #DE252E
+}
+
+/* forms */
+
+[type=text], [type=password], [type=date], [type=datetime], [type=datetime-local], [type=month], [type=week], [type=email], [type=number], [type=search], [type=tel], [type=time], [type=url], [type=color], textarea {
+    border: 2px solid #A9D8D8;
+    padding: 12px;
+}
+
+input[type=text], input[type=tel], input[type=email], input[type=number], input[type=date], select, textarea, textarea[rows] {
+    color: #235753;
+    font-size: 16px;
+}
+
+/* sepa */
+
+.input-wrapper.info>i {
+    background-color: #A9D8D8;
+    color: #235753;
+}
+
+.non-touch .input-wrapper.info>i:hover {
+    background-color: #C8F7F7;
+}
+
+.checkbox-wrapper label:not(.error):before {
+    border-color: #A9D8D8;
+}
+
+button.button.grey, a.button.grey {
+    background-color: #B8B8B8;
+    font-weight: 600;
+}
+
+.non-touch button.button:hover, .non-touch a.button:hover {
+    background-color: #E43997;
+}
+
+button.button.grey+.hint, a.button.grey+.hint, button.button+.hint, a.button+.hint {
+    background-color: white;
+    color: #235753;
+}
+
+label {
+    color: white;
+}
+
+label a {
+    text-decoration: underline;
+}
+
+.checkbox-wrapper .background label:before {
+    border-color: #A9D8D8;
+    border-radius: 2px;
+}
+
+/* paypal */
+
+.callout {
+    background-color: transparent;
+    border-radius: 0;
+    border: 2px solid #A9D8D8;
+    color: white;
 }
