@@ -5,7 +5,7 @@ import Icon from "@/app/icon.png";
 import HeroImage from "@/app/pictures/12.10.png";
 import CollectImage from "@/app/pictures/sammeln.png";
 import SignatureImage from "@/app/pictures/unterschriften.png";
-import LogoBlock from "./logo-block";
+import LogosBlock from "./logos-block";
 import TimelineItem from "./timeline-item";
 import Script from "next/script";
 
@@ -13,7 +13,7 @@ export default function HomePage() {
   return (
     <main>
       <section className="bg-green-dark text-white">
-        <div className="container flex flex-col-reverse py-24 md:flex-row-reverse justify-between">
+        <div className="container flex flex-col-reverse md:flex-row-reverse justify-between">
           <figure className="-mb-32 -mt-6 -ml-12 relative sm:-ml-0">
             <Image
               sizes="100vw"
@@ -57,7 +57,7 @@ export default function HomePage() {
       </section>
 
       <section className="bg-blue-light">
-        <div className="container flex flex-col items-center py-24 text-center gap-10">
+        <div className="container flex flex-col items-center text-center gap-10 pt-24">
           <h2 className="h2 max-w-xl underline-1">
             Gemeinsam machen wir Hamburgs Klimapolitik sozial, planbar und
             verantwortungsbewusst.
@@ -119,7 +119,7 @@ export default function HomePage() {
       </section>
 
       <section>
-        <div className="container py-24">
+        <div className="container">
           <h2 className="h2 underline-2 text-center">
             Über 139.000 Hamburger*innen unterstützen uns bereits.
             <br />
@@ -167,7 +167,7 @@ export default function HomePage() {
       </section>
 
       <section className="bg-green-dark text-white">
-        <div className="container py-24">
+        <div className="container">
           <h2 className="h2 text-center mb-20">6 gute Gründe für dein Ja!</h2>
 
           <ul className="sm:grid sm:grid-cols-3 items-top gap-10 justify-between w-full">
@@ -261,11 +261,11 @@ export default function HomePage() {
       </section>
 
       <section className="bg-blue-light">
-        <LogoBlock className="container py-24" />
+        <LogosBlock className="container" />
       </section>
 
       <section>
-        <div className="container py-24 flex flex-col sm:flex-row gap-12 justify-around">
+        <div className="container flex flex-col sm:flex-row gap-12 justify-around">
           <div className="flex flex-col gap-6 items-start sm:basis-[400px]">
             <h2 className="h2">
               Kurz vor Klimaschutzgesetz: Lasst uns den letzten Schritt zusammen
@@ -308,7 +308,7 @@ export default function HomePage() {
       </section>
 
       <section className="bg-green-dark text-white">
-        <div className="container py-24 flex flex-col sm:flex-row gap-12 justify-around items-center">
+        <div className="container flex flex-col sm:flex-row gap-12 justify-around items-center">
           <div className="flex flex-col gap-6 sm:basis-[400px] items-start">
             <h2 className="h2">Spenden</h2>
             <p>

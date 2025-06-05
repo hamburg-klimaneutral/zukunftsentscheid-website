@@ -1,5 +1,5 @@
 @utility container {
-  @apply max-w-7xl mx-auto px-5 lg:px-12;
+  @apply max-w-7xl mx-auto px-5 py-14 sm:py-24 lg:px-12;
 }
 
 /* Utility class that provides the base styling for decorative image underlines beneath text elements */

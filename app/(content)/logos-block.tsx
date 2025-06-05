@@ -101,7 +101,7 @@ const LOGOS = [
   },
 ] as const;
 
-export default function LogoBlock({ className }: { className?: string }) {
+export default function LogosBlock({ className }: { className?: string }) {
   return (
     <ul
       className={twMerge(
