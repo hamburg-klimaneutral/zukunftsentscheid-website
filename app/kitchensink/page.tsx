@@ -1,3 +1,8 @@
+import Image from "next/image";
+import Hero from "@/app/components/hero";
+import HeroImage from "@/app/pictures/12.10.png";
+import Block from "@/app/components/block";
+
 export default function KitchenSinkPage() {
   return (
     <div className="max-w-5xl m-auto gap-20 p-4 sm:mt-8 flex flex-col">
@@ -11,8 +16,11 @@ export default function KitchenSinkPage() {
         <p>
           Body: Lorem Ipsum dolor <strong>strong</strong> sit amet
         </p>
-        <small>Tiny Body: Lorem Ipsum dolor <strong>strong</strong> sit amet</small>
+        <small>
+          Tiny Body: Lorem Ipsum dolor <strong>strong</strong> sit amet
+        </small>
       </section>
+
       <section className="flex flex-col gap-4">
         <h1 className="h1">Menu and Buttons</h1>
         <ul className="flex gap-1">
@@ -21,10 +29,15 @@ export default function KitchenSinkPage() {
           <li className="text-menu-item">Menu Item</li>
         </ul>
         <div className="flex gap-2">
-        <a href="#" className="button">Button</a>
-        <a href="#" className="button primary">Primary Button</a>
+          <a href="#" className="button">
+            Button
+          </a>
+          <a href="#" className="button primary">
+            Primary Button
+          </a>
         </div>
       </section>
+
       <section className="flex flex-col gap-4">
         <h1 className="h1">Colors</h1>
         <h2 className="h2">Brand Colors</h2>
@@ -104,6 +117,27 @@ export default function KitchenSinkPage() {
             <span className="text-tiny">#49c654</span>
           </li>
         </ul>
+      </section>
+
+      <section>
+        <h1 className="h1">Heros</h1>
+        <Block variant="green">
+          <Hero asset={<Image src={HeroImage} alt="Demo Hero Image" />}>
+            <h1 className="h1">Hero with Asset</h1>
+          </Hero>
+        </Block>
+        <Block variant="blue">
+          <Hero>
+            <p>Hero</p>
+            <h1 className="h1">Blue without Asset</h1>
+          </Hero>
+        </Block>
+        <Block variant="green">
+          <Hero>
+            <p>Hero</p>
+            <h1 className="h1">Without Asset</h1>
+          </Hero>
+        </Block>
       </section>
     </div>
   );

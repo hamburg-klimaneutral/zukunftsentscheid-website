@@ -1,57 +1,19 @@
 @layer components {
-  .markdown h1 {
-    @apply h1;
-  }
+  .content-grid {
+    @apply grid grid-flow-dense grid-rows-1 sm:grid-rows-2 items-center gap-y-6 gap-x-20 justify-between;
+    /* Swap column for odd items */
+    @apply [&>*:nth-child(4n+4)]:col-1 [&>*:nth-child(4n+3)]:col-2;
 
-  .markdown h2 {
-    @apply h2;
-  }
-
-  .markdown h3 {
-    @apply h3;
-  }
-
-  .markdown strong, .markdown b {
-    @apply font-bold;
-  }
-
-  .markdown small {
-    @apply text-tiny;
-  }
-
-  .underline-1 {
-    @apply has-underline pb-4 lg:pb-6;
-
-    &::after {
-      @apply w-[350px] bg-size-[350px] lg:w-[607px] lg:bg-size-[607px] bg-[url(/shapes/underline-karl.png)];
+    figure {
+      @apply max-w-[532px];
     }
   }
 
-  .underline-2 {
-    @apply has-underline pb-12;
+  .teaser {
+    @apply flex flex-col gap-6 sm:basis-[400px] sm:max-w-[400px] items-start;
 
-    &::after {
-      @apply w-[205px] bg-size-[205px] bg-[url(/shapes/underline-frieda.png)];
-    }
-  }
-
-  .icon-claim {
-    @apply flex flex-col items-center max-w-[330px] text-center basis-full mx-auto;
-
-    img {
-      @apply mb-6;
-    }
-
-    h3 {
-      @apply h3 mb-2.5;
-    }
-
-    p {
-      @apply mb-10;
-    }
-
-    a {
-      @apply hidden sm:button;
+    &.wide {
+      @apply sm:basis-[530px] sm:max-w-[530px];
     }
   }
 }
