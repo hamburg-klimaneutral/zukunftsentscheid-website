@@ -16,7 +16,7 @@ function generateRandomTwingleId() {
     return '_' + Math.random().toString(36).substring(2, 11)
 }
 
-export function TwingleWidget(
+export default function TwingleWidget(
     {
         projectId,
         projectName,

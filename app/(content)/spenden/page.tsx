@@ -1,4 +1,4 @@
-import {TwingleWidget} from "@/app/_components/TwingleWidget";
+import TwingleWidget from "../twingle-widget";
 
 export default function DonationPage() {
     return (

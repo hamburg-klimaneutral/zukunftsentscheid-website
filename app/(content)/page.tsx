@@ -7,14 +7,14 @@ import CollectImage from "@/app/pictures/sammeln.png";
 import SignatureImage from "@/app/pictures/unterschriften.png";
 import LogoBlock from "./logo-block";
 import TimelineItem from "./timeline-item";
-import {TwingleWidget} from "@/app/_components/TwingleWidget";
+import TwingleWidget from "./twingle-widget";
 
 export default function HomePage() {
   return (
     <main>
-      <section className="bg-green-dark py-12">
-        <div className="container m-auto flex flex-col-reverse text-white md:flex-row-reverse">
-          <figure className="-mb-20 -mt-6 -ml-12 relative grow md:-my-24 md:mt-0 md:ml-0">
+      <section className="bg-green-dark text-white">
+        <div className="container flex flex-col-reverse py-24 md:flex-row-reverse justify-between">
+          <figure className="-mb-32 -mt-6 -ml-12 relative sm:-ml-0">
             <Image
               sizes="100vw"
               className="h-auto w-full"
@@ -22,7 +22,7 @@ export default function HomePage() {
               alt="Das Team von Zukunftsentscheid Hamburg präsentiert den Termin der Volksabstimmung am 12.10.2025 vor der Kulisse des Hamburger Rathauses."
               priority
             />
-            <div className="right-10 sm:-right-2 -rotate-12 absolute top-4 sm:top-1/4 bg-white h3 px-2.5 py-1 text-green-dark transform">
+            <div className="right-10 sm:-right-2 -rotate-12 absolute top-4 sm:top-1/4 bg-white h3 px-2.5 py-1 transform text-green-dark">
               Sag ja
               <Image
                 src={Icon}
@@ -36,15 +36,17 @@ export default function HomePage() {
             </div>
           </figure>
           <div className="relative flex flex-col items-start justify-center gap-8">
-            <h1 className="block h1 max-w-[230px] sm:max-w-[420px] lg:hidden">
-              Mit dem <mark>Volksentscheid</mark> am 12.10. geben wir Hamburg
-              ein <mark className="short">besseres</mark>{" "}
+            <h1 className="block h1 lg:hidden whitespace-pre-line">
+              Mit dem{'\n'}
+              <mark>Volksentscheid</mark> am{'\n'}
+              12.10. geben wir{'\n'}
+              Hamburg ein <mark className="short">besseres</mark>{'\n'}
               <mark className="long">Klimaschutzgesetz!</mark>
             </h1>
-            <h1 className="hidden h1 max-w-[530px] lg:block">
-              Mit dem <mark>Volksentscheid</mark> am 12.10. geben wir Hamburg
-              ein <br />
-              <mark className="long">besseres Klimaschutzgesetz!</mark>
+            <h1 className="hidden h1 lg:block whitespace-pre-line">
+              Mit dem <mark>Volksentscheid</mark> am{'\n'}
+              12.10. geben wir Hamburg ein
+              {'\n'}<mark className="long text-nowrap">besseres Klimaschutzgesetz!</mark>
             </h1>
             <p>Hamburg entscheidet fürs Klima - sei dabei!</p>
             <Link className="button primary" href="/">
@@ -55,7 +57,7 @@ export default function HomePage() {
       </section>
 
       <section className="bg-blue-light">
-        <div className="container flex flex-col items-center py-12 text-center gap-10">
+        <div className="container flex flex-col items-center py-24 text-center gap-10">
           <h2 className="h2 max-w-xl underline-1">
             Gemeinsam machen wir Hamburgs Klimapolitik sozial, planbar und
             verantwortungsbewusst.
@@ -117,7 +119,7 @@ export default function HomePage() {
       </section>
 
       <section>
-        <div className="container py-12">
+        <div className="container py-24">
           <h2 className="h2 underline-2 text-center">
             Über 139.000 Hamburger*innen unterstützen uns bereits.
             <br />
@@ -134,7 +136,7 @@ export default function HomePage() {
               </figure>
               <div className="flex flex-col gap-6 items-start">
                 <h3 className="h3">Was ist noch zu tun?</h3>
-                <p>
+                <p className="max-w-[520px]">
                   Nur mit deiner Unterstützung können wir den Entscheid zum
                   Erfolg führen. Ob beim Haustürwahlkampf, auf Veranstaltungen,
                   Plakate kleben, Flyer verteilen und in der
@@ -151,7 +153,7 @@ export default function HomePage() {
               </figure>
               <div className="flex flex-col gap-6 items-start">
                 <h3 className="h3">Wie kannst du helfen?</h3>
-                <p>
+                <p className="max-w-[520px]">
                   Komm zu einem unserer Infotreffen - jeden Mittwoch um 18:30
                   Uhr in der Kampstraße 15. Oder unterstütze uns bei Aktionen!
                 </p>
@@ -165,7 +167,7 @@ export default function HomePage() {
       </section>
 
       <section className="bg-green-dark text-white">
-        <div className="container py-12">
+        <div className="container py-24">
           <h2 className="h2 text-center mb-20">6 gute Gründe für dein Ja!</h2>
 
           <ul className="sm:grid sm:grid-cols-3 items-top gap-10 justify-between w-full">
@@ -259,12 +261,12 @@ export default function HomePage() {
       </section>
 
       <section className="bg-blue-light">
-        <LogoBlock className="container py-12" />
+        <LogoBlock className="container py-24" />
       </section>
 
       <section>
-        <div className="container py-12 flex flex-col sm:flex-row gap-12 justify-around">
-          <div className="flex flex-col max-w-[400px] gap-6 items-start">
+        <div className="container py-24 flex flex-col sm:flex-row gap-12 justify-around">
+          <div className="flex flex-col gap-6 items-start sm:basis-[400px]">
             <h2 className="h2">
               Kurz vor Klimaschutzgesetz: Lasst uns den letzten Schritt zusammen
               gehen
@@ -306,8 +308,8 @@ export default function HomePage() {
       </section>
 
       <section className="bg-green-dark text-white">
-        <div className="container py-12 flex flex-col sm:flex-row gap-12 justify-around items-center">
-          <div className="flex flex-col gap-6 max-w-[400px] items-start">
+        <div className="container py-24 flex flex-col sm:flex-row gap-12 justify-around items-center">
+          <div className="flex flex-col gap-6 sm:basis-[400px] items-start">
             <h2 className="h2">Spenden</h2>
             <p>
               Der Hamburger Zukunftsentscheid wird ausschließlich durch Spenden
@@ -320,7 +322,7 @@ export default function HomePage() {
           </div>
 
           {/* @TODO: use old project name to keep history */}
-          <TwingleWidget projectName="next-test-startseite" projectId="tw683f2b611d1ed" className="max-w-[450px]" />
+          <TwingleWidget projectName="next-test-startseite" projectId="tw683f2b611d1ed" className="sm:max-w-[450px]" />
         </div>
       </section>
     </main>

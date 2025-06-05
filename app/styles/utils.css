@@ -1,5 +1,5 @@
 @utility container {
-  @apply max-w-7xl mx-auto px-3 lg:px-12;
+  @apply max-w-7xl mx-auto px-5 lg:px-12;
 }
 
 /* Utility class that provides the base styling for decorative image underlines beneath text elements */
@@ -12,7 +12,11 @@
 }
 
 @utility button {
-  @apply inline-flex text-menu font-semibold px-3 cursor-pointer items-center;
+  @apply inline-flex text-menu font-semibold px-3 cursor-pointer items-center justify-center;
+
+  &:focus {
+    @apply outline-2 outline-offset-2 outline-focus;
+  }
 
   &:not(.primary):not(.secondary) {
     @apply text-green-dark relative py-1;
@@ -68,5 +72,13 @@
       @apply bg-[url(/shapes/underline-long.png)];
       @apply w-[300px] bg-size-[300px_8px] sm:w-[523px] sm:bg-size-[523px];
     }
+  }
+}
+
+@utility form-input {
+  @apply bg-white border-none ring-1 ring-green-dark rounded-none p-3 placeholder-grey;
+
+  &:focus {
+    @apply outline-none ring-2 ring-green-dark;
   }
 }
