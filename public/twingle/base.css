@@ -172,6 +172,7 @@ a:hover, a:focus, .footer-gls .impress-wrapper a:hover {
 
 .payment-component-wrapper .method-wrapper.method-selected .has-recommendation input[type=radio]:checked+label {
     border-color: var(--ze-input-border-color);
+    outline: none;
 }
 
 
