@@ -61,6 +61,8 @@ export default function HomePage() {
           <figure>
             <Image
               src={CollectImage}
+              sizes="(min-width: 640px) 530px, 100vw"
+              placeholder="blur"
               alt="Das Team von Zukunftsentscheid Hamburg bei der Unterschriftensammlung"
             />
           </figure>
@@ -74,6 +76,8 @@ export default function HomePage() {
           <figure className="hidden sm:block">
             <Image
               src={SignatureImage}
+              sizes="(min-width: 640px) 530px, 100vw"
+              placeholder="blur"
               alt="Zwei Mitglieder vom Zukunftsentscheid Hamburg präsentieren gesammelte Unterschriften"
             />
           </figure>
