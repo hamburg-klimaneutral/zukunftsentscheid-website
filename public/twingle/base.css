@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap');
+
+.widget-header.widget {
+    background-color: transparent;
+}
+
+body, h1, h2, h3, h4, h5, h6, a, p, label {
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+}
+
+h1 {
+    display: none;
+}
+
+body {
+    background: transparent !important;
+}
+
+label[for="transaction-amount"] {
+    color: var(--twingle-text-color);
+    margin-bottom: 16px;
+}

@@ -3,7 +3,11 @@
  * To test changes to this file, replace the contents of the CSS file using the Sources panel in Chrome DevTools.
  */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap');
+@import url("base.css");
+
+:root {
+  --twingle-text-color: #235753;
+}
 
 .widget-header.widget {
     background-color: transparent;
