@@ -1,6 +1,8 @@
 import Block from "@/app/components/block";
+import ContactForm from "@/app/(content)/kontakt/form";
 
-export default function DonationPage() {
+export default function ContactPage() {
+
     return (
         <main>
             <Block variant="green">
@@ -9,7 +11,7 @@ export default function DonationPage() {
             </Block>
 
             <Block>
-                HI
+                <ContactForm />
             </Block>
         </main>
     )
