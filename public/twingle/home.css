@@ -73,25 +73,3 @@ button.button.arrow[type="submit"]:hover {
 .footer-gls img {
     filter: brightness(0) invert(1);
 }
-
-/* payment-step */
-
-.step-navigation {
-    color: #235753;
-}
-
-.widget.payment-select span, .step-navigation span {
-    font-size: 12px;
-    background-color: #A9D8D8;
-    border-radius: 2px;
-}
-
-.widget.payment-select span:hover, .step-navigation span:hover {
-    background-color: #C8F7F7;
-}
-
-.payment-component-wrapper h2 {
-    color: white;
-    font-size: 16px;
-    font-weight: 600;
-}

@@ -107,7 +107,40 @@ a:hover, a:focus, .footer-gls .impress-wrapper a:hover {
 }
 
 
+/* step navigation (go back) */
+
+.step-navigation {
+    color: #235753 !important;
+}
+
+.widget.payment-select span, .step-navigation span {
+    font-size: 12px;
+    background-color: #A9D8D8;
+    border-radius: 2px;
+}
+
+.widget.payment-select span:hover, .step-navigation span:hover {
+    background-color: #C8F7F7 !important;
+}
+
+
 /* payment method selection  */
+
+.payment-component-wrapper h2 { /* "Bitte Zahlungsart wählen" */
+    color: var(--ze-text-color);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.payment-component-wrapper .method-wrapper {
+    background: transparent;
+    padding: 0;
+    gap: 12px;
+}
+
+.payment-component-wrapper .method-wrapper > div {
+    margin: 0;
+}
 
 .payment-component-wrapper .method-wrapper input[type=radio] + label:hover, .payment-component-wrapper .method-wrapper input[type=radio] + label:active, .payment-component-wrapper .method-wrapper input[type=radio] + label:focus {
     border-color: var(--ze-input-appended-button-hover-color)
