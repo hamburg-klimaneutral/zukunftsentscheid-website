@@ -47,13 +47,9 @@ label {
     color: var(--ze-text-color);
 }
 
-.infotext {
-    background-color: var(--ze-text-color);
-    color: var(--ze-text-color-inverted);
-}
 
-.infotext:before {
-    border-color: rgba(0,0,0,0) rgba(0,0,0,0) var(--ze-text-color) rgba(0,0,0,0);
+a:hover, a:focus, .footer-gls .impress-wrapper a:hover {
+    color: var(--ze-text-color-focus);
 }
 
 
@@ -187,8 +183,20 @@ input[type=text], input[type=tel], input[type=email], input[type=number], input[
     background-color: var(--ze-input-appended-button-hover-color);
 }
 
-/* cta */
 
+/* infotext (help-button on email field) */
+
+.infotext {
+    background-color: var(--ze-text-color);
+    color: var(--ze-text-color-inverted);
+}
+
+.infotext:before {
+    border-color: rgba(0,0,0,0) rgba(0,0,0,0) var(--ze-text-color) rgba(0,0,0,0);
+}
+
+
+/* cta */
 
 button.button.grey, a.button.grey {
     background-color: #B8B8B8;
@@ -216,3 +224,36 @@ button.button.grey + .hint, a.button.grey + .hint, button.button + .hint, a.butt
     border-radius: 0;
     color: var(--ze-text-color);
 }
+
+/* footer */
+
+
+
+
+.footer-gls {
+    background: transparent !important;
+    padding-top: 0 !important;
+    padding-bottom: 0;
+}
+
+.footer-gls > span {
+    color: var(--ze-text-color);
+}
+
+.footer-gls .impress-wrapper a {
+    color: var(--ze-text-color);
+    text-decoration: underline;
+}
+
+footer .payment-preview-wrapper {
+    background-color: white;
+    border: 1px solid #235753;
+    border-radius: 32px;
+    display: flex;
+    padding: 8px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+

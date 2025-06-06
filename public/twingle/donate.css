@@ -7,9 +7,12 @@
 
 :root {
     --ze-text-color: #235753;
+    --ze-text-color-focus: #40827D;
+    --ze-text-color-inverted: white;
+
     --ze-input-border-color: #235753;
     --ze-input-appended-button-hover-color: #40827D;
-    --ze-text-color-inverted: white;
+
     --ze-amount-slider-thumb-color: #A9D8D8;
     --ze-amount-slider-thumb-hover-color: #C8F7F7;
 }
@@ -68,39 +71,11 @@ button.button.arrow[type="submit"]:hover {
 
 /* footer */
 
-.footer-gls {
-    background: transparent !important;
-    padding-top: 0 !important;
-    padding-bottom: 0;
-}
-
-.footer-gls > span {
-    color: white;
-}
-
-.footer-gls .impress-wrapper a {
-    color: white;
-    text-decoration: underline;
-}
-
-a:hover, a:focus, .footer-gls .impress-wrapper a:hover {
-    color: #A9D8D8;
-}
-
 .footer-gls img {
-    filter: brightness(0) invert(1);
+    /* https://codepen.io/sosuke/pen/Pjoqqp */
+    filter: brightness(0) invert(26%) sepia(10%) saturate(2527%) hue-rotate(126deg) brightness(98%) contrast(84%);
 }
 
-footer .payment-preview-wrapper {
-    background-color: white;
-    border-radius: 32px;
-    display: flex;
-    padding: 8px 20px;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 24px;
-}
 
 /* payment-step */
 

@@ -7,9 +7,12 @@
 
 :root {
     --ze-text-color: white;
+    --ze-text-color-focus: #A9D8D8;
     --ze-text-color-inverted: #235753;
+
     --ze-input-border-color: #A9D8D8;
     --ze-input-appended-button-hover-color: #C8F7F7;
+
     --ze-amount-slider-thumb-color: #235753;
     --ze-amount-slider-thumb-hover-color: #40827D;
 }
@@ -67,38 +70,8 @@ button.button.arrow[type="submit"]:hover {
 
 /* footer */
 
-.footer-gls {
-    background: transparent !important;
-    padding-top: 0 !important;
-    padding-bottom: 0;
-}
-
-.footer-gls > span {
-    color: white;
-}
-
-.footer-gls .impress-wrapper a {
-    color: white;
-    text-decoration: underline;
-}
-
-a:hover, a:focus, .footer-gls .impress-wrapper a:hover {
-    color: #A9D8D8;
-}
-
 .footer-gls img {
     filter: brightness(0) invert(1);
-}
-
-footer .payment-preview-wrapper {
-    background-color: white;
-    border-radius: 32px;
-    display: flex;
-    padding: 8px 20px;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 24px;
 }
 
 /* payment-step */
