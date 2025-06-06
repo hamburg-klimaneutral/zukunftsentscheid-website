@@ -91,6 +91,7 @@ export default function ContactForm() {
 
 
             <button className="button primary self-center mt-7" type="submit">
+                {/*TODO: redirect to success page or display error*/}
                 Abschicken
             </button>
         </form>

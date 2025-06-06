@@ -2,12 +2,13 @@ import {cache} from 'react'
 import assert from 'node:assert'
 import type {SendEmailV3_1} from 'node-mailjet'
 import MailJet from 'node-mailjet'
+import {CONTACT_MAIL_ADDRESS, CONTACT_MAIL_NAME} from "@/app/config";
 
 const {DIVERT_MAILS_TO_LOG = 'false', MAILJET_API_KEY, MAILJET_SECRET_KEY} = process.env
 
 const MAIL_FROM: SendEmailV3_1.Message['From'] = {
-    Email: 'kontakt@zukunftsentscheid-hamburg.de',
-    Name: 'Hamburger Zukunftsentscheid',
+    Email: CONTACT_MAIL_ADDRESS,
+    Name: CONTACT_MAIL_NAME,
 }
 
 const getClient = cache(() => {
