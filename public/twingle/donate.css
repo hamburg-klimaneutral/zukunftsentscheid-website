@@ -144,20 +144,3 @@ footer .payment-preview-wrapper {
 .payment-component-wrapper .method-wrapper input[type=radio] + label:hover, .payment-component-wrapper .method-wrapper input[type=radio] + label:active, .payment-component-wrapper .method-wrapper input[type=radio] + label:focus {
     border-color: #E43997
 }
-
-/* sepa */
-
-
-button.button.grey, a.button.grey {
-    background-color: #B8B8B8;
-    font-weight: 600;
-}
-
-.non-touch button.button:hover, .non-touch a.button:hover {
-    background-color: #E43997;
-}
-
-button.button.grey + .hint, a.button.grey + .hint, button.button + .hint, a.button + .hint {
-    background-color: white;
-    color: #235753;
-}

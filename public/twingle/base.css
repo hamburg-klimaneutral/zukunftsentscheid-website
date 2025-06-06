@@ -186,3 +186,33 @@ input[type=text], input[type=tel], input[type=email], input[type=number], input[
 .non-touch .input-wrapper.info > i:hover {
     background-color: var(--ze-input-appended-button-hover-color);
 }
+
+/* cta */
+
+
+button.button.grey, a.button.grey {
+    background-color: #B8B8B8;
+    font-weight: 600;
+}
+
+button.button.has-hint, a.button.has-hint {
+    border-radius: 2px;
+}
+
+button.button, a.button {
+    background-color: #CC0070;
+}
+
+button.button:hover, a.button:hover {
+    background-color: #E43997;
+}
+
+/* cta hint */
+
+button.button.grey + .hint, a.button.grey + .hint, button.button + .hint, a.button + .hint {
+    margin-top: 16px;
+    background-color: white;
+    border: 1px solid var(--ze-text-color);
+    border-radius: 0;
+    color: var(--ze-text-color);
+}
