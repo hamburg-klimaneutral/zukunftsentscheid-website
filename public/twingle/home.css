@@ -6,7 +6,11 @@
 @import url("./base.css");
 
 :root {
-    --twingle-text-color: white;
+    --ze-text-color: white;
+    --ze-text-color-inverted: #235753;
+    --ze-input-border-color: #A9D8D8;
+    --ze-amount-slider-thumb-color: #235753;
+    --ze-amount-slider-thumb-hover-color: #40827D;
 }
 
 /* amount buttons */
@@ -152,39 +156,6 @@ footer .payment-preview-wrapper {
     border-color: #E43997
 }
 
-/* anderer betrag */
-
-.amount-wrapper .input-wrapper .currency-symbol {
-    background-color: #A9D8D8;
-    color: #235753;
-}
-
-.amount-wrapper input[type=number], .amount-wrapper input[type=text], .amount-wrapper input[type=tel] {
-    border-color: #A9D8D8;
-    color: #235753;
-    border-width: 2px;
-    border-top-left-radius: 2px;
-    border-bottom-left-radius: 2px;
-}
-
-.amount-wrapper .slider-wrapper {
-    background-color: #A9D8D8;
-}
-
-.amount-wrapper .slider-wrapper {
-    border-radius: 0 2px 2px 0;
-}
-
-.amount-wrapper .input-wrapper {
-    margin-bottom: 0;
-}
-
-/* errors */
-
-.payment-component-wrapper h2.error {
-    color: #DE252E
-}
-
 /* forms */
 
 [type=text], [type=password], [type=date], [type=datetime], [type=datetime-local], [type=month], [type=week], [type=email], [type=number], [type=search], [type=tel], [type=time], [type=url], [type=color], textarea {
@@ -256,10 +227,6 @@ label a {
     border-width: 2px;
     background-color: white;
     box-shadow: none;
-}
-
-input[type=text].ng-touched.ng-invalid, input[type=tel].ng-touched.ng-invalid, input[type=email].ng-touched.ng-invalid, input[type=number].ng-touched.ng-invalid, input[type=date].ng-touched.ng-invalid, select.ng-touched.ng-invalid, textarea.ng-touched.ng-invalid, textarea[rows].ng-touched.ng-invalid {
-    border-color: #DE252E;
 }
 
 /* paypal */

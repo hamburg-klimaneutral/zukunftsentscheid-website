@@ -3,32 +3,14 @@
  * To test changes to this file, replace the contents of the CSS file using the Sources panel in Chrome DevTools.
  */
 
-@import url("base.css");
+@import url("./base.css");
 
 :root {
-  --twingle-text-color: #235753;
-}
-
-.widget-header.widget {
-    background-color: transparent;
-}
-
-body, h1, h2, h3, h4, h5, h6, a, p, label {
-    font-family: "Inter", sans-serif;
-    font-style: normal;
-}
-
-h1 {
-    display: none;
-}
-
-body {
-    background: transparent !important;
-}
-
-label[for="transaction-amount"] {
-    color: white;
-    margin-bottom: 16px;
+    --ze-text-color: #235753;
+    --ze-input-border-color: #235753;
+    --ze-text-color-inverted: white;
+    --ze-amount-slider-thumb-color: #A9D8D8;
+    --ze-amount-slider-thumb-hover-color: #C8F7F7;
 }
 
 /* amount buttons */
@@ -52,13 +34,13 @@ form {
     gap: 16px;
 }
 
-.amount-wrapper input[type=radio]:checked + label:hover, .amount-wrapper input[type="radio"] + label:hover, .button-wrapper button.button:hover {
-    background: #40827D;
+.amount-wrapper input[type=radio]:checked + label:hover, .amount-wrapper input[type="radio"] + label:hover, .amount-wrapper .button-wrapper button.button:hover {
+    background-color: #40827D;
     color: #fff;
 }
 
 .amount-wrapper input[type=radio] + label, .button-wrapper button.button {
-    background: #A9D8D8;
+    background-color: #A9D8D8;
     color: #235753;
     border-radius: 2px;
 }
@@ -112,7 +94,7 @@ button.button.arrow[type="submit"]:hover {
     text-decoration: underline;
 }
 
-.footer-gls .impress-wrapper a:hover {
+a:hover, a:focus, .footer-gls .impress-wrapper a:hover {
     color: #A9D8D8;
 }
 
@@ -133,8 +115,18 @@ footer .payment-preview-wrapper {
 
 /* payment-step */
 
+.step-navigation {
+    color: #235753;
+}
+
 .widget.payment-select span, .step-navigation span {
     font-size: 12px;
+    background-color: #A9D8D8;
+    border-radius: 2px;
+}
+
+.widget.payment-select span:hover, .step-navigation span:hover {
+    background-color: #C8F7F7;
 }
 
 .payment-component-wrapper h2 {
@@ -164,43 +156,10 @@ footer .payment-preview-wrapper {
     border-color: #E43997
 }
 
-/* anderer betrag */
-
-.amount-wrapper .input-wrapper .currency-symbol {
-    background-color: #A9D8D8;
-    color: #235753;
-}
-
-.amount-wrapper input[type=number], .amount-wrapper input[type=text], .amount-wrapper input[type=tel] {
-    border-color: #A9D8D8;
-    color: #235753;
-    border-width: 2px;
-    border-top-left-radius: 2px;
-    border-bottom-left-radius: 2px;
-}
-
-.amount-wrapper .slider-wrapper {
-    background-color: #A9D8D8;
-}
-
-.amount-wrapper .slider-wrapper {
-    border-radius: 0 2px 2px 0;
-}
-
-.amount-wrapper .input-wrapper {
-    margin-bottom: 0;
-}
-
-/* errors */
-
-.payment-component-wrapper h2.error {
-    color: #DE252E
-}
-
 /* forms */
 
 [type=text], [type=password], [type=date], [type=datetime], [type=datetime-local], [type=month], [type=week], [type=email], [type=number], [type=search], [type=tel], [type=time], [type=url], [type=color], textarea {
-    border: 2px solid #A9D8D8;
+    border: 1px solid #A9D8D8;
     padding: 12px;
 }
 
@@ -210,6 +169,18 @@ input[type=text], input[type=tel], input[type=email], input[type=number], input[
 }
 
 /* sepa */
+
+.checkbox-wrapper label[for="terms"] {
+    font-size: 12px;
+}
+
+.checkbox-wrapper label[for="terms"]::before {
+    color: #235753;
+}
+
+.checkbox-wrapper label.error {
+    font-size: 12px;
+}
 
 .input-wrapper.info > i {
     background-color: #A9D8D8;
@@ -249,6 +220,13 @@ label a {
 .checkbox-wrapper .background label:before {
     border-color: #A9D8D8;
     border-radius: 2px;
+}
+
+[type=text]:focus, [type=password]:focus, [type=date]:focus, [type=datetime]:focus, [type=datetime-local]:focus, [type=month]:focus, [type=week]:focus, [type=email]:focus, [type=number]:focus, [type=search]:focus, [type=tel]:focus, [type=time]:focus, [type=url]:focus, [type=color]:focus, textarea:focus {
+    border-color: #A9D8D8;
+    border-width: 2px;
+    background-color: white;
+    box-shadow: none;
 }
 
 /* paypal */

@@ -8,11 +8,6 @@ export default function DonationPage() {
                     Hello!
                 </div>
             </section>
-            <section className="py-12">
-                <div className="container py-24">
-                    Wieso spenden?
-                </div>
-            </section>
             <section>
                 <div className="container py-24">
                 {/* @TODO: use old project name to keep history */}
