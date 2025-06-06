@@ -71,6 +71,7 @@ a:hover, a:focus, .footer-gls .impress-wrapper a:hover {
 .amount-wrapper .slider-wrapper .slider input[type=range]::-webkit-slider-thumb {
     background-color: var(--ze-amount-slider-thumb-color);
 }
+
 .amount-wrapper .slider-wrapper .slider input[type=range]::-moz-range-thumb {
     background-color: var(--ze-amount-slider-thumb-color);
 }
@@ -79,6 +80,7 @@ a:hover, a:focus, .footer-gls .impress-wrapper a:hover {
     background-color: var(--ze-amount-slider-thumb-hover-color);
     cursor: pointer;
 }
+
 .amount-wrapper .slider-wrapper .slider input[type=range]::-moz-range-thumb:hover {
     background-color: var(--ze-amount-slider-thumb-hover-color);
     cursor: pointer;
@@ -87,9 +89,11 @@ a:hover, a:focus, .footer-gls .impress-wrapper a:hover {
 .amount-wrapper .slider-wrapper .slider input[type=range]::-webkit-slider-runnable-track {
     background-color: white;
 }
+
 .amount-wrapper .slider-wrapper .slider input[type=range]:focus::-webkit-slider-runnable-track {
     background-color: white;
 }
+
 .amount-wrapper .slider-wrapper .slider input[type=range]::-moz-range-track {
     background-color: white;
 }
@@ -166,11 +170,11 @@ a:hover, a:focus, .footer-gls .impress-wrapper a:hover {
     outline-offset: 2px;
 }
 
-.payment-component-wrapper .method-wrapper .has-recommendation input[type=radio] + label:hover  {
+.payment-component-wrapper .method-wrapper .has-recommendation input[type=radio] + label:hover {
     border-color: var(--ze-input-appended-button-hover-color);
 }
 
-.payment-component-wrapper .method-wrapper.method-selected .has-recommendation input[type=radio]:checked+label {
+.payment-component-wrapper .method-wrapper.method-selected .has-recommendation input[type=radio]:checked + label {
     border-color: var(--ze-input-border-color);
     outline: none;
 }
@@ -287,7 +291,7 @@ input[type=radio]:checked + label {
 }
 
 .infotext:before {
-    border-color: rgba(0,0,0,0) rgba(0,0,0,0) var(--ze-text-color) rgba(0,0,0,0);
+    border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) var(--ze-text-color) rgba(0, 0, 0, 0);
 }
 
 

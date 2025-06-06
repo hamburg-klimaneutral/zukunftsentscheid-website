@@ -1,4 +1,4 @@
-import TwingleWidget from "../twingle-widget";
+import TwingleWidget from "@/app/components/twingle-widget";
 
 export default function DonationPage() {
     return (
@@ -21,7 +21,8 @@ export default function DonationPage() {
                     </div>
 
                     {/* @TODO: use old project name to keep history */}
-                    <TwingleWidget projectName="next-test-spenden" projectId="tw683f2bafdc6cb" className="sm:max-w-[450px]" />
+                    <TwingleWidget projectName="next-test-spenden" projectId="tw683f2bafdc6cb"
+                                   className="sm:max-w-[450px]"/>
                 </div>
             </section>
         </main>
