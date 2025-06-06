@@ -60,7 +60,7 @@ export default function ContactForm() {
 
             <div className={twMerge(clsx('flex flex-col gap-3', {'error': errors.message}))}>
                 <label className={clsx('text-tiny', {'text-error': errors.message})}
-                            htmlFor="contact-input-message">
+                       htmlFor="contact-input-message">
                     Deine Nachricht
                 </label>
                 <textarea
@@ -72,22 +72,23 @@ export default function ContactForm() {
                 {errors.message && <span className="text-tiny text-error">{errors.message?.message}</span>}
             </div>
 
-            <div className="flex flex-row gap-3 items-center justify-center">
-                <input
-                    {...register('privacyAccepted')}
-                    type="checkbox"
-                    id="contact-input-privacy"
-                    placeholder="Du hast Fragen oder möchtest uns etwas sagen?"
-                />
-                <div className="flex flex-col gap-1 relative">
+            <div className="flex flex-col gap-3 items-center">
+                <div className="flex flex-row gap-3 items-center justify-center">
+                    <input
+                        {...register('privacyAccepted')}
+                        type="checkbox"
+                        id="contact-input-privacy"
+                        placeholder="Du hast Fragen oder möchtest uns etwas sagen?"
+                    />
                     <label htmlFor="contact-input-privacy">
                         Ich akzeptiere die Bestimmungen zum <Link href="/datenschutz"
                                                                   className="underline">Datenschutz</Link>
                     </label>
-                    {errors.privacyAccepted && <span
-                        className="text-tiny text-error absolute -bottom-4">{errors.privacyAccepted?.message}</span>}
                 </div>
+                {errors.privacyAccepted && <span
+                    className="text-tiny text-error">{errors.privacyAccepted?.message}</span>}
             </div>
+
 
             <button className="button primary self-center mt-7" type="submit">
                 Abschicken
