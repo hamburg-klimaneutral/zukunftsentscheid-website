@@ -88,7 +88,7 @@ export default function MainLayout({
           <ul className="text-menu flex flex-wrap gap-4 justify-center">
             <li>FAQ</li>
             <li>Presse</li>
-            <li>Kontakt</li>
+            <li><Link href="/kontakt">Kontakt</Link></li>
             <li>Impressum</li>
             <li>Datenschutz</li>
           </ul>
