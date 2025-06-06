@@ -2,8 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 import Icon from "@/app/icon.png";
-import HeroImage from "@/app/pictures/12.10.png";
-import Hero from "@/app/components/hero";
+import HeroImage from "@/app/_pictures/12.10.png";
+import Hero from "@/app/_components/hero";
 
 export default function HomeHero() {
   return (
