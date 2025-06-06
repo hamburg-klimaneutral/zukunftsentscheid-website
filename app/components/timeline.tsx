@@ -1,7 +1,30 @@
 import Image from "next/image";
 import { twMerge } from "tailwind-merge";
 
-export default function TimelineItem({
+export default function Timeline() {
+  return (
+    <ul className="flex flex-col gap-20">
+      <TimelineItem completed title="Volksinitiative">
+        <strong>Vorgabe:</strong> 10.000 Unterschriften in 6 Monaten
+        <br />
+        <strong>Ergebnis:</strong> 23.316 Unterschriften in 4 Wochen
+      </TimelineItem>
+      <TimelineItem completed title="Volksbegehren">
+        <strong>Vorgabe:</strong> 65.835 Unterschriften
+        <br />
+        <strong>Ergebnis:</strong> 106.374 Unterschriften nach 3 Wochen
+      </TimelineItem>
+      <TimelineItem title="Volksentscheid">
+        <strong>Vorgabe:</strong> Die Mehrheit der Hamburgerinnen und
+        Hamburger, die zur Bürgerschaft wahlberechtigt sind, stimmt dafür.
+        Stimmt die Mehrheit für den Gesetzestext, tritt er innerhalb eines
+        Monats in Kraft.
+      </TimelineItem>
+    </ul>
+  )
+}
+
+function TimelineItem({
   title,
   completed,
   children,

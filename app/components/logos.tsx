@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+
 import MietvereinLogo from "@/app/logos/mietverein.png";
 import StPauliLogo from "@/app/logos/st-pauli.png";
 import SchauspielhausLogo from "@/app/logos/schauspielhaus.png";
@@ -16,7 +17,6 @@ import CampactLogo from "@/app/logos/campact.png";
 import GreenpeaceLogo from "@/app/logos/greenpeace.png";
 import NabuLogo from "@/app/logos/nabu.png";
 import GoldeimerLogo from "@/app/logos/goldeimer.png";
-import { twMerge } from "tailwind-merge";
 
 const LOGOS = [
   {
@@ -101,14 +101,9 @@ const LOGOS = [
   },
 ] as const;
 
-export default function LogoBlock({ className }: { className?: string }) {
+export default function Logos() {
   return (
-    <ul
-      className={twMerge(
-        className,
-        "flex flex-wrap justify-between w-full gap-4 items-center",
-      )}
-    >
+    <ul className="flex flex-wrap justify-between w-full gap-4 items-center">
       <li>
         <p className="w-[150px]">Wir werden u.a. unterstützt von</p>
       </li>

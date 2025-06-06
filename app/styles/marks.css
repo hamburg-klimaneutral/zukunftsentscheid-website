@@ -1,0 +1,17 @@
+@layer components {
+  .underline-1 {
+    @apply has-underline pb-4 lg:pb-6;
+
+    &::after {
+      @apply w-[350px] bg-size-[350px] lg:w-[607px] lg:bg-size-[607px] bg-[url(/shapes/underline-karl.png)];
+    }
+  }
+
+  .underline-2 {
+    @apply has-underline pb-12;
+
+    &::after {
+      @apply w-[205px] bg-size-[205px] bg-[url(/shapes/underline-frieda.png)];
+    }
+  }
+}
