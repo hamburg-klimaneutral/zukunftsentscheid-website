@@ -39,59 +39,52 @@ export default function DonationPage() {
                 </div>
             </section>
 
-            {/* TODO: convert to accordion */}
-
             <Block variant="green">
-                <div className="container space-y-12">
-
-                    <div className="space-y-2">
-                        <p className="font-bold">Kann ich auch per Überweisung spenden?</p>
-                        <p>
-                            Spenden können auch an folgendes Bankkonto überwiesen werden:
-                        </p>
-                        <p>
-                            IBAN: DE44 4306 0967 1311 9000 00
-                            <br/>
-                            BIC: GENODEM1GLS
-                        </p>
-                    </div>
-
-                    <div className="space-y-2">
-                        <p className="font-bold">Was machen wir mit den Spenden?</p>
-                        <p>
-                            Ein Großteil der Kosten entsteht durch Arbeitsmaterialien für das Sammeln der
-                            Unterschriften: Klemmbretter, Kugelschreiber, Druck von Unterschriftenlisten – aber auch
-                            Fahnen und Westen, um auf unsere Sammler*innen aufmerksam zu machen.
-                        </p>
-                        <p>
-                            Um Menschen von unseren Zielen zu überzeugen, müssen wir aber zum Beispiel auch in
-                            Mobilisierung investieren: Plakate, Flyer, diese Website oder andere Wege, um die Menschen
-                            in Hamburg zu erreichen.</p>
-                        <p>
-                            Wir alle arbeiten ehrenamtlich, sodass nur ein sehr geringer Teil der Spendengelder in
-                            Verwaltung fließt.
-                        </p>
-                    </div>
-
-                    <div className="space-y-2">
-                        <p className="font-bold">Woher kommt das Geld?</p>
-
-                        <p>
-                            Der Hamburger Zukunftsentscheid finanziert sich durch Spenden und Förderungen. Das Geld
-                            kommt von verschiedenen Spender*innen, die uns entweder regelmäßig oder zu bestimmten
-                            Anlässen spenden.
-                        </p>
-
-                        <p>
-                            Zu unseren Spender*innen gehören Einzelpersonen, aber auch Organisationen, Vereine,
-                            Stiftungen und Unternehmen.
-                        </p>
-                    </div>
+                <div className="space-y-6 max-w-xl self-start">
+                    <p className="font-bold pb-2">Kann ich auch per Überweisung spenden?</p>
+                    <p>
+                        Spenden können auch an folgendes Bankkonto überwiesen werden:
+                    </p>
+                    <p>
+                        IBAN: DE44 4306 0967 1311 9000 00
+                        <br/>
+                        BIC: GENODEM1GLS
+                    </p>
                 </div>
 
+                <div className="space-y-6 max-w-xl self-start">
+                    <p className="font-bold pb-2">Was machen wir mit den Spenden?</p>
+                    <p>
+                        Ein Großteil der Kosten entsteht durch Arbeitsmaterialien für das Sammeln der
+                        Unterschriften: Klemmbretter, Kugelschreiber, Druck von Unterschriftenlisten – aber auch
+                        Fahnen und Westen, um auf unsere Sammler*innen aufmerksam zu machen.
+                    </p>
+                    <p>
+                        Um Menschen von unseren Zielen zu überzeugen, müssen wir aber zum Beispiel auch in
+                        Mobilisierung investieren: Plakate, Flyer, diese Website oder andere Wege, um die Menschen
+                        in Hamburg zu erreichen.
+                    </p>
+                    <p>
+                        Wir alle arbeiten ehrenamtlich, sodass nur ein sehr geringer Teil der Spendengelder in
+                        Verwaltung fließt.
+                    </p>
+                </div>
+
+                <div className="space-y-6 max-w-xl self-start">
+                    <p className="font-bold pb-2">Woher kommt das Geld?</p>
+
+                    <p>
+                        Der Hamburger Zukunftsentscheid finanziert sich durch Spenden und Förderungen. Das Geld
+                        kommt von verschiedenen Spender*innen, die uns entweder regelmäßig oder zu bestimmten
+                        Anlässen spenden.
+                    </p>
+
+                    <p>
+                        Zu unseren Spender*innen gehören Einzelpersonen, aber auch Organisationen, Vereine,
+                        Stiftungen und Unternehmen.
+                    </p>
+                </div>
             </Block>
-
-
         </main>
     )
 }
