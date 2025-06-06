@@ -4,40 +4,36 @@ import Block from "@/app/components/block";
 export default function DonationPage() {
     return (
         <main>
-            <section className="bg-green-dark text-white">
-                <div className="container py-24">
-                    Spenden
-                    <h1 className="h1">Mache mit deiner Spende ein besseres Klimaschutzgesetz für Hamburg möglich!</h1>
-                </div>
-            </section>
+            <Block variant="green">
+                Spenden
+                <h1 className="h1">Mache mit deiner Spende ein besseres Klimaschutzgesetz für Hamburg möglich!</h1>
+            </Block>
 
-            <section>
-                <div className="container py-24 flex flex-col sm:flex-row gap-12 justify-around items-center">
-                    {/* @TODO: use old project name to keep history */}
-                    <TwingleWidget projectName="next-test-spenden" projectId="tw683f2bafdc6cb"
-                                   className="sm:max-w-[450px]"/>
+            <Block className="sm:flex-row justify-around">
+                {/* @TODO: use old project name to keep history */}
+                <TwingleWidget projectName="next-test-spenden" projectId="tw683f2bafdc6cb"
+                               className="sm:max-w-[450px]"/>
 
-                    <div className="flex flex-col gap-6 sm:basis-[400px] items-start">
-                        <p>
-                            Der Hamburger Zukunftsentscheid wird ausschließlich durch Spenden und Förderungen
-                            finanziert. Deine Spende zählt!
-                        </p>
-                        <p>
-                            Die Spenden verwaltet der Verein „Hamburg Klimaneutral e.V.“. Der Verein ist vom Finanzamt
-                            Hamburg Nord als gemeinnützig anerkannt und kann Spendenbescheinigungen ausstellen. Schreibe
-                            einfach deine Adresse mit in die Überweisung oder aktiviere die Spendenbescheinigung im
-                            Formular
-                            oben.
-                        </p>
-                        <p>
-                            Gerne gehen wir auch auf Wünsche ein oder beantworten Fragen: <a
-                            href="mailto:spenden@hamburg-klimaneutral.de" className="underline" target="_blank">
-                            spenden@hamburg-klimaneutral.de
-                        </a>
-                        </p>
-                    </div>
+                <div className="flex flex-col gap-6 sm:basis-[400px] items-start">
+                    <p>
+                        Der Hamburger Zukunftsentscheid wird ausschließlich durch Spenden und Förderungen
+                        finanziert. Deine Spende zählt!
+                    </p>
+                    <p>
+                        Die Spenden verwaltet der Verein „Hamburg Klimaneutral e.V.“. Der Verein ist vom Finanzamt
+                        Hamburg Nord als gemeinnützig anerkannt und kann Spendenbescheinigungen ausstellen. Schreibe
+                        einfach deine Adresse mit in die Überweisung oder aktiviere die Spendenbescheinigung im
+                        Formular
+                        oben.
+                    </p>
+                    <p>
+                        Gerne gehen wir auch auf Wünsche ein oder beantworten Fragen: <a
+                        href="mailto:spenden@hamburg-klimaneutral.de" className="underline" target="_blank">
+                        spenden@hamburg-klimaneutral.de
+                    </a>
+                    </p>
                 </div>
-            </section>
+            </Block>
 
             <Block variant="green">
                 <div className="space-y-6 max-w-xl self-start">
