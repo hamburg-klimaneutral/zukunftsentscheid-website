@@ -4,7 +4,6 @@
     --ze-error-color: #DE252E;
 }
 
-
 .widget-header.widget {
     background-color: transparent;
 }
@@ -22,9 +21,39 @@ body {
     background: transparent !important;
 }
 
+form {
+    margin-bottom: 48px;
+}
+
+.amount-wrapper {
+    margin-bottom: 32px;
+}
+
+*:focus-visible {
+    outline: 2px solid #539EFF;
+    outline-offset: 2px;
+}
+
 label[for="transaction-amount"] {
     color: var(--ze-text-color);
     margin-bottom: 16px;
+}
+
+label a {
+    text-decoration: underline;
+}
+
+label {
+    color: var(--ze-text-color);
+}
+
+.infotext {
+    background-color: var(--ze-text-color);
+    color: var(--ze-text-color-inverted);
+}
+
+.infotext:before {
+    border-color: rgba(0,0,0,0) rgba(0,0,0,0) var(--ze-text-color) rgba(0,0,0,0);
 }
 
 
@@ -90,4 +119,70 @@ label[for="transaction-amount"] {
 
 input[type=text].ng-touched.ng-invalid, input[type=tel].ng-touched.ng-invalid, input[type=email].ng-touched.ng-invalid, input[type=number].ng-touched.ng-invalid, input[type=date].ng-touched.ng-invalid, select.ng-touched.ng-invalid, textarea.ng-touched.ng-invalid, textarea[rows].ng-touched.ng-invalid {
     border-color: var(--ze-error-color);
+}
+
+/* paypal */
+
+.callout {
+    background-color: transparent;
+    border-radius: 0;
+    border: 2px solid var(--ze-input-border-color);
+    color: var(--ze-text-color);
+}
+
+/* checkbox */
+
+.checkbox-wrapper .background {
+    background-color: transparent;
+}
+
+.checkbox-wrapper label[for="terms"] {
+    font-size: 12px;
+}
+
+.checkbox-wrapper label[for="terms"]::before {
+    color: #235753;
+}
+
+.checkbox-wrapper label.error {
+    font-size: 12px;
+}
+
+.checkbox-wrapper .background label:before {
+    border-color: var(--ze-input-border-color);
+    border-radius: 2px;
+}
+
+.checkbox-wrapper label:not(.error):before {
+    border-color: var(--ze-input-border-color);
+}
+
+/* inputs */
+
+[type=text], [type=password], [type=date], [type=datetime], [type=datetime-local], [type=month], [type=week], [type=email], [type=number], [type=search], [type=tel], [type=time], [type=url], [type=color], textarea {
+    border: 1px solid var(--ze-input-border-color);
+    padding: 12px;
+}
+
+input[type=text], input[type=tel], input[type=email], input[type=number], input[type=date], select, textarea, textarea[rows] {
+    color: #235753;
+    font-size: 16px;
+}
+
+[type=text]:focus, [type=password]:focus, [type=date]:focus, [type=datetime]:focus, [type=datetime-local]:focus, [type=month]:focus, [type=week]:focus, [type=email]:focus, [type=number]:focus, [type=search]:focus, [type=tel]:focus, [type=time]:focus, [type=url]:focus, [type=color]:focus, textarea:focus {
+    border-color: var(--ze-input-border-color);
+    border-width: 2px;
+    background-color: white;
+    box-shadow: none;
+}
+
+/* email field */
+
+.input-wrapper.info > i {
+    background-color: var(--ze-input-border-color);
+    color: var(--ze-text-color-inverted);
+}
+
+.non-touch .input-wrapper.info > i:hover {
+    background-color: var(--ze-input-appended-button-hover-color);
 }
