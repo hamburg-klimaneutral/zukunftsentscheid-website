@@ -243,6 +243,28 @@ input[type=text], input[type=tel], input[type=email], input[type=number], input[
     box-shadow: none;
 }
 
+/* button-styled radio inputs */
+
+input[type=radio] {
+    font-size: 16px;
+}
+
+input[type=radio] + label {
+    background-color: var(--ze-radio-button-bg-color);
+    color: var(--ze-radio-button-text-color);
+    border-radius: 2px;
+}
+
+input[type=radio]:checked + label:hover, .non-touch input[type="radio"] + label:hover {
+    background-color: var(--ze-radio-button-hover-bg-color);
+    color: var(--ze-radio-button-text-color);
+}
+
+input[type=radio]:checked + label {
+    background-color: var(--ze-radio-button-selected-bg-color);
+    color: var(--ze-radio-button-selected-text-color);
+}
+
 /* email field */
 
 .input-wrapper.info > i {
@@ -283,6 +305,27 @@ button.button, a.button {
 }
 
 button.button:hover, a.button:hover {
+    background-color: #E43997;
+}
+
+
+/* submit (arrow button) */
+
+button.button.arrow[type="submit"]::after {
+    display: none;
+}
+
+button.button.arrow[type="submit"] {
+    width: 100% !important;
+    text-transform: none;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    border-radius: 2px;
+}
+
+button.button.arrow[type="submit"]:hover {
     background-color: #E43997;
 }
 
