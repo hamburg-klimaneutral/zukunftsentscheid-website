@@ -107,6 +107,42 @@ a:hover, a:focus, .footer-gls .impress-wrapper a:hover {
 }
 
 
+/* payment method selection  */
+
+.payment-component-wrapper .method-wrapper input[type=radio] + label:hover, .payment-component-wrapper .method-wrapper input[type=radio] + label:active, .payment-component-wrapper .method-wrapper input[type=radio] + label:focus {
+    border-color: var(--ze-input-appended-button-hover-color)
+}
+
+/* recommended payment option */
+
+.payment-component-wrapper .method-wrapper .has-recommendation input[type=radio] + label span.recommendation {
+    background-color: transparent !important; /* also override focus and active styles */
+    color: var(--ze-text-color) !important; /* also override focus and active styles */
+    top: -4px;
+    border-radius: calc(infinity * 1px);
+    font-size: 12px;
+}
+
+.payment-component-wrapper .method-wrapper .has-recommendation input[type=radio] + label {
+    border-radius: 2px;
+}
+
+.payment-component-wrapper .method-wrapper .has-recommendation input[type=radio] + label {
+    border-color: var(--ze-input-border-color);
+    border-style: dashed;
+}
+
+.payment-component-wrapper .method-wrapper .has-recommendation input[type=radio] + label:hover  {
+    border-color: var(--ze-input-appended-button-hover-color);
+    border-style: solid;
+}
+
+.payment-component-wrapper .method-wrapper.method-selected .has-recommendation input[type=radio]:checked+label {
+    border-color: var(--ze-input-border-color);
+    border-style: solid;
+}
+
+
 /* errors */
 
 .payment-component-wrapper h2.error {
@@ -117,6 +153,7 @@ input[type=text].ng-touched.ng-invalid, input[type=tel].ng-touched.ng-invalid, i
     border-color: var(--ze-error-color);
 }
 
+
 /* paypal */
 
 .callout {
@@ -125,6 +162,7 @@ input[type=text].ng-touched.ng-invalid, input[type=tel].ng-touched.ng-invalid, i
     border: 2px solid var(--ze-input-border-color);
     color: var(--ze-text-color);
 }
+
 
 /* checkbox */
 
@@ -152,6 +190,7 @@ input[type=text].ng-touched.ng-invalid, input[type=tel].ng-touched.ng-invalid, i
 .checkbox-wrapper label:not(.error):before {
     border-color: var(--ze-input-border-color);
 }
+
 
 /* inputs */
 
@@ -215,6 +254,7 @@ button.button:hover, a.button:hover {
     background-color: #E43997;
 }
 
+
 /* cta hint */
 
 button.button.grey + .hint, a.button.grey + .hint, button.button + .hint, a.button + .hint {
@@ -225,8 +265,8 @@ button.button.grey + .hint, a.button.grey + .hint, button.button + .hint, a.butt
     color: var(--ze-text-color);
 }
 
-/* footer */
 
+/* footer */
 
 .footer-gls {
     background: transparent !important;

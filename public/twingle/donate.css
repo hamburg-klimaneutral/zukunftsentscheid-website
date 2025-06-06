@@ -99,23 +99,15 @@ button.button.arrow[type="submit"]:hover {
     font-weight: 600;
 }
 
-.payment-component-wrapper .method-wrapper .has-recommendation input[type=radio] + label span.recommendation {
-    background-color: #CC0070;
-    color: white;
+
+.payment-component-wrapper .method-wrapper {
+    background: transparent;
+    padding: 0;
+    gap: 12px;
 }
 
-.payment-component-wrapper .method-wrapper .has-recommendation input[type=radio] + label:hover span.recommendation {
-    background-color: #E43997;
+.payment-component-wrapper .method-wrapper > div {
+    margin: 0;
 }
 
-.payment-component-wrapper .method-wrapper .has-recommendation input[type=radio] + label {
-    border-color: #CC0070;
-}
-
-.payment-component-wrapper .method-wrapper .has-recommendation input[type=radio] + label:hover {
-    border-color: #E43997;
-}
-
-.payment-component-wrapper .method-wrapper input[type=radio] + label:hover, .payment-component-wrapper .method-wrapper input[type=radio] + label:active, .payment-component-wrapper .method-wrapper input[type=radio] + label:focus {
-    border-color: #E43997
-}
+/* payment selection with recommendation */
