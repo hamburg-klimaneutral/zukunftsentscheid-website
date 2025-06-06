@@ -228,8 +228,6 @@ button.button.grey + .hint, a.button.grey + .hint, button.button + .hint, a.butt
 /* footer */
 
 
-
-
 .footer-gls {
     background: transparent !important;
     padding-top: 0 !important;
@@ -243,6 +241,10 @@ button.button.grey + .hint, a.button.grey + .hint, button.button + .hint, a.butt
 .footer-gls .impress-wrapper a {
     color: var(--ze-text-color);
     text-decoration: underline;
+}
+
+footer .payment-preview {
+    background-color: white;
 }
 
 footer .payment-preview-wrapper {
