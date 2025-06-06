@@ -2,7 +2,6 @@
 
 import {useForm, SubmitHandler} from "react-hook-form"
 import {zodResolver} from "@hookform/resolvers/zod";
-import {Label} from "radix-ui";
 import Link from "next/link";
 import {contactFormSchema, ContactFormSchema} from "@/app/actions/submit-contact-form-schema";
 import {submitContactForm} from "@/app/actions/submit-contact-form";
@@ -34,9 +33,9 @@ export default function ContactForm() {
     return (
         <form className="flex flex-col gap-8 w-xl max-w-full" onSubmit={handleSubmit(onSubmitForm)}>
             <div className={twMerge(clsx('flex flex-col gap-3', {'error': errors.name}))}>
-                <Label.Root className={clsx('text-tiny', {'text-error': errors.name})} htmlFor="contact-input-name">
+                <label className={clsx('text-tiny', {'text-error': errors.name})} htmlFor="contact-input-name">
                     Dein Name
-                </Label.Root>
+                </label>
                 <input
                     {...register('name')}
                     type="text"
@@ -47,9 +46,9 @@ export default function ContactForm() {
             </div>
 
             <div className={twMerge(clsx('flex flex-col gap-3', {'error': errors.email}))}>
-                <Label.Root className={clsx('text-tiny', {'text-error': errors.email})} htmlFor="contact-input-email">
+                <label className={clsx('text-tiny', {'text-error': errors.email})} htmlFor="contact-input-email">
                     Deine E-Mail-Adresse
-                </Label.Root>
+                </label>
                 <input
                     {...register('email')}
                     type="email"
@@ -60,10 +59,10 @@ export default function ContactForm() {
             </div>
 
             <div className={twMerge(clsx('flex flex-col gap-3', {'error': errors.message}))}>
-                <Label.Root className={clsx('text-tiny', {'text-error': errors.message})}
+                <label className={clsx('text-tiny', {'text-error': errors.message})}
                             htmlFor="contact-input-message">
                     Deine Nachricht
-                </Label.Root>
+                </label>
                 <textarea
                     {...register('message')}
                     id="contact-input-message"
@@ -81,10 +80,10 @@ export default function ContactForm() {
                     placeholder="Du hast Fragen oder möchtest uns etwas sagen?"
                 />
                 <div className="flex flex-col gap-1 relative">
-                    <Label.Root htmlFor="contact-input-privacy">
+                    <label htmlFor="contact-input-privacy">
                         Ich akzeptiere die Bestimmungen zum <Link href="/datenschutz"
                                                                   className="underline">Datenschutz</Link>
-                    </Label.Root>
+                    </label>
                     {errors.privacyAccepted && <span
                         className="text-tiny text-error absolute -bottom-4">{errors.privacyAccepted?.message}</span>}
                 </div>
