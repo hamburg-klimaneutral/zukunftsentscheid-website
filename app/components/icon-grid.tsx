@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function IconGridBlock({
+export default function IconGrid({
   children,
 }: {
   children: React.ReactNode;

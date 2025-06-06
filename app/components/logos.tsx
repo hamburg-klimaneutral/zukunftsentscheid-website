@@ -101,7 +101,7 @@ const LOGOS = [
   },
 ] as const;
 
-export default function LogosBlock() {
+export default function Logos() {
   return (
     <ul className="flex flex-wrap justify-between w-full gap-4 items-center">
       <li>
