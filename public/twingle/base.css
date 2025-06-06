@@ -246,17 +246,17 @@ input[type=text], input[type=tel], input[type=email], input[type=number], input[
 
 /* button-styled radio inputs */
 
-input[type=radio] {
+input[type=radio], .amount-wrapper .button-wrapper button.button, .amount-wrapper .button-wrapper label strong {
     font-size: 16px;
 }
 
-input[type=radio] + label {
+input[type=radio] + label, .amount-wrapper .button-wrapper button.button {
     background-color: var(--ze-radio-button-bg-color);
     color: var(--ze-radio-button-text-color);
     border-radius: 2px;
 }
 
-input[type=radio]:checked + label:hover, .non-touch input[type="radio"] + label:hover {
+input[type=radio]:checked + label:hover, .non-touch input[type="radio"] + label:hover, .amount-wrapper .button-wrapper button.button:hover {
     background-color: var(--ze-radio-button-hover-bg-color);
     color: var(--ze-radio-button-text-color);
 }
