@@ -422,7 +422,7 @@ a.button.grey+.hint,
 button.button+.hint,
 a.button+.hint {
     margin-top: 16px;
-    background-color: white;
+    background-color: transparent;
     border: 1px solid var(--ze-text-color);
     border-radius: 0;
     color: var(--ze-text-color);
