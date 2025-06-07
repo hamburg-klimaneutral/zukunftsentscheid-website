@@ -1,14 +1,18 @@
 'use client'
 
-import {useForm, SubmitHandler} from "react-hook-form"
-import {zodResolver} from "@hookform/resolvers/zod";
+import { useForm, SubmitHandler } from "react-hook-form"
+import { zodResolver } from "@hookform/resolvers/zod";
 import Link from "next/link";
-import {contactFormSchema, ContactFormSchema} from "@/app/actions/submit-contact-form-schema";
-import {submitContactForm} from "@/app/actions/submit-contact-form";
-import {twMerge} from "tailwind-merge";
-import {clsx} from 'clsx'
+import { contactFormSchema, ContactFormSchema } from "@/app/actions/submit-contact-form-schema";
+import { submitContactForm } from "@/app/actions/submit-contact-form";
+import { twMerge } from "tailwind-merge";
+import { clsx } from 'clsx'
 
-export default function ContactForm() {
+interface ContactFormProps {
+    onSuccess: () => void
+}
+
+export default function ContactForm({ onSuccess }: ContactFormProps) {
     const form = useForm<ContactFormSchema>({
         resolver: zodResolver(contactFormSchema),
         defaultValues: {
@@ -23,17 +27,18 @@ export default function ContactForm() {
     const {
         register,
         handleSubmit,
-        formState: {errors},
+        formState: { errors },
     } = form;
 
     const onSubmitForm: SubmitHandler<ContactFormSchema> = async (data) => {
         await submitContactForm(data);
+        onSuccess()
     };
 
     return (
         <form className="flex flex-col gap-8 w-xl max-w-full" onSubmit={handleSubmit(onSubmitForm)}>
-            <div className={twMerge(clsx('flex flex-col gap-3', {'error': errors.name}))}>
-                <label className={clsx('text-tiny', {'text-error': errors.name})} htmlFor="contact-input-name">
+            <div className={twMerge(clsx('flex flex-col gap-3', { 'error': errors.name }))}>
+                <label className={clsx('text-tiny', { 'text-error': errors.name })} htmlFor="contact-input-name">
                     Dein Name
                 </label>
                 <input
@@ -45,8 +50,8 @@ export default function ContactForm() {
                 {errors.name && <span className="text-tiny text-error">{errors.name?.message}</span>}
             </div>
 
-            <div className={twMerge(clsx('flex flex-col gap-3', {'error': errors.email}))}>
-                <label className={clsx('text-tiny', {'text-error': errors.email})} htmlFor="contact-input-email">
+            <div className={twMerge(clsx('flex flex-col gap-3', { 'error': errors.email }))}>
+                <label className={clsx('text-tiny', { 'text-error': errors.email })} htmlFor="contact-input-email">
                     Deine E-Mail-Adresse
                 </label>
                 <input
@@ -58,9 +63,9 @@ export default function ContactForm() {
                 {errors.email && <span className="text-tiny text-error">{errors.email?.message}</span>}
             </div>
 
-            <div className={twMerge(clsx('flex flex-col gap-3', {'error': errors.message}))}>
-                <label className={clsx('text-tiny', {'text-error': errors.message})}
-                       htmlFor="contact-input-message">
+            <div className={twMerge(clsx('flex flex-col gap-3', { 'error': errors.message }))}>
+                <label className={clsx('text-tiny', { 'text-error': errors.message })}
+                    htmlFor="contact-input-message">
                     Deine Nachricht
                 </label>
                 <textarea
@@ -82,7 +87,7 @@ export default function ContactForm() {
                     />
                     <label htmlFor="contact-input-privacy">
                         Ich akzeptiere die Bestimmungen zum <Link href="/datenschutz"
-                                                                  className="underline">Datenschutz</Link>
+                            className="underline">Datenschutz</Link>
                     </label>
                 </div>
                 {errors.privacyAccepted && <span
