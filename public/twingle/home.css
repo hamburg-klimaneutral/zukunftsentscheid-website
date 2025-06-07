@@ -21,6 +21,8 @@
     --ze-radio-button-hover-bg-color: #C8F7F7;
     --ze-radio-button-selected-bg-color: white;
     --ze-radio-button-selected-text-color: #235753;
+
+    --ze-error-color: #FFA033;
 }
 
 /* amount buttons */
