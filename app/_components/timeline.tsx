@@ -15,13 +15,12 @@ export default function Timeline() {
         <strong>Ergebnis:</strong> 106.374 Unterschriften nach 3 Wochen
       </TimelineItem>
       <TimelineItem title="Volksentscheid">
-        <strong>Vorgabe:</strong> Die Mehrheit der Hamburgerinnen und
-        Hamburger, die zur Bürgerschaft wahlberechtigt sind, stimmt dafür.
-        Stimmt die Mehrheit für den Gesetzestext, tritt er innerhalb eines
-        Monats in Kraft.
+        <strong>Vorgabe:</strong> Die Mehrheit der Hamburgerinnen und Hamburger,
+        die zur Bürgerschaft wahlberechtigt sind, stimmt dafür. Stimmt die
+        Mehrheit für den Gesetzestext, tritt er innerhalb eines Monats in Kraft.
       </TimelineItem>
     </ul>
-  )
+  );
 }
 
 function TimelineItem({
@@ -34,23 +33,32 @@ function TimelineItem({
   children: React.ReactNode;
 }) {
   return (
-    <li className="flex gap-6 group">
-      <figure className="flex flex-col items-center relative shrink-0">
-        <div className={twMerge('absolute top-1 h-12 w-1.5 -mt-12 group-first:hidden', completed ? 'bg-green-dark' : 'bg-blue-light')} />
+    <li className="group flex gap-6">
+      <figure className="relative flex shrink-0 flex-col items-center">
+        <div
+          className={twMerge(
+            "absolute top-1 -mt-12 h-12 w-1.5 group-first:hidden",
+            completed ? "bg-green-dark" : "bg-blue-light"
+          )}
+        />
         <Image
-          src={completed ? "/icons/timeline-check.svg" : "/icons/timeline-exclamation.svg"}
+          src={
+            completed
+              ? "/icons/timeline-check.svg"
+              : "/icons/timeline-exclamation.svg"
+          }
           width={47}
           height={47}
           alt=""
           aria-hidden
         />
-        {completed && <div className="flex-1 w-1.5 -mt-1 -mb-11 bg-green-dark group-last:hidden" />}
+        {completed && (
+          <div className="bg-green-dark -mt-1 -mb-11 w-1.5 flex-1 group-last:hidden" />
+        )}
       </figure>
       <div className="flex flex-col gap-2">
         <h3 className="h3">{title}</h3>
-        <p className="max-w-[400px]">
-          {children}
-        </p>
+        <p className="max-w-[400px]">{children}</p>
       </div>
     </li>
   );

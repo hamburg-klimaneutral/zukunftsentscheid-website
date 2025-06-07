@@ -5,11 +5,11 @@
 
 @layer base {
   body {
-    @apply font-body text-base bg-white text-green-dark;
+    @apply font-body text-green-dark bg-white text-base;
   }
 
   a:focus {
-    @apply outline-2 outline-offset-2 outline-focus;
+    @apply outline-focus outline-2 outline-offset-2;
   }
 
   form {
