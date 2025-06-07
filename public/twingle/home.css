@@ -1,0 +1,41 @@
+/*
+ * This file is loaded by the donation iframe from a fixed URL configured in Twingle.
+ * To test changes to this file, replace the contents of the CSS file using the Sources panel in Chrome DevTools.
+ */
+
+@import url("./base.css");
+
+:root {
+    --ze-text-color: white;
+    --ze-text-color-focus: #A9D8D8;
+    --ze-text-color-inverted: #235753;
+
+    --ze-input-border-color: #A9D8D8;
+    --ze-input-appended-button-hover-color: #C8F7F7;
+
+    --ze-amount-slider-thumb-color: #235753;
+    --ze-amount-slider-thumb-hover-color: #40827D;
+
+    --ze-radio-button-bg-color: #A9D8D8;
+    --ze-radio-button-text-color: #235753;
+    --ze-radio-button-hover-bg-color: #C8F7F7;
+    --ze-radio-button-selected-bg-color: white;
+    --ze-radio-button-selected-text-color: #235753;
+
+    --ze-error-color: #FFA033;
+}
+
+/* amount buttons */
+
+.amount-wrapper .button-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+
+/* footer */
+
+.footer-gls img {
+    filter: brightness(0) invert(1);
+}
