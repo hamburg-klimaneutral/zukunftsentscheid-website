@@ -1,5 +1,5 @@
-import TwingleWidget from "@/app/components/twingle-widget";
-import Block from "@/app/components/block";
+import TwingleWidget from "@/app/_components/twingle-widget";
+import Block from "@/app/_components/block";
 
 export default function DonationPage() {
     return (
@@ -12,7 +12,7 @@ export default function DonationPage() {
             <Block className="sm:flex-row justify-around">
                 {/* @TODO: use old project name to keep history */}
                 <TwingleWidget projectName="next-test-spenden" projectId="tw683f2bafdc6cb"
-                               className="sm:max-w-[450px]"/>
+                    className="sm:max-w-[450px]" />
 
                 <div className="flex flex-col gap-6 sm:basis-[400px] items-start">
                     <p>
@@ -28,9 +28,9 @@ export default function DonationPage() {
                     </p>
                     <p>
                         Gerne gehen wir auch auf Wünsche ein oder beantworten Fragen: <a
-                        href="mailto:spenden@hamburg-klimaneutral.de" className="underline" target="_blank">
-                        spenden@hamburg-klimaneutral.de
-                    </a>
+                            href="mailto:spenden@hamburg-klimaneutral.de" className="underline" target="_blank">
+                            spenden@hamburg-klimaneutral.de
+                        </a>
                     </p>
                 </div>
             </Block>
@@ -43,7 +43,7 @@ export default function DonationPage() {
                     </p>
                     <p>
                         IBAN: DE44 4306 0967 1311 9000 00
-                        <br/>
+                        <br />
                         BIC: GENODEM1GLS
                     </p>
                 </div>

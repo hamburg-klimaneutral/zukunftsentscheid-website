@@ -1,15 +1,15 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import Block from "@/app/components/block";
+import Block from "@/app/_components/block";
 import HomeHero from "./home-hero";
-import IconGrid, { GridIcon } from "@/app/components/icon-grid";
-import Logos from "@/app/components/logos";
-import Timeline from "@/app/components/timeline";
-import TwingleWidget from "@/app/components/twingle-widget";
+import IconGrid, { GridIcon } from "@/app/_components/icon-grid";
+import Logos from "@/app/_components/logos";
+import Timeline from "@/app/_components/timeline";
+import TwingleWidget from "@/app/_components/twingle-widget";
 
-import CollectImage from "@/app/pictures/sammeln.png";
-import SignatureImage from "@/app/pictures/unterschriften.png";
+import CollectImage from "@/app/_pictures/sammeln.png";
+import SignatureImage from "@/app/_pictures/unterschriften.png";
 
 export default function HomePage() {
   return (
@@ -69,9 +69,9 @@ export default function HomePage() {
           <div className="teaser wide">
             <h3 className="h3">Was ist noch zu tun?</h3>
             <p>Nur mit deiner Unterstützung können wir den Entscheid zum Erfolg
-            führen. Ob beim Haustürwahlkampf, auf Veranstaltungen, Plakate
-            kleben, Flyer verteilen und in der Öffentlichkeitsarbeit - jede
-            Hilfe ist wertvoll!</p>
+              führen. Ob beim Haustürwahlkampf, auf Veranstaltungen, Plakate
+              kleben, Flyer verteilen und in der Öffentlichkeitsarbeit - jede
+              Hilfe ist wertvoll!</p>
           </div>
           <figure className="hidden sm:block">
             <Image
@@ -179,8 +179,8 @@ export default function HomePage() {
             Mehr erfahren
           </Link>
         </div>
-      {/* @TODO: use old project name to keep history */}
-      <TwingleWidget projectName="next-test-startseite" projectId="tw683f2b611d1ed" className="sm:max-w-[450px]" />
+        {/* @TODO: use old project name to keep history */}
+        <TwingleWidget projectName="next-test-startseite" projectId="tw683f2b611d1ed" className="sm:max-w-[450px]" />
       </Block>
     </main>
   );

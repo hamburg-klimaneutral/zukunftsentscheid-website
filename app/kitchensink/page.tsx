@@ -1,7 +1,7 @@
 import Image from "next/image";
-import Hero from "@/app/components/hero";
-import HeroImage from "@/app/pictures/12.10.png";
-import Block from "@/app/components/block";
+import Hero from "@/app/_components/hero";
+import HeroImage from "@/app/_pictures/12.10.png";
+import Block from "@/app/_components/block";
 
 export default function KitchenSinkPage() {
   return (

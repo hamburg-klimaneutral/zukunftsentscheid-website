@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import localFont from "next/font/local";
-import "./styles/globals.css";
+import "./_styles/globals.css";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -10,7 +10,7 @@ const inter = Inter({
 
 const veneer = localFont({
   variable: "--font-veneer",
-  src: "./fonts/veneer.woff2",
+  src: "./_fonts/veneer.woff2",
 });
 
 export const metadata: Metadata = {
