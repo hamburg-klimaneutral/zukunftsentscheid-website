@@ -1,8 +1,8 @@
 'use client'
 import Script from "next/script";
 import React from "react";
-import {useEffect, useState} from "react";
-import {twMerge} from "tailwind-merge";
+import { useEffect, useState } from "react";
+import { twMerge } from "tailwind-merge";
 
 interface TwingleWidgetProps {
     projectName: string
@@ -50,7 +50,7 @@ export default function TwingleWidget(
                 }}
             />
             <div id={containerId} className={twMerge('w-full', className)}
-                 aria-label="Spenden Widget" {...props} />
+                aria-label="Spenden Widget" {...props} />
         </>
     )
 }
