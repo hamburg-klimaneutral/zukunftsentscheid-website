@@ -2,14 +2,14 @@ import Link from "next/link";
 import Image from "next/image";
 import Script from "next/script";
 
-import Block from "@/app/components/block";
+import Block from "@/app/_components/block";
 import HomeHero from "./home-hero";
-import IconGrid, { GridIcon } from "@/app/components/icon-grid";
-import Logos from "@/app/components/logos";
-import Timeline from "@/app/components/timeline";
+import IconGrid, { GridIcon } from "@/app/_components/icon-grid";
+import Logos from "@/app/_components/logos";
+import Timeline from "@/app/_components/timeline";
 
-import CollectImage from "@/app/pictures/sammeln.png";
-import SignatureImage from "@/app/pictures/unterschriften.png";
+import CollectImage from "@/app/_pictures/sammeln.png";
+import SignatureImage from "@/app/_pictures/unterschriften.png";
 
 export default function HomePage() {
   return (
