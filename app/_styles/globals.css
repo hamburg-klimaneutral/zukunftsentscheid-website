@@ -13,6 +13,7 @@
   }
 
   form {
+
     [type="text"],
     input:where(:not([type])),
     [type="email"],
@@ -31,5 +32,9 @@
     select {
       @apply form-input;
     }
+  }
+
+  .form-field.error label {
+    @apply text-error
   }
 }

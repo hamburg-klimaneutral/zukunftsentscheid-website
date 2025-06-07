@@ -37,8 +37,8 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
 
     return (
         <form className="flex flex-col gap-8 w-xl max-w-full" onSubmit={handleSubmit(onSubmitForm)}>
-            <div className={twMerge(clsx('flex flex-col gap-3', { 'error': errors.name }))}>
-                <label className={clsx('text-tiny', { 'text-error': errors.name })} htmlFor="contact-input-name">
+            <div className={twMerge(clsx('flex flex-col gap-3 form-field', { 'error': errors.name }))}>
+                <label className="text-tiny" htmlFor="contact-input-name">
                     Dein Name
                 </label>
                 <input
@@ -50,8 +50,8 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
                 {errors.name && <span className="text-tiny text-error">{errors.name?.message}</span>}
             </div>
 
-            <div className={twMerge(clsx('flex flex-col gap-3', { 'error': errors.email }))}>
-                <label className={clsx('text-tiny', { 'text-error': errors.email })} htmlFor="contact-input-email">
+            <div className={twMerge(clsx('flex flex-col gap-3 form-field', { 'error': errors.email }))}>
+                <label className="text-tiny" htmlFor="contact-input-email">
                     Deine E-Mail-Adresse
                 </label>
                 <input
@@ -63,9 +63,8 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
                 {errors.email && <span className="text-tiny text-error">{errors.email?.message}</span>}
             </div>
 
-            <div className={twMerge(clsx('flex flex-col gap-3', { 'error': errors.message }))}>
-                <label className={clsx('text-tiny', { 'text-error': errors.message })}
-                    htmlFor="contact-input-message">
+            <div className={twMerge(clsx('flex flex-col gap-3 form-field', { 'error': errors.message }))}>
+                <label className="text-tiny" htmlFor="contact-input-message">
                     Deine Nachricht
                 </label>
                 <textarea
@@ -78,7 +77,7 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
             </div>
 
             <div className="flex flex-col gap-3 items-center">
-                <div className="flex flex-row gap-3 items-center justify-center">
+                <div className="flex flex-row gap-3 items-center justify-center form-field">
                     <input
                         {...register('privacyAccepted')}
                         type="checkbox"
