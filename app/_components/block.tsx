@@ -21,8 +21,8 @@ export default function Block({
     <section className={VARIANTS[variant]}>
       <div
         className={twMerge(
-          "container py-14 sm:py-24 flex flex-col items-center gap-10",
-          className,
+          "container flex flex-col items-center gap-10 py-14 sm:py-24",
+          className
         )}
       >
         {children}

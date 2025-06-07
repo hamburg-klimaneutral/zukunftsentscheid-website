@@ -103,7 +103,7 @@ const LOGOS = [
 
 export default function Logos() {
   return (
-    <ul className="flex flex-wrap justify-between w-full gap-4 items-center">
+    <ul className="flex w-full flex-wrap items-center justify-between gap-4">
       <li>
         <p className="w-[150px]">Wir werden u.a. unterstützt von</p>
       </li>
