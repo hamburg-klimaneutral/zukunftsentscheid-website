@@ -1,11 +1,11 @@
 'use server'
 
-import {contactFormSchema, ContactFormSchema} from "@/app/actions/submit-contact-form-schema";
-import {sendPlainTextMail} from "@/app/actions/services/sendPlainTextMail";
-import {CONTACT_MAIL_ADDRESS, CONTACT_MAIL_NAME} from "@/app/config";
+import { contactFormSchema, ContactFormSchema } from "@/app/actions/submit-contact-form-schema";
+import { sendPlainTextMail } from "@/app/actions/services/sendPlainTextMail";
+import { CONTACT_MAIL_ADDRESS, CONTACT_MAIL_NAME } from "@/app/config";
 
 export async function submitContactForm(data: ContactFormSchema) {
-    const {name, email, message} = contactFormSchema.parse(data)
+    const { name, email, message } = contactFormSchema.parse(data)
 
     await sendPlainTextMail({
         to: CONTACT_MAIL_ADDRESS,
