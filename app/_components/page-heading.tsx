@@ -13,10 +13,7 @@ export default function PageHeading({
 }: PageHeadlineProps) {
   return (
     <div
-      className={twMerge(
-        "flex flex-col items-center gap-4 w-xl",
-        className,
-      )}
+      className={twMerge("flex w-xl flex-col items-center gap-4", className)}
     >
       <p>{subheading}</p>
       <h1 className="h1">{heading}</h1>
