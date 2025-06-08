@@ -76,7 +76,7 @@
 }
 
 @utility form-input {
-  @apply ring-green-dark placeholder-grey border-xs rounded-none bg-white p-3 ring-1;
+  @apply ring-green-dark placeholder-grey rounded-xs border-none bg-white p-3 ring-1;
 
   &:focus {
     @apply ring-green-dark ring-2 outline-none;
