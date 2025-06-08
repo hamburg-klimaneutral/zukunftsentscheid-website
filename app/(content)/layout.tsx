@@ -8,7 +8,7 @@ export default function MainLayout({
 }>) {
   return (
     <>
-      <header className="bg-green-dark py-3 sm:py-6 text-white">
+      <header className="bg-green-dark py-3 text-white sm:py-6">
         <div className="container m-auto">
           <Image
             src="/logo.svg"
@@ -21,8 +21,8 @@ export default function MainLayout({
       </header>
       {children}
       <footer className="bg-blue-light">
-        <div className="container m-auto py-24 flex flex-col gap-14">
-          <div className="flex flex-col sm:flex-row justify-between gap-14">
+        <div className="container m-auto flex flex-col gap-14 py-24">
+          <div className="flex flex-col justify-between gap-14 sm:flex-row">
             <figure className="sm:basis-[213px]">
               <Image
                 src="/logo-inverted.svg"
@@ -31,17 +31,20 @@ export default function MainLayout({
                 height={58}
               />
             </figure>
-            <form className="flex flex-col items-center gap-2 ">
-              <h3 className="font-bold mb-3">
+            <form className="flex flex-col items-center gap-2">
+              <h3 className="mb-3 font-bold">
                 Du willst nichts mehr verpassen?
               </h3>
-              <div className="flex flex-col lg:flex-row gap-2 w-full">
+              <div className="flex w-full flex-col gap-2 lg:flex-row">
                 <input
                   placeholder="E-Mail"
                   type="email"
                   className="text-input w-full"
                 />
-                <button type="submit" className="button primary w-full text-nowrap sm:w-auto">
+                <button
+                  type="submit"
+                  className="button primary w-full text-nowrap sm:w-auto"
+                >
                   Newsletter Abonnieren
                 </button>
               </div>
@@ -49,7 +52,7 @@ export default function MainLayout({
                 Informationen zum Datenschutz
               </Link>
             </form>
-            <div className="flex justify-between sm:flex-col sm:gap-10 sm:basis-[213px] items-end">
+            <div className="flex items-end justify-between sm:basis-[213px] sm:flex-col sm:gap-10">
               <Link
                 href="https://www.instagram.com/zukunftsentscheid_hamburg/"
                 rel="noopener noreferrer"
@@ -85,10 +88,12 @@ export default function MainLayout({
               </Link>
             </div>
           </div>
-          <ul className="text-menu flex flex-wrap gap-4 justify-center">
+          <ul className="text-menu flex flex-wrap justify-center gap-4">
             <li>FAQ</li>
             <li>Presse</li>
-            <li><Link href="/kontakt">Kontakt</Link></li>
+            <li>
+              <Link href="/kontakt">Kontakt</Link>
+            </li>
             <li>Impressum</li>
             <li>Datenschutz</li>
           </ul>

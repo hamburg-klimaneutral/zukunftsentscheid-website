@@ -19,7 +19,7 @@ export default function HomePage() {
       </Block>
 
       <Block variant="blue" className="pt-24">
-        <h2 className="h2 text-center max-w-xl underline-1">
+        <h2 className="h2 underline-1 max-w-xl text-center">
           Gemeinsam machen wir Hamburgs Klimapolitik sozial, planbar und
           verantwortungsbewusst.
         </h2>
@@ -52,7 +52,7 @@ export default function HomePage() {
       </Block>
 
       <Block>
-        <h2 className="h2 text-center underline-2 whitespace-pre-line">
+        <h2 className="h2 underline-2 text-center whitespace-pre-line">
           Über 139.000 Hamburger*innen unterstützen uns bereits.{"\n"}
           Hilf mit!
         </h2>
@@ -68,10 +68,12 @@ export default function HomePage() {
           </figure>
           <div className="teaser wide">
             <h3 className="h3">Was ist noch zu tun?</h3>
-            <p>Nur mit deiner Unterstützung können wir den Entscheid zum Erfolg
-            führen. Ob beim Haustürwahlkampf, auf Veranstaltungen, Plakate
-            kleben, Flyer verteilen und in der Öffentlichkeitsarbeit - jede
-            Hilfe ist wertvoll!</p>
+            <p>
+              Nur mit deiner Unterstützung können wir den Entscheid zum Erfolg
+              führen. Ob beim Haustürwahlkampf, auf Veranstaltungen, Plakate
+              kleben, Flyer verteilen und in der Öffentlichkeitsarbeit - jede
+              Hilfe ist wertvoll!
+            </p>
           </div>
           <figure className="hidden sm:block">
             <Image
@@ -95,7 +97,7 @@ export default function HomePage() {
       </Block>
 
       <Block variant="green">
-        <h2 className="h2 text-center max-w-xl">6 gute Gründe für dein Ja!</h2>
+        <h2 className="h2 max-w-xl text-center">6 gute Gründe für dein Ja!</h2>
         <IconGrid>
           <GridIcon src="/icons/vote.svg" title="Deine Stimme zählt">
             Unser Gesetzvorschlag wird bei einem Volksentscheid am 12.10.
@@ -167,13 +169,13 @@ export default function HomePage() {
         <Timeline />
       </Block>
 
-      <Block variant="green" className="sm:flex-row justify-around">
+      <Block variant="green" className="justify-around sm:flex-row">
         <div className="teaser">
           <h2 className="h2">Spenden</h2>
           <p>
             Der Hamburger Zukunftsentscheid wird ausschließlich durch Spenden
-            und Förderungen finanziert. Mit deiner Spende machst du ein
-            besseres Klimaschutzgesetz für Hamburg möglich!
+            und Förderungen finanziert. Mit deiner Spende machst du ein besseres
+            Klimaschutzgesetz für Hamburg möglich!
           </p>
           <Link className="button secondary alt" href="/">
             Mehr erfahren

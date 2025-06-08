@@ -1,5 +1,5 @@
 @utility container {
-  @apply max-w-7xl mx-auto px-5 lg:px-12;
+  @apply mx-auto max-w-7xl px-5 lg:px-12;
 }
 
 /* Utility class that provides the base styling for decorative image underlines beneath text elements */
@@ -7,15 +7,15 @@
   @apply relative;
 
   &::after {
-    @apply content-[''] left-1/2 transform -translate-x-1/2 inset-y-0 absolute bg-bottom bg-no-repeat;
+    @apply absolute inset-y-0 left-1/2 -translate-x-1/2 transform bg-bottom bg-no-repeat content-[''];
   }
 }
 
 @utility button {
-  @apply inline-flex text-menu font-semibold px-3 cursor-pointer items-center justify-center;
+  @apply text-menu inline-flex cursor-pointer items-center justify-center px-3 font-semibold;
 
   &:focus {
-    @apply outline-2 outline-offset-2 outline-focus;
+    @apply outline-focus outline-2 outline-offset-2;
   }
 
   &:not(.primary):not(.secondary) {
@@ -26,12 +26,12 @@
     }
 
     &:before {
-      @apply content-[''] w-6 h-6 mr-2.5 transition-transform bg-[url(/icons/arrow-right.svg)] pointer-events-none;
+      @apply pointer-events-none mr-2.5 h-6 w-6 bg-[url(/icons/arrow-right.svg)] transition-transform content-[''];
     }
   }
 
   &.secondary {
-    @apply text-white bg-green-dark hover:bg-green-dark-80 py-3.5;
+    @apply bg-green-dark hover:bg-green-dark-80 py-3.5 text-white;
 
     &.alt {
       @apply bg-blue-light hover:bg-blue-light-80 text-green-dark;
@@ -39,25 +39,25 @@
   }
 
   &.primary {
-    @apply text-white bg-pink-dark hover:bg-pink-dark-80 py-3.5;
+    @apply bg-pink-dark hover:bg-pink-dark-80 py-3.5 text-white;
   }
 }
 
 @utility h1 {
-  @apply font-heading text-4xl sm:text-5xl underline-marks;
+  @apply font-heading underline-marks text-4xl sm:text-5xl;
 }
 
 @utility h2 {
-  @apply font-heading text-2xl sm:text-3xl underline-marks;
+  @apply font-heading underline-marks text-2xl sm:text-3xl;
 }
 
 @utility h3 {
-  @apply font-heading text-lg sm:text-xl underline-marks;
+  @apply font-heading underline-marks text-lg sm:text-xl;
 }
 
 @utility underline-marks {
   mark {
-    @apply bg-transparent text-inherit has-underline;
+    @apply has-underline bg-transparent text-inherit;
 
     &::after {
       @apply bg-[url(/shapes/underline-short.png)];
@@ -76,13 +76,13 @@
 }
 
 @utility form-input {
-  @apply bg-white border-none ring-1 ring-green-dark rounded-xs p-3 placeholder-grey;
+  @apply ring-green-dark placeholder-grey border-xs rounded-none bg-white p-3 ring-1;
 
   &:focus {
-    @apply outline-none ring-2 ring-green-dark;
+    @apply ring-green-dark ring-2 outline-none;
   }
 
   .form-field.error & {
-    @apply outline-none ring-2 ring-error text-error;
+    @apply ring-error text-error ring-2 outline-none;
   }
 }
