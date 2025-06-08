@@ -1,8 +1,8 @@
 @layer components {
   .content-grid {
-    @apply grid grid-flow-dense grid-rows-1 sm:grid-rows-2 items-center gap-y-6 gap-x-20 justify-between;
+    @apply grid grid-flow-dense grid-rows-1 items-center justify-between gap-x-20 gap-y-6 sm:grid-rows-2;
     /* Swap column for odd items */
-    @apply [&>*:nth-child(4n+4)]:col-1 [&>*:nth-child(4n+3)]:col-2;
+    @apply [&>*:nth-child(4n+3)]:col-2 [&>*:nth-child(4n+4)]:col-1;
 
     figure {
       @apply max-w-[532px];
@@ -10,10 +10,10 @@
   }
 
   .teaser {
-    @apply flex flex-col gap-6 sm:basis-[400px] sm:max-w-[400px] items-start;
+    @apply flex flex-col items-start gap-6 sm:max-w-[400px] sm:basis-[400px];
 
     &.wide {
-      @apply sm:basis-[530px] sm:max-w-[530px];
+      @apply sm:max-w-[530px] sm:basis-[530px];
     }
   }
 }

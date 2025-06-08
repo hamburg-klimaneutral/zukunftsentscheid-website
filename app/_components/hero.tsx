@@ -8,18 +8,23 @@ export default function Hero({
   asset?: React.ReactNode;
 }) {
   return (
-    <div className={twMerge('flex flex-col-reverse md:flex-row-reverse', asset ? "justify-between" : "justify-center")}>
+    <div
+      className={twMerge(
+        "flex flex-col-reverse md:flex-row-reverse",
+        asset ? "justify-between" : "justify-center"
+      )}
+    >
       {asset && (
-        <figure className="-mb-32 -mt-6 -ml-12 relative basis-1/2 sm:-ml-0">
+        <figure className="relative -mt-6 -mb-32 -ml-12 basis-1/2 sm:-ml-0">
           {asset}
         </figure>
       )}
       <div
         className={twMerge(
-          "flex flex-col gap-4 whitespace-pre-line relative",
+          "relative flex flex-col gap-4 whitespace-pre-line",
           asset
-            ? "items-start justify-center basis-1/2"
-            : "items-center basis-full",
+            ? "basis-1/2 items-start justify-center"
+            : "basis-full items-center"
         )}
       >
         {children}
