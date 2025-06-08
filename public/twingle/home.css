@@ -6,36 +6,35 @@
 @import url("./base.css");
 
 :root {
-    --ze-text-color: white;
-    --ze-text-color-focus: #A9D8D8;
-    --ze-text-color-inverted: #235753;
+  --ze-text-color: white;
+  --ze-text-color-focus: #a9d8d8;
+  --ze-text-color-inverted: #235753;
 
-    --ze-input-border-color: #A9D8D8;
-    --ze-input-appended-button-hover-color: #C8F7F7;
+  --ze-input-border-color: #a9d8d8;
+  --ze-input-appended-button-hover-color: #c8f7f7;
 
-    --ze-amount-slider-thumb-color: #235753;
-    --ze-amount-slider-thumb-hover-color: #40827D;
+  --ze-amount-slider-thumb-color: #235753;
+  --ze-amount-slider-thumb-hover-color: #40827d;
 
-    --ze-radio-button-bg-color: #A9D8D8;
-    --ze-radio-button-text-color: #235753;
-    --ze-radio-button-hover-bg-color: #C8F7F7;
-    --ze-radio-button-selected-bg-color: white;
-    --ze-radio-button-selected-text-color: #235753;
+  --ze-radio-button-bg-color: #a9d8d8;
+  --ze-radio-button-text-color: #235753;
+  --ze-radio-button-hover-bg-color: #c8f7f7;
+  --ze-radio-button-selected-bg-color: white;
+  --ze-radio-button-selected-text-color: #235753;
 
-    --ze-error-color: #FFA033;
+  --ze-error-color: #ffa033;
 }
 
 /* amount buttons */
 
 .amount-wrapper .button-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
-
 
 /* footer */
 
 .footer-gls img {
-    filter: brightness(0) invert(1);
+  filter: brightness(0) invert(1);
 }
