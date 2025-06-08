@@ -9,11 +9,11 @@ export default function MobileOverlay({
   return (
     <Dialog.Root>
       <Dialog.Portal>
-        <Dialog.Overlay className="lg:hidden fixed inset-0 h-dvh w-screen bg-green-dark flex flex-col justify-between pt-30 z-20">
-          <Dialog.Content className="w-full h-full overflow-y-scroll">
+        <Dialog.Overlay className="bg-green-dark fixed inset-0 z-20 flex h-dvh w-screen flex-col justify-between pt-30 lg:hidden">
+          <Dialog.Content className="h-full w-full overflow-y-scroll">
             <Dialog.Title className="sr-only">Navigation</Dialog.Title>
             {children}
-            <div className="absolute top-0 py-6 px-5 flex w-full justify-between">
+            <div className="absolute top-0 flex w-full justify-between px-5 py-6">
               <figure>
                 <Image
                   src="/logo.svg"
@@ -30,7 +30,7 @@ export default function MobileOverlay({
                   src="/icons/close.svg"
                   width={48}
                   height={48}
-                  className="w-12 h-12"
+                  className="h-12 w-12"
                   alt=""
                   aria-hidden
                 />
@@ -40,14 +40,14 @@ export default function MobileOverlay({
         </Dialog.Overlay>
       </Dialog.Portal>
       <Dialog.Trigger
-        className="lg:hidden data-[state=open]:hidden"
+        className="data-[state=open]:hidden lg:hidden"
         aria-label="Navigation öffnen"
       >
         <Image
           src="/icons/burger.svg"
           width={48}
           height={48}
-          className="w-12 h-12"
+          className="h-12 w-12"
           alt=""
           aria-hidden
         />

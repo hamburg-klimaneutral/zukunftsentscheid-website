@@ -10,7 +10,7 @@ export default function MainLayout({
   return (
     <>
       <header className="bg-green-dark py-6 text-white">
-        <div className="container m-auto flex justify-between items-center">
+        <div className="container m-auto flex items-center justify-between">
           <figure className="shrink-0">
             <Image
               src="/logo.svg"

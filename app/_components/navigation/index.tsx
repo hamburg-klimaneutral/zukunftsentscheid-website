@@ -16,11 +16,11 @@ export default function Navigation({
       className={twMerge("z-10", className)}
       orientation={orientation}
     >
-      <NavigationMenu.List className="group/list flex data-[orientation=vertical]:flex-col gap-0.5 items-center">
+      <NavigationMenu.List className="group/list flex items-center gap-0.5 data-[orientation=vertical]:flex-col">
         {NAVIGATION_ITEMS.map((item) => (
           <NavigationMenu.Item
             key={item.title}
-            className="relative w-full bg-blue-light lg:bg-transparent lg:w-auto"
+            className="bg-blue-light relative w-full lg:w-auto lg:bg-transparent"
           >
             {"items" in item ? (
               <>
@@ -43,8 +43,8 @@ export default function Navigation({
                     />
                   </svg>
                 </NavigationMenu.Trigger>
-                <NavigationMenu.Content className="bg-blue-light text-green-dark whitespace-nowrap lg:rounded-xs lg:absolute lg:w-full lg:top-full">
-                  <ul className="p-0.5 flex flex-col">
+                <NavigationMenu.Content className="bg-blue-light text-green-dark whitespace-nowrap lg:absolute lg:top-full lg:w-full lg:rounded-xs">
+                  <ul className="flex flex-col p-0.5">
                     {item.items.map((subItem) => (
                       <li key={subItem.title}>
                         <NavigationMenu.Link
@@ -68,7 +68,7 @@ export default function Navigation({
         {NAVIGATION_BUTTONS.map((button) => (
           <NavigationMenu.Item
             key={button.title}
-            className="-order-1 lg:order-1 w-full lg:w-auto px-6 lg:px-2 mb-3 lg:m-0 last:mb-5 lg:last:m-0 lg:py-3.5"
+            className="-order-1 mb-3 w-full px-6 last:mb-5 lg:order-1 lg:m-0 lg:w-auto lg:px-2 lg:py-3.5 lg:last:m-0"
           >
             <NavigationMenu.Link
               href={button.href}
