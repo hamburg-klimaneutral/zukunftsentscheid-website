@@ -12,7 +12,7 @@
 }
 
 @utility button {
-  @apply text-menu inline-flex cursor-pointer items-center justify-center px-3 font-semibold;
+  @apply text-menu inline-flex cursor-pointer items-center justify-center rounded-xs px-3 font-semibold select-none;
 
   &:focus {
     @apply outline-focus outline-2 outline-offset-2;
@@ -40,7 +40,15 @@
 
   &.primary {
     @apply bg-pink-dark hover:bg-pink-dark-80 py-3.5 text-white;
+
+    &.alt {
+      @apply bg-green-neon hover:bg-green-neon-80 text-green-dark;
+    }
   }
+}
+
+@utility nav-item {
+  @apply text-menu focus:outline-focus hover:bg-green-dark-80 flex w-full items-center justify-between gap-0.5 px-6 py-3.5 leading-6 select-none hover:rounded-xs hover:text-white focus:outline-2 lg:w-auto;
 }
 
 @utility h1 {
