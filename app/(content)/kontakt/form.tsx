@@ -9,13 +9,8 @@ import {
 } from "@/app/actions/submit-contact-form-schema";
 import { submitContactForm } from "@/app/actions/submit-contact-form";
 import { twMerge } from "tailwind-merge";
-import { clsx } from "clsx";
 
-interface ContactFormProps {
-  onSuccess: () => void;
-}
-
-export default function ContactForm({ onSuccess }: ContactFormProps) {
+export default function ContactForm() {
   const form = useForm<ContactFormSchema>({
     resolver: zodResolver(contactFormSchema),
     defaultValues: {
@@ -35,7 +30,6 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
 
   const onSubmitForm: SubmitHandler<ContactFormSchema> = async (data) => {
     await submitContactForm(data);
-    onSuccess();
   };
 
   return (
@@ -45,7 +39,8 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
     >
       <div
         className={twMerge(
-          clsx("form-field flex flex-col gap-3", { error: errors.name })
+          "form-field flex flex-col gap-3",
+          errors.name && "error"
         )}
       >
         <label className="text-tiny" htmlFor="contact-input-name">
@@ -64,7 +59,8 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
 
       <div
         className={twMerge(
-          clsx("form-field flex flex-col gap-3", { error: errors.email })
+          "form-field flex flex-col gap-3",
+          errors.email && "error"
         )}
       >
         <label className="text-tiny" htmlFor="contact-input-email">
@@ -83,7 +79,8 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
 
       <div
         className={twMerge(
-          clsx("form-field flex flex-col gap-3", { error: errors.message })
+          "form-field flex flex-col gap-3",
+          errors.message && "error"
         )}
       >
         <label className="text-tiny" htmlFor="contact-input-message">
@@ -125,7 +122,6 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
       </div>
 
       <button className="button primary mt-7 self-center" type="submit">
-        {/*TODO: redirect to success page or display error*/}
         Abschicken
       </button>
     </form>

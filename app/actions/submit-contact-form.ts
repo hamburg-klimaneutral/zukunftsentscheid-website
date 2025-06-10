@@ -6,6 +6,7 @@ import {
 } from "@/app/actions/submit-contact-form-schema";
 import { sendPlainTextMail } from "@/app/actions/services/sendPlainTextMail";
 import { CONTACT_MAIL_ADDRESS, CONTACT_MAIL_NAME } from "@/app/config";
+import { redirect } from "next/navigation";
 
 export async function submitContactForm(data: ContactFormSchema) {
   const { name, email, message } = contactFormSchema.parse(data);
@@ -34,4 +35,6 @@ ${message}`,
       Email: CONTACT_MAIL_ADDRESS,
     },
   });
+
+  redirect("/kontakt/erfolgreich-abgeschickt");
 }
