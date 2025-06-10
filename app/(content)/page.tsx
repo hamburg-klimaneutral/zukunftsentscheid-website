@@ -97,7 +97,9 @@ export default function HomePage() {
       </Block>
 
       <Block variant="green">
-        <h2 className="h2 max-w-xl text-center">6 gute Gründe für dein Ja!</h2>
+        <h2 className="h2 underline-3 max-w-xl text-center">
+          6 gute Gründe für dein Ja!
+        </h2>
         <IconGrid>
           <GridIcon src="/icons/vote.svg" title="Deine Stimme zählt">
             Unser Gesetzvorschlag wird bei einem Volksentscheid am 12.10.
