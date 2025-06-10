@@ -1,6 +1,6 @@
 export default function PrivacyContent() {
   return (
-    <div className="markdown-autostyled max-w-full">
+    <div className="markdown max-w-full">
       <h2 id="m716">Präambel</h2>
       <p>
         Mit der folgenden Datenschutzerklärung möchten wir Sie darüber

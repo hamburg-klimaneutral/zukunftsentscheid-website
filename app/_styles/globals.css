@@ -2,6 +2,7 @@
 @import "./theme.css";
 @import "./utils.css";
 @import "./components.css";
+@import "./markdown.css";
 
 @layer base {
   body {
@@ -35,35 +36,5 @@
 
   .form-field.error label {
     @apply text-error;
-  }
-
-  .markdown-autostyled {
-    @apply space-y-4;
-  }
-
-  .markdown-autostyled h1 {
-    @apply h1;
-  }
-
-  .markdown-autostyled h2 {
-    @apply h2;
-  }
-
-  .markdown-autostyled h3 {
-    @apply h3;
-  }
-
-  .markdown-autostyled ol {
-    @apply list-decimal;
-    @apply ml-5;
-  }
-
-  .markdown-autostyled ul {
-    @apply list-disc;
-    @apply ml-5;
-  }
-
-  .markdown-autostyled a:not(.button) {
-    @apply underline;
   }
 }
