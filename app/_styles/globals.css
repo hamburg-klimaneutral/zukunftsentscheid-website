@@ -36,4 +36,34 @@
   .form-field.error label {
     @apply text-error;
   }
+
+  .md-autostyled {
+    @apply space-y-4;
+  }
+
+  .md-autostyled h1 {
+    @apply h1;
+  }
+
+  .md-autostyled h2 {
+    @apply h2;
+  }
+
+  .md-autostyled h3 {
+    @apply h3;
+  }
+
+  .md-autostyled ol {
+    @apply list-decimal;
+    @apply ml-5;
+  }
+
+  .md-autostyled ul {
+    @apply list-disc;
+    @apply ml-5;
+  }
+
+  .md-autostyled a:not(.button) {
+    @apply underline;
+  }
 }
