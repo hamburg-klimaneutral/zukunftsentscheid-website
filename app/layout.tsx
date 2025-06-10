@@ -32,6 +32,11 @@ export default function RootLayout({
   return (
     <html lang="de">
       <body className={`${inter.variable} ${veneer.variable} antialiased`}>
+        <object
+          type="image/svg+xml"
+          data="/icons/blobs.svg"
+          className="hidden"
+        />
         {children}
       </body>
     </html>
