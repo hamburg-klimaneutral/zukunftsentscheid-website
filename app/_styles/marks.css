@@ -25,4 +25,13 @@
       @apply h-[71px] w-[208px] bg-[url(/shapes/underline-bernd.png)] bg-size-[208px_71px];
     }
   }
+
+  .underline-4 {
+    @apply has-underline pb-5;
+
+    &::before {
+      @apply left-1/2 -translate-x-1/2 bg-bottom;
+      @apply w-[148px] bg-[url(/shapes/underline-alex.png)] bg-size-[148px];
+    }
+  }
 }
