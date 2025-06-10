@@ -37,33 +37,33 @@
     @apply text-error;
   }
 
-  .md-autostyled {
+  .markdown-autostyled {
     @apply space-y-4;
   }
 
-  .md-autostyled h1 {
+  .markdown-autostyled h1 {
     @apply h1;
   }
 
-  .md-autostyled h2 {
+  .markdown-autostyled h2 {
     @apply h2;
   }
 
-  .md-autostyled h3 {
+  .markdown-autostyled h3 {
     @apply h3;
   }
 
-  .md-autostyled ol {
+  .markdown-autostyled ol {
     @apply list-decimal;
     @apply ml-5;
   }
 
-  .md-autostyled ul {
+  .markdown-autostyled ul {
     @apply list-disc;
     @apply ml-5;
   }
 
-  .md-autostyled a:not(.button) {
+  .markdown-autostyled a:not(.button) {
     @apply underline;
   }
 }
