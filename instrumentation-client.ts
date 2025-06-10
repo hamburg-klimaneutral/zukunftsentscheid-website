@@ -7,6 +7,8 @@ import * as Sentry from "@sentry/nextjs";
 Sentry.init({
   dsn: "https://b875be0322304b88e1a6eb8bed8fe524@o4508935781679104.ingest.de.sentry.io/4509456902848592",
 
+  enabled: process.env.NODE_ENV !== "development",
+
   // Setting this option to true will print useful information to the console while you're setting up Sentry.
   debug: false,
 });
