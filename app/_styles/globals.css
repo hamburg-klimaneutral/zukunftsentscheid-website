@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "./accordion.css";
 @import "./theme.css";
 @import "./utils.css";
 @import "./components.css";
