@@ -20,6 +20,8 @@
     "@mdx-js/loader": "^3.1.0",
     "@mdx-js/react": "^3.1.0",
     "@next/mdx": "^15.3.3",
+    "@radix-ui/react-dialog": "^1.1.14",
+    "@radix-ui/react-navigation-menu": "^1.2.13",
     "@sentry/nextjs": "^9.27.0",
     "next": "15.3.3",
     "node-mailjet": "^6.0.8",

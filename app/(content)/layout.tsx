@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Navigation, { MobileOverlay } from "@/app/_components/navigation";
 
 export default function MainLayout({
   children,
@@ -8,15 +9,23 @@ export default function MainLayout({
 }>) {
   return (
     <>
-      <header className="bg-green-dark py-3 text-white sm:py-6">
-        <div className="container m-auto">
-          <Image
-            src="/logo.svg"
-            alt="Zukunftsentscheid-Hamburg Logo"
-            width={213}
-            height={58}
-            priority
-          />
+      <header className="bg-green-dark py-6 text-white">
+        <div className="container m-auto flex items-center justify-between">
+          <figure className="shrink-0">
+            <Image
+              src="/logo.svg"
+              alt="Zukunftsentscheid-Hamburg Logo"
+              width={213}
+              height={58}
+              priority
+            />
+          </figure>
+          {/* Desktop */}
+          <Navigation className="hidden lg:block" orientation="horizontal" />
+          {/* Mobile */}
+          <MobileOverlay>
+            <Navigation orientation="vertical" />
+          </MobileOverlay>
         </div>
       </header>
       {children}

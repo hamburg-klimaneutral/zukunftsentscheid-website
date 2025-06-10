@@ -10,7 +10,7 @@ export default function Hero({
   return (
     <div
       className={twMerge(
-        "flex flex-col-reverse md:flex-row-reverse",
+        "flex w-full flex-col-reverse items-center md:flex-row-reverse",
         asset ? "justify-between" : "justify-center"
       )}
     >
@@ -22,9 +22,7 @@ export default function Hero({
       <div
         className={twMerge(
           "relative flex flex-col gap-4 whitespace-pre-line",
-          asset
-            ? "basis-1/2 items-start justify-center"
-            : "basis-full items-center"
+          asset ? "items-start" : "basis-full items-center"
         )}
       >
         {children}
