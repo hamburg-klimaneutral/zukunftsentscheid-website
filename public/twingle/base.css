@@ -1,0 +1,488 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap");
+
+:root {
+  --ze-error-color: #de252e;
+}
+
+.widget-header.widget {
+  display: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+label {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+}
+
+h1 {
+  display: none;
+}
+
+body {
+  background: transparent !important;
+}
+
+form {
+  margin-bottom: 48px;
+}
+
+.amount-wrapper {
+  margin-bottom: 32px;
+}
+
+*:focus-visible {
+  outline: 2px solid #539eff;
+  outline-offset: 2px;
+}
+
+label[for="transaction-amount"] {
+  color: var(--ze-text-color);
+  margin-bottom: 16px;
+}
+
+label a {
+  text-decoration: underline;
+}
+
+label {
+  color: var(--ze-text-color);
+}
+
+input[type="text"].ng-touched.ng-invalid + label,
+input[type="tel"].ng-touched.ng-invalid + label,
+input[type="email"].ng-touched.ng-invalid + label,
+input[type="number"].ng-touched.ng-invalid + label,
+input[type="date"].ng-touched.ng-invalid + label,
+select.ng-touched.ng-invalid + label,
+textarea.ng-touched.ng-invalid + label,
+textarea[rows].ng-touched.ng-invalid + label {
+  color: var(--ze-error-color);
+}
+
+a:hover,
+a:focus,
+.footer-gls .impress-wrapper a:hover {
+  color: var(--ze-text-color-focus);
+}
+
+/* anderer betrag */
+
+.amount-wrapper .input-wrapper .currency-symbol {
+  background-color: var(--ze-input-border-color);
+  color: var(--ze-text-color-inverted);
+}
+
+.amount-wrapper input[type="number"],
+.amount-wrapper input[type="text"],
+.amount-wrapper input[type="tel"] {
+  border-color: var(--ze-input-border-color);
+  color: #235753;
+  border-width: 2px;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+.amount-wrapper
+  .slider-wrapper
+  .slider
+  input[type="range"]::-webkit-slider-thumb {
+  background-color: var(--ze-amount-slider-thumb-color);
+}
+
+.amount-wrapper .slider-wrapper .slider input[type="range"]::-moz-range-thumb {
+  background-color: var(--ze-amount-slider-thumb-color);
+}
+
+.amount-wrapper
+  .slider-wrapper
+  .slider
+  input[type="range"]::-webkit-slider-thumb:hover {
+  background-color: var(--ze-amount-slider-thumb-hover-color);
+  cursor: pointer;
+}
+
+.amount-wrapper
+  .slider-wrapper
+  .slider
+  input[type="range"]::-moz-range-thumb:hover {
+  background-color: var(--ze-amount-slider-thumb-hover-color);
+  cursor: pointer;
+}
+
+.amount-wrapper
+  .slider-wrapper
+  .slider
+  input[type="range"]::-webkit-slider-runnable-track {
+  background-color: white;
+}
+
+.amount-wrapper
+  .slider-wrapper
+  .slider
+  input[type="range"]:focus::-webkit-slider-runnable-track {
+  background-color: white;
+}
+
+.amount-wrapper .slider-wrapper .slider input[type="range"]::-moz-range-track {
+  background-color: white;
+}
+
+.amount-wrapper .slider-wrapper {
+  background-color: var(--ze-input-border-color);
+}
+
+.amount-wrapper .slider-wrapper {
+  border-radius: 0 2px 2px 0;
+}
+
+.amount-wrapper .input-wrapper {
+  margin-bottom: 0;
+}
+
+/* step navigation (go back) */
+
+.step-navigation {
+  color: #235753 !important;
+}
+
+.step-navigation span {
+  font-size: 12px;
+  background-color: #a9d8d8;
+  border-radius: 2px;
+}
+
+.step-navigation span:hover {
+  background-color: #c8f7f7 !important;
+}
+
+/* payment method selection  */
+
+.payment-component-wrapper h2 {
+  /* "Bitte Zahlungsart wählen" */
+  color: var(--ze-text-color);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.payment-component-wrapper .method-wrapper {
+  background: transparent;
+  padding: 0;
+  gap: 12px;
+}
+
+.payment-component-wrapper .method-wrapper > div {
+  margin: 0;
+}
+
+.payment-component-wrapper .method-wrapper input[type="radio"] + label:hover,
+.payment-component-wrapper .method-wrapper input[type="radio"] + label:active,
+.payment-component-wrapper .method-wrapper input[type="radio"] + label:focus {
+  border-color: var(--ze-input-appended-button-hover-color);
+}
+
+/* recommended payment option */
+
+.payment-component-wrapper
+  .method-wrapper
+  .has-recommendation
+  input[type="radio"]
+  + label
+  span.recommendation {
+  background-color: transparent !important;
+  /* also override focus and active styles */
+  color: var(--ze-text-color) !important;
+  /* also override focus and active styles */
+  top: -4px;
+  border-radius: calc(infinity * 1px);
+  font-size: 12px;
+}
+
+.payment-component-wrapper
+  .method-wrapper
+  .has-recommendation
+  input[type="radio"]
+  + label {
+  border-radius: 2px;
+}
+
+.payment-component-wrapper
+  .method-wrapper
+  .has-recommendation
+  input[type="radio"]
+  + label {
+  border-color: transparent;
+  outline: 2px solid #539eff;
+  outline-offset: 2px;
+}
+
+.payment-component-wrapper
+  .method-wrapper
+  .has-recommendation
+  input[type="radio"]
+  + label:hover {
+  border-color: var(--ze-input-appended-button-hover-color);
+}
+
+.payment-component-wrapper
+  .method-wrapper.method-selected
+  .has-recommendation
+  input[type="radio"]:checked
+  + label {
+  border-color: var(--ze-input-border-color);
+  outline: none;
+}
+
+/* errors */
+
+.payment-component-wrapper h2.error {
+  color: var(--ze-error-color);
+}
+
+input[type="text"].ng-touched.ng-invalid,
+input[type="tel"].ng-touched.ng-invalid,
+input[type="email"].ng-touched.ng-invalid,
+input[type="number"].ng-touched.ng-invalid,
+input[type="date"].ng-touched.ng-invalid,
+select.ng-touched.ng-invalid,
+textarea.ng-touched.ng-invalid,
+textarea[rows].ng-touched.ng-invalid {
+  border-color: var(--ze-error-color);
+}
+
+/* paypal */
+
+.callout {
+  background-color: transparent;
+  border-radius: 0;
+  border: 2px solid var(--ze-input-border-color);
+  color: var(--ze-text-color);
+}
+
+/* checkbox */
+
+.checkbox-wrapper .background {
+  background-color: transparent;
+}
+
+.checkbox-wrapper label[for="terms"] {
+  font-size: 12px;
+}
+
+.checkbox-wrapper label[for="terms"]::before {
+  color: #235753;
+}
+
+.checkbox-wrapper label.error {
+  font-size: 12px;
+}
+
+.checkbox-wrapper .background label:before {
+  border-color: var(--ze-input-border-color);
+  border-radius: 2px;
+}
+
+.checkbox-wrapper label:not(.error):before {
+  border-color: var(--ze-input-border-color);
+}
+
+/* inputs */
+
+[type="text"],
+[type="password"],
+[type="date"],
+[type="datetime"],
+[type="datetime-local"],
+[type="month"],
+[type="week"],
+[type="email"],
+[type="number"],
+[type="search"],
+[type="tel"],
+[type="time"],
+[type="url"],
+[type="color"],
+textarea {
+  border: 1px solid var(--ze-input-border-color);
+  padding: 12px;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="number"],
+input[type="date"],
+select,
+textarea,
+textarea[rows] {
+  color: #235753;
+  font-size: 16px;
+}
+
+[type="text"]:focus,
+[type="password"]:focus,
+[type="date"]:focus,
+[type="datetime"]:focus,
+[type="datetime-local"]:focus,
+[type="month"]:focus,
+[type="week"]:focus,
+[type="email"]:focus,
+[type="number"]:focus,
+[type="search"]:focus,
+[type="tel"]:focus,
+[type="time"]:focus,
+[type="url"]:focus,
+[type="color"]:focus,
+textarea:focus {
+  border-color: var(--ze-input-border-color);
+  border-width: 2px;
+  background-color: white;
+  box-shadow: none;
+}
+
+/* button-styled radio inputs */
+
+input[type="radio"],
+.amount-wrapper .button-wrapper button.button,
+.amount-wrapper .button-wrapper label strong {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+input[type="radio"] + label,
+.amount-wrapper .button-wrapper button.button {
+  background-color: var(--ze-radio-button-bg-color);
+  color: var(--ze-radio-button-text-color);
+  border-radius: 2px;
+}
+
+input[type="radio"]:checked + label:hover,
+.non-touch input[type="radio"] + label:hover,
+.amount-wrapper .button-wrapper button.button:hover {
+  background-color: var(--ze-radio-button-hover-bg-color);
+  color: var(--ze-radio-button-text-color);
+}
+
+input[type="radio"]:checked + label {
+  background-color: var(--ze-radio-button-selected-bg-color);
+  color: var(--ze-radio-button-selected-text-color);
+}
+
+/* email field */
+
+.input-wrapper.info > i {
+  background-color: var(--ze-input-border-color);
+  color: var(--ze-text-color-inverted);
+}
+
+.non-touch .input-wrapper.info > i:hover {
+  background-color: var(--ze-input-appended-button-hover-color);
+}
+
+/* infotext (help-button on email field) */
+
+.infotext {
+  background-color: var(--ze-text-color);
+  color: var(--ze-text-color-inverted);
+}
+
+.infotext:before {
+  border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) var(--ze-text-color)
+    rgba(0, 0, 0, 0);
+}
+
+/* cta */
+
+button.button.grey,
+a.button.grey {
+  background-color: #b8b8b8;
+  font-weight: 600;
+}
+
+button.button.has-hint,
+a.button.has-hint {
+  border-radius: 2px;
+}
+
+button.button,
+a.button {
+  background-color: #cc0070;
+}
+
+button.button:hover,
+a.button:hover {
+  background-color: #e43997;
+}
+
+/* submit (arrow button) */
+
+button.button.arrow[type="submit"]::after {
+  display: none;
+}
+
+button.button.arrow[type="submit"] {
+  width: 100% !important;
+  text-transform: none;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  border-radius: 2px;
+}
+
+button.button.arrow[type="submit"]:hover {
+  background-color: #e43997;
+}
+
+/* cta hint */
+
+button.button.grey + .hint,
+a.button.grey + .hint,
+button.button + .hint,
+a.button + .hint {
+  margin-top: 16px;
+  background-color: transparent;
+  border: 1px solid var(--ze-input-border-color);
+  border-radius: 0;
+  color: var(--ze-text-color);
+}
+
+/* footer */
+
+.footer-gls {
+  background: transparent !important;
+  padding-top: 0 !important;
+  padding-bottom: 0;
+}
+
+.footer-gls > span {
+  color: var(--ze-text-color);
+}
+
+.footer-gls .impress-wrapper a {
+  color: var(--ze-text-color);
+  text-decoration: underline;
+}
+
+footer .payment-preview {
+  background-color: white;
+}
+
+footer .payment-preview-wrapper {
+  background-color: white;
+  border: 1px solid #235753;
+  border-radius: 32px;
+  display: flex;
+  padding: 8px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}

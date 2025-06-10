@@ -2,7 +2,8 @@
   .underline-1 {
     @apply has-underline pb-4 lg:pb-6;
 
-    &::after {
+    &::before {
+      @apply left-1/2 -translate-x-1/2 bg-bottom;
       @apply w-[350px] bg-[url(/shapes/underline-karl.png)] bg-size-[350px] lg:w-[607px] lg:bg-size-[607px];
     }
   }
@@ -10,8 +11,18 @@
   .underline-2 {
     @apply has-underline pb-12;
 
-    &::after {
+    &::before {
+      @apply left-1/2 -translate-x-1/2 bg-bottom;
       @apply w-[205px] bg-[url(/shapes/underline-frieda.png)] bg-size-[205px];
+    }
+  }
+
+  .underline-3 {
+    @apply has-underline;
+
+    &::before {
+      @apply top-1/2 -left-8 -translate-y-1/2;
+      @apply h-[71px] w-[208px] bg-[url(/shapes/underline-bernd.png)] bg-size-[208px_71px];
     }
   }
 }

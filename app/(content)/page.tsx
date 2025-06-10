@@ -1,12 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
-import Script from "next/script";
 
 import Block from "@/app/_components/block";
 import HomeHero from "./home-hero";
 import IconGrid, { GridIcon } from "@/app/_components/icon-grid";
 import Logos from "@/app/_components/logos";
 import Timeline from "@/app/_components/timeline";
+import TwingleWidget from "@/app/_components/twingle-widget";
 
 import CollectImage from "@/app/_pictures/sammeln.png";
 import SignatureImage from "@/app/_pictures/unterschriften.png";
@@ -97,7 +97,9 @@ export default function HomePage() {
       </Block>
 
       <Block variant="green">
-        <h2 className="h2 max-w-xl text-center">6 gute Gründe für dein Ja!</h2>
+        <h2 className="h2 underline-3 max-w-xl text-center">
+          6 gute Gründe für dein Ja!
+        </h2>
         <IconGrid>
           <GridIcon src="/icons/vote.svg" title="Deine Stimme zählt">
             Unser Gesetzvorschlag wird bei einem Volksentscheid am 12.10.
@@ -177,18 +179,15 @@ export default function HomePage() {
             und Förderungen finanziert. Mit deiner Spende machst du ein besseres
             Klimaschutzgesetz für Hamburg möglich!
           </p>
-          <Link className="button secondary alt" href="/">
+          <Link className="button secondary alt" href="/spenden">
             Mehr erfahren
           </Link>
         </div>
-        <Script
-          src="https://spenden.twingle.de/embed/hamburg-klimaneutral/testprojekt/tw67beebe41b6eb/widget/foo"
-          strategy="lazyOnload"
-        />
-        <div
-          id="twingle-public-embed-foo"
-          className="w-full sm:max-w-[450px]"
-          aria-label="Spenden Widget"
+        {/* @TODO: use old project name to keep history */}
+        <TwingleWidget
+          projectName="next-test-startseite"
+          projectId="tw683f2b611d1ed"
+          className="sm:max-w-[450px]"
         />
       </Block>
     </main>
