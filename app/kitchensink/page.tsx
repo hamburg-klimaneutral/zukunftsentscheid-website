@@ -146,7 +146,7 @@ export default function KitchenSinkPage() {
         <ul className="flex flex-wrap gap-4">
           {Array.from({ length: 102 }).map((_, index) => (
             <li key={index} className="relative">
-              <Blob id={index} variant="pink" />
+              <Blob id={index} className="fill-pink-light" />
               <span className="translat-1/2 absolute inset-1/2">{index}</span>
             </li>
           ))}
