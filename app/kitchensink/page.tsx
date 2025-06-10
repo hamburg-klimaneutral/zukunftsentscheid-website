@@ -2,6 +2,7 @@ import Image from "next/image";
 import Hero from "@/app/_components/hero";
 import HeroImage from "@/app/_pictures/12.10.png";
 import Block from "@/app/_components/block";
+import Blob from "@/app/_components/blob";
 
 export default function KitchenSinkPage() {
   return (
@@ -138,6 +139,18 @@ export default function KitchenSinkPage() {
             <h1 className="h1">Without Asset</h1>
           </Hero>
         </Block>
+      </section>
+
+      <section>
+        <h1 className="h1">Blobs</h1>
+        <ul className="flex flex-wrap gap-4">
+          {Array.from({ length: 102 }).map((_, index) => (
+            <li key={index} className="relative">
+              <Blob id={index} variant="pink" />
+              <span className="translat-1/2 absolute inset-1/2">{index}</span>
+            </li>
+          ))}
+        </ul>
       </section>
     </div>
   );
