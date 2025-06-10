@@ -1,6 +1,6 @@
 "use client";
 
-import { useForm, SubmitHandler } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Link from "next/link";
 import {
@@ -28,14 +28,10 @@ export default function ContactForm() {
     formState: { errors },
   } = form;
 
-  const onSubmitForm: SubmitHandler<ContactFormSchema> = async (data) => {
-    await submitContactForm(data);
-  };
-
   return (
     <form
       className="flex w-xl max-w-full flex-col gap-8"
-      onSubmit={handleSubmit(onSubmitForm)}
+      onSubmit={handleSubmit(submitContactForm)}
     >
       <div
         className={twMerge(

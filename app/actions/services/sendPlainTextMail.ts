@@ -1,4 +1,3 @@
-import { cache } from "react";
 import assert from "node:assert";
 import type { SendEmailV3_1 } from "node-mailjet";
 import MailJet from "node-mailjet";
@@ -15,7 +14,7 @@ const MAIL_FROM: SendEmailV3_1.Message["From"] = {
   Name: CONTACT_MAIL_NAME,
 };
 
-const getClient = cache(() => {
+const getClient = () => {
   assert(MAILJET_API_KEY, "MAILJET_API_KEY not defined");
   assert(MAILJET_SECRET_KEY, "MAILJET_SECRET_KEY not defined");
 
@@ -23,7 +22,7 @@ const getClient = cache(() => {
     apiKey: MAILJET_API_KEY,
     apiSecret: MAILJET_SECRET_KEY,
   });
-});
+};
 
 export async function sendPlainTextMail({
   to,
