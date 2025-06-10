@@ -7,6 +7,7 @@ import HomeHero from "./home-hero";
 import IconGrid, { GridIcon } from "@/app/_components/icon-grid";
 import Logos from "@/app/_components/logos";
 import Timeline from "@/app/_components/timeline";
+import Blob from "@/app/_components/blob";
 
 import CollectImage from "@/app/_pictures/sammeln.png";
 import SignatureImage from "@/app/_pictures/unterschriften.png";
@@ -52,6 +53,18 @@ export default function HomePage() {
       </Block>
 
       <Block>
+        <div className="absolute -top-25 -right-40 scale-50 sm:-right-30 sm:scale-100">
+          <Blob
+            id={33}
+            size={352}
+            className="fill-green-neon z-1 scale-x-[-1] rotate-50"
+          />
+          <Blob
+            id={44}
+            size={120}
+            className="absolute -top-15 right-22 z-1 rotate-90 fill-white"
+          />
+        </div>
         <h2 className="h2 underline-2 text-center whitespace-pre-line">
           Über 139.000 Hamburger*innen unterstützen uns bereits.{"\n"}
           Hilf mit!

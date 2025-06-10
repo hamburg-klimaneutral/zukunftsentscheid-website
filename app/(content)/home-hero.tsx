@@ -4,12 +4,13 @@ import Link from "next/link";
 import Icon from "@/app/icon.png";
 import HeroImage from "@/app/_pictures/12.10.png";
 import Hero from "@/app/_components/hero";
+import Blob from "@/app/_components/blob";
 
 export default function HomeHero() {
   return (
     <Hero
       asset={
-        <>
+        <figure className="relative z-0">
           <Image
             sizes="100vw"
             className="h-auto w-full"
@@ -29,7 +30,17 @@ export default function HomeHero() {
             <br />
             zu Hamburg
           </div>
-        </>
+          <Blob
+            id={4}
+            size={64}
+            className="fill-green-neon absolute -right-8 bottom-2/5 z-1 scale-50 sm:scale-100"
+          />
+          <Blob
+            id={45}
+            size={232}
+            className="fill-blue-light absolute -right-30 bottom-1/10 -z-1 scale-50 sm:scale-100"
+          />
+        </figure>
       }
     >
       <h1 className="h1 block whitespace-pre-line lg:hidden">
