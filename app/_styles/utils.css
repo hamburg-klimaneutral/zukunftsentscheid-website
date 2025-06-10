@@ -83,6 +83,10 @@
   }
 }
 
+@utility blob-* {
+  @apply mask-[url(--value([*]))] mask-alpha mask-contain mask-no-repeat;
+}
+
 @utility form-input {
   @apply ring-green-dark placeholder-grey rounded-xs border-none bg-white p-3 ring-1;
 

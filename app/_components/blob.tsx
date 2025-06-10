@@ -25,7 +25,7 @@ export default function Blob({
       className={twMerge("inline-block", VARIANTS[variant], className)}
     >
       <use
-        href={`/icons/blobs.svg#blob${id}`}
+        href={`/blobs/${id}.svg#${id}`}
         className={twMerge("inline-block", VARIANTS[variant], className)}
       />
     </svg>

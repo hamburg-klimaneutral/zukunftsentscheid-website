@@ -58,7 +58,7 @@ export default function HomePage() {
         </h2>
 
         <div className="content-grid">
-          <figure>
+          <figure className="blob-[/blobs/36.svg]">
             <Image
               src={CollectImage}
               sizes="(min-width: 640px) 530px, 100vw"
@@ -75,7 +75,7 @@ export default function HomePage() {
               Hilfe ist wertvoll!
             </p>
           </div>
-          <figure className="hidden sm:block">
+          <figure className="blob-[/blobs/5.svg] hidden sm:block">
             <Image
               src={SignatureImage}
               sizes="(min-width: 640px) 530px, 100vw"
