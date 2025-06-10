@@ -2,6 +2,17 @@
 
 A Next.js project with MDX support for [Hamburger Zukunftsentscheid](https://zukunftsentscheid-hamburg.de/).
 
+## Environment variables
+
+Create a `.env.local`:
+
+```text
+DIVERT_MAILS_TO_LOG=true # You can divert outbound mails to the console instead of configuring mailjey keys.
+MAILJET_SECRET_KEY=
+MAILJET_API_KEY=
+```
+
+
 ## Quick Start
 
 ```

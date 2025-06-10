@@ -32,4 +32,8 @@
       @apply form-input;
     }
   }
+
+  .form-field.error label {
+    @apply text-error;
+  }
 }

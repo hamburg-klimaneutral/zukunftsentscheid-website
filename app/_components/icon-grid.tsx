@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { twMerge } from "tailwind-merge";
 
 export default function IconGrid({ children }: { children: React.ReactNode }) {
   return (
@@ -12,13 +13,20 @@ export function GridIcon({
   src,
   title,
   children,
+  className,
 }: {
   src: string;
   title: string;
   children: React.ReactNode;
+  className?: string;
 }) {
   return (
-    <li className="mx-auto flex max-w-[330px] basis-full flex-col items-center text-center whitespace-pre-line">
+    <li
+      className={twMerge(
+        "mx-auto flex max-w-[330px] basis-full flex-col items-center text-center whitespace-pre-line",
+        className
+      )}
+    >
       <Image
         src={src}
         alt=""
