@@ -13,7 +13,7 @@ export default function HomeHero() {
         <figure className="relative z-0">
           <Image
             sizes="100vw"
-            className="h-auto w-full"
+            className="mb-12 h-auto w-full sm:mb-0 lg:-mb-3"
             src={HeroImage}
             alt="Das Team von Zukunftsentscheid Hamburg präsentiert den Termin der Volksabstimmung am 12.10.2025 vor der Kulisse des Hamburger Rathauses."
             priority
@@ -39,7 +39,7 @@ export default function HomeHero() {
           <ResponsivePositionedBlob
             id={45}
             className="fill-blue-light -z-1"
-            positionPercentages={{ top: 42, left: 81 }}
+            positionPercentages={{ top: 41, left: 81 }}
             heightPercentage={48}
           />
         </figure>
