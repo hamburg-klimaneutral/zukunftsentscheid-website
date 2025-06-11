@@ -1,4 +1,4 @@
-@layer components {
+@layer base {
   .markdown {
     @apply space-y-4;
 
