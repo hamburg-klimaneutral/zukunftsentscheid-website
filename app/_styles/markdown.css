@@ -1,7 +1,5 @@
-@layer base {
+@layer components {
   .markdown {
-    @apply space-y-4;
-
     h1 {
       @apply h1;
     }
@@ -21,20 +19,6 @@
 
     small {
       @apply text-tiny;
-    }
-
-    ol {
-      @apply list-decimal;
-      @apply ml-5;
-    }
-
-    ul {
-      @apply list-disc;
-      @apply ml-5;
-    }
-
-    a:not(.button) {
-      @apply underline;
     }
   }
 }
