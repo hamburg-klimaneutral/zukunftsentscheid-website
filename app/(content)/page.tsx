@@ -11,6 +11,7 @@ import Blob from "@/app/_components/blob";
 
 import CollectImage from "@/app/_pictures/sammeln.png";
 import SignatureImage from "@/app/_pictures/unterschriften.png";
+import RelativePositionedBlob from "@/app/_components/relative-positioned-blob";
 
 export default function HomePage() {
   return (
@@ -79,14 +80,30 @@ export default function HomePage() {
         </h2>
 
         <div className="content-grid">
-          <figure className="blob-[/blobs/36.svg]">
-            <Image
-              src={CollectImage}
-              sizes="(min-width: 640px) 530px, 100vw"
-              placeholder="blur"
-              alt="Das Team von Zukunftsentscheid Hamburg bei der Unterschriftensammlung"
+          <figure className="relative">
+            <RelativePositionedBlob
+              id={70}
+              className="fill-pink-light absolute"
+              positionPercentages={{ left: -18, top: 20 }}
+              heightPercentage={81}
+            />
+            <figure className="blob-[/blobs/36.svg]">
+              <Image
+                src={CollectImage}
+                sizes="(min-width: 640px) 530px, 100vw"
+                placeholder="blur"
+                alt="Das Team von Zukunftsentscheid Hamburg bei der Unterschriftensammlung"
+              />
+            </figure>
+            <RelativePositionedBlob
+              id={96}
+              className="fill-blue-light absolute"
+              positionPercentages={{ left: 32, bottom: 8 }}
+              rotation={-55.3}
+              heightPercentage={16.8}
             />
           </figure>
+
           <div className="teaser wide">
             <h3 className="h3">Was ist noch zu tun?</h3>
             <p>
@@ -96,12 +113,28 @@ export default function HomePage() {
               Hilfe ist wertvoll!
             </p>
           </div>
-          <figure className="blob-[/blobs/5.svg] hidden sm:block">
-            <Image
-              src={SignatureImage}
-              sizes="(min-width: 640px) 530px, 100vw"
-              placeholder="blur"
-              alt="Zwei Mitglieder vom Zukunftsentscheid Hamburg präsentieren gesammelte Unterschriften"
+          <figure className="relative">
+            <RelativePositionedBlob
+              id={33}
+              className="fill-green-dark absolute"
+              positionPercentages={{ left: 62.5, bottom: 0 }}
+              rotation={-99}
+              heightPercentage={61.7}
+            />
+            <figure className="blob-[/blobs/5.svg] hidden sm:block">
+              <Image
+                src={SignatureImage}
+                sizes="(min-width: 640px) 530px, 100vw"
+                placeholder="blur"
+                alt="Zwei Mitglieder vom Zukunftsentscheid Hamburg präsentieren gesammelte Unterschriften"
+              />
+            </figure>
+            <RelativePositionedBlob
+              id={45}
+              className="fill-green-neon absolute"
+              positionPercentages={{ left: 66, bottom: -1 }}
+              rotation={62.425}
+              heightPercentage={15}
             />
           </figure>
           <div className="teaser wide">
