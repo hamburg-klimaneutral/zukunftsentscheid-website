@@ -19,7 +19,7 @@ type RelativePositionedBlobProps = {
     );
 };
 
-export default function RelativePositionedBlob({
+export default function ResponsivePositionedBlob({
   id,
   className,
   heightPercentage,

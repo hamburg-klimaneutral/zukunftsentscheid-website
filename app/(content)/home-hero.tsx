@@ -4,7 +4,7 @@ import Link from "next/link";
 import Icon from "@/app/icon.png";
 import HeroImage from "@/app/_pictures/12.10.png";
 import Hero from "@/app/_components/hero";
-import RelativePositionedBlob from "@/app/_components/relative-positioned-blob";
+import ResponsivePositionedBlob from "@/app/_components/responsive-positioned-blob";
 
 export default function HomeHero() {
   return (
@@ -30,13 +30,13 @@ export default function HomeHero() {
             <br />
             zu Hamburg
           </div>
-          <RelativePositionedBlob
+          <ResponsivePositionedBlob
             id={4}
             className="fill-green-neon"
             positionPercentages={{ top: 47, left: 94.6 }}
             heightPercentage={13.2}
           />
-          <RelativePositionedBlob
+          <ResponsivePositionedBlob
             id={45}
             className="fill-blue-light -z-1"
             positionPercentages={{ top: 42, left: 81 }}

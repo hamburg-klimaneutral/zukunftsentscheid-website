@@ -11,7 +11,7 @@ import Blob from "@/app/_components/blob";
 
 import CollectImage from "@/app/_pictures/sammeln.png";
 import SignatureImage from "@/app/_pictures/unterschriften.png";
-import RelativePositionedBlob from "@/app/_components/relative-positioned-blob";
+import ResponsivePositionedBlob from "@/app/_components/responsive-positioned-blob";
 
 export default function HomePage() {
   return (
@@ -81,7 +81,7 @@ export default function HomePage() {
 
         <div className="content-grid">
           <figure className="relative">
-            <RelativePositionedBlob
+            <ResponsivePositionedBlob
               id={70}
               className="fill-pink-light absolute"
               positionPercentages={{ left: -18, top: 20 }}
@@ -95,7 +95,7 @@ export default function HomePage() {
                 alt="Das Team von Zukunftsentscheid Hamburg bei der Unterschriftensammlung"
               />
             </figure>
-            <RelativePositionedBlob
+            <ResponsivePositionedBlob
               id={96}
               className="fill-blue-light absolute"
               positionPercentages={{ left: 32, bottom: 8 }}
@@ -114,7 +114,7 @@ export default function HomePage() {
             </p>
           </div>
           <figure className="relative">
-            <RelativePositionedBlob
+            <ResponsivePositionedBlob
               id={33}
               className="fill-green-dark absolute"
               positionPercentages={{ left: 62.5, bottom: 0 }}
@@ -129,7 +129,7 @@ export default function HomePage() {
                 alt="Zwei Mitglieder vom Zukunftsentscheid Hamburg präsentieren gesammelte Unterschriften"
               />
             </figure>
-            <RelativePositionedBlob
+            <ResponsivePositionedBlob
               id={45}
               className="fill-green-neon absolute"
               positionPercentages={{ left: 66, bottom: -1 }}
