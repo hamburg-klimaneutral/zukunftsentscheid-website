@@ -88,9 +88,13 @@
 }
 
 @utility form-input {
-  @apply ring-green-dark placeholder-grey rounded-none border-none bg-white p-3 ring-1;
+  @apply ring-green-dark placeholder-grey rounded-xs border-none bg-white p-3 ring-1;
 
   &:focus {
     @apply ring-green-dark ring-2 outline-none;
+  }
+
+  .form-field.error & {
+    @apply ring-error text-error ring-2 outline-none;
   }
 }

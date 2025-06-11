@@ -1,12 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
-import Script from "next/script";
 
 import Block from "@/app/_components/block";
 import HomeHero from "./home-hero";
 import IconGrid, { GridIcon } from "@/app/_components/icon-grid";
 import Logos from "@/app/_components/logos";
 import Timeline from "@/app/_components/timeline";
+import TwingleWidget from "@/app/_components/twingle-widget";
 import Blob from "@/app/_components/blob";
 
 import CollectImage from "@/app/_pictures/sammeln.png";
@@ -25,21 +25,29 @@ export default function HomePage() {
           verantwortungsbewusst.
         </h2>
         <IconGrid>
-          <GridIcon src="/icons/check.svg" title="Sozialverträglichkeit">
+          <GridIcon
+            blobId={66}
+            src="/icons/check.svg"
+            title="Sozialverträglichkeit"
+          >
             Fairer Klimaschutz,{"\n"}
             der für alle bezahlbar bleibt.
             <Link href="/" className="button">
               mehr dazu
             </Link>
           </GridIcon>
-          <GridIcon src="/icons/clock.svg" title="Jährliche Ziele">
+          <GridIcon blobId={70} src="/icons/clock.svg" title="Jährliche Ziele">
             Planbarkeit und Transparenz{"\n"}
             für Menschen und Wirtschaft.
             <Link href="/" className="button">
               mehr dazu
             </Link>
           </GridIcon>
-          <GridIcon src="/icons/muscle.svg" title="Klimaneutralität 2040">
+          <GridIcon
+            blobId={3}
+            src="/icons/muscle.svg"
+            title="Klimaneutralität 2040"
+          >
             Ein verantwortungsvoller und{"\n"}
             wettbewerbsfähiger Beitrag unserer Stadt.
             <Link href="/" className="button">
@@ -114,14 +122,21 @@ export default function HomePage() {
           6 gute Gründe für dein Ja!
         </h2>
         <IconGrid>
-          <GridIcon src="/icons/vote.svg" title="Deine Stimme zählt">
+          <GridIcon
+            blobId={35}
+            src="/icons/vote.svg"
+            title="Deine Stimme zählt"
+            className="fill-pink-light"
+          >
             Unser Gesetzvorschlag wird bei einem Volksentscheid am 12.10.
             abgestimmt. Gewinnen wir, tritt unser verbessertes Klimaschutzgesetz
             in Kraft.
           </GridIcon>
           <GridIcon
+            blobId={2}
             src="/icons/shake.svg"
             title="Wirtschaft & Wissenschaft an Board"
+            className="fill-pink-light"
           >
             Unser Gesetz wurde gemeinsam mit Expertise aus Wissenschaft,
             Sozialverbänden und Wirtschaft entwickelt. Auch OECD und
@@ -129,26 +144,37 @@ export default function HomePage() {
             2040 ist möglich!
           </GridIcon>
           <GridIcon
+            blobId={34}
             src="/icons/for-all.svg"
             title="Klimaschutz, der alle mitnimmt"
+            className="fill-pink-light"
           >
             Klimaschutz, Wohlstand und soziale Gerechtigkeit sind keine
             Gegensätze. Unser Gesetz sorgt dafür, dass vom Klimaschutz alle
             profitieren.
           </GridIcon>
           <GridIcon
+            blobId={5}
             src="/icons/globe.svg"
             title="Klimaschutz macht dein Leben besser"
+            className="fill-pink-light"
           >
             Solaranlagen und Sanierungen sparen Energie und Geld. Ein
             zuverlässiger ÖPNV bringt dich schneller ans Ziel.
           </GridIcon>
-          <GridIcon src="/icons/hamburg.svg" title="Gemeinsam für Hamburg">
+          <GridIcon
+            blobId={66}
+            src="/icons/hamburg.svg"
+            title="Gemeinsam für Hamburg"
+            className="fill-pink-light"
+          >
             Mehr als 160 Verbände und Unternehmen stehen hinter uns.
           </GridIcon>
           <GridIcon
+            blobId={3}
             src="/icons/heart-hand.svg"
             title="Was wir wollen, bewegt viele"
+            className="fill-pink-light"
           >
             Über 139.000 Hamburger*innen haben den Zukunftsentscheid bereits
             unterstützt. Jetzt kommt es auf dich an!
@@ -192,18 +218,15 @@ export default function HomePage() {
             und Förderungen finanziert. Mit deiner Spende machst du ein besseres
             Klimaschutzgesetz für Hamburg möglich!
           </p>
-          <Link className="button secondary alt" href="/">
+          <Link className="button secondary alt" href="/spenden">
             Mehr erfahren
           </Link>
         </div>
-        <Script
-          src="https://spenden.twingle.de/embed/hamburg-klimaneutral/testprojekt/tw67beebe41b6eb/widget/foo"
-          strategy="lazyOnload"
-        />
-        <div
-          id="twingle-public-embed-foo"
-          className="w-full sm:max-w-[450px]"
-          aria-label="Spenden Widget"
+        {/* @TODO: use old project name to keep history */}
+        <TwingleWidget
+          projectName="next-test-startseite"
+          projectId="tw683f2b611d1ed"
+          className="sm:max-w-[450px]"
         />
       </Block>
     </main>
