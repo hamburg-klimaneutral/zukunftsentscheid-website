@@ -14,9 +14,10 @@ export default function ContactSuccessPage() {
       </Block>
       <Block>
         <GridIcon
+          blobId={66}
           src="/icons/book-heart.svg"
           title="Abgeschickt!"
-          className="max-w-xl"
+          className="fill-blue-light max-w-xl"
         >
           Wir geben uns Mühe dein Anliegen so schnell wie es geht zu bearbeiten.
           Wenn du nicht so lange warten möchtest, schau dir an, wie du helfen
