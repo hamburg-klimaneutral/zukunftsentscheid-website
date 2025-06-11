@@ -19,7 +19,7 @@ export default function HomePage() {
         <HomeHero />
       </Block>
 
-      <Block variant="blue" className="pt-24">
+      <Block variant="blue" className="pt-24" negativeZIndex>
         <h2 className="h2 underline-1 max-w-xl text-center">
           Gemeinsam machen wir Hamburgs Klimapolitik sozial, planbar und
           verantwortungsbewusst.
