@@ -1,3 +1,5 @@
+// TODO: Update content for new website
+
 export default function PrivacyContent() {
   return (
     <div className="markdown max-w-full">

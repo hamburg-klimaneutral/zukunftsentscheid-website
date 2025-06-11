@@ -19,7 +19,9 @@ export default function Block({
   className,
 }: BlockProps) {
   return (
-    <section className={VARIANTS[variant]}>
+    <section
+      className={twMerge(VARIANTS[variant], "relative z-0 overflow-x-clip")}
+    >
       <div
         className={twMerge(
           "container flex flex-col items-center gap-10 py-14 sm:py-24",
