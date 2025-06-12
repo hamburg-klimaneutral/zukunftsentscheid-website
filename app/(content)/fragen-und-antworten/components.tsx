@@ -39,14 +39,25 @@ function Section({ title, children }: SectionProps) {
   return (
     <section className="w-full">
       <h2 className="h2 mb-15 text-center">{title}</h2>
-      <Accordion.Root collapsible type="single">
-        <div className="flex flex-col gap-2">{children}</div>
-      </Accordion.Root>
+      <div className="flex flex-col gap-2">{children}</div>
     </section>
   );
 }
 
+interface RootProps {
+  children?: React.ReactNode;
+}
+
+function Root({ children }: RootProps) {
+  return (
+    <Accordion.Root collapsible type="single" className="w-full">
+      {children}
+    </Accordion.Root>
+  );
+}
+
 export const FAQ = {
-  Item,
+  Root,
   Section,
+  Item,
 };
