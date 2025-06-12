@@ -84,7 +84,7 @@ export default function HomePage() {
             <ResponsivePositionedBlob
               id={70}
               className="fill-pink-light absolute"
-              positionPercentages={{ left: -18, top: 20 }}
+              position={{ left: "-18%", top: "20%" }}
               heightPercentage={81}
             />
             <figure className="blob-[/blobs/36.svg]">
@@ -98,7 +98,7 @@ export default function HomePage() {
             <ResponsivePositionedBlob
               id={96}
               className="fill-blue-light absolute"
-              positionPercentages={{ left: 32, bottom: 8 }}
+              position={{ left: "32%", bottom: "8%" }}
               rotation={-55.3}
               heightPercentage={16.8}
             />
@@ -117,7 +117,7 @@ export default function HomePage() {
             <ResponsivePositionedBlob
               id={33}
               className="fill-green-dark absolute"
-              positionPercentages={{ left: 62.5, bottom: 0 }}
+              position={{ left: "62.5%", bottom: "0%" }}
               rotation={-99}
               heightPercentage={61.7}
             />
@@ -132,7 +132,7 @@ export default function HomePage() {
             <ResponsivePositionedBlob
               id={45}
               className="fill-green-neon absolute"
-              positionPercentages={{ left: 66, bottom: -1 }}
+              position={{ left: "66%", bottom: "-1%" }}
               rotation={62.425}
               heightPercentage={15}
             />

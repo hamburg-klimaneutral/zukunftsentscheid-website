@@ -33,13 +33,13 @@ export default function HomeHero() {
           <ResponsivePositionedBlob
             id={4}
             className="fill-green-neon"
-            positionPercentages={{ top: 47, left: 94.6 }}
+            position={{ top: "47%", left: "94.6%" }}
             heightPercentage={13.2}
           />
           <ResponsivePositionedBlob
             id={45}
             className="fill-blue-light -z-1"
-            positionPercentages={{ top: 41, left: 81 }}
+            position={{ top: "41%", left: "81%" }}
             heightPercentage={48}
           />
         </figure>

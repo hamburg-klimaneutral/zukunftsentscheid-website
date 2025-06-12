@@ -1,21 +1,23 @@
 import { twMerge } from "tailwind-merge";
 
+type Position = string | number;
+
 type RelativePositionedBlobProps = {
   id: number;
   className?: string;
   rotation?: number;
   heightPercentage: number;
-  positionPercentages: (
+  position: (
     | {
-        top: number;
+        top: Position;
       }
-    | { bottom: number }
+    | { bottom: Position }
   ) &
     (
       | {
-          left: number;
+          left: Position;
         }
-      | { right: number }
+      | { right: Position }
     );
 };
 
@@ -23,16 +25,9 @@ export default function ResponsivePositionedBlob({
   id,
   className,
   heightPercentage,
-  positionPercentages,
+  position,
   rotation,
 }: RelativePositionedBlobProps) {
-  const percentagePositions = Object.fromEntries(
-    Object.entries(positionPercentages).map(([key, value]) => [
-      key,
-      `${value}%`,
-    ])
-  );
-
   let transform = "";
 
   if (rotation) {
@@ -46,7 +41,7 @@ export default function ResponsivePositionedBlob({
       className={twMerge("absolute inline-block", className)}
       aria-hidden
       style={{
-        ...percentagePositions,
+        ...position,
         height: `${heightPercentage}%`,
         transform,
       }}
