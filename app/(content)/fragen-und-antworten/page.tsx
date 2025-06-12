@@ -7,7 +7,7 @@ import { FAQ } from "./components";
 export default function FragenUndAntwortenPage() {
   return (
     <>
-      <Block variant="blue">
+      <Block variant="green">
         <Hero>
           <h1 className="h1">Fragen und Antworten</h1>
         </Hero>
