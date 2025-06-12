@@ -10,6 +10,7 @@ import TwingleWidget from "@/app/_components/twingle-widget";
 
 import CollectImage from "@/app/_pictures/sammeln.png";
 import SignatureImage from "@/app/_pictures/unterschriften.png";
+import ClaimsOverview from "../_components/claims-overview";
 
 export default function HomePage() {
   return (
@@ -23,37 +24,7 @@ export default function HomePage() {
           Gemeinsam machen wir Hamburgs Klimapolitik sozial, planbar und
           verantwortungsbewusst.
         </h2>
-        <IconGrid>
-          <GridIcon
-            blobId={66}
-            src="/icons/check.svg"
-            title="Sozialverträglichkeit"
-          >
-            Fairer Klimaschutz,{"\n"}
-            der für alle bezahlbar bleibt.
-            <Link href="/" className="button">
-              mehr dazu
-            </Link>
-          </GridIcon>
-          <GridIcon blobId={70} src="/icons/clock.svg" title="Jährliche Ziele">
-            Planbarkeit und Transparenz{"\n"}
-            für Menschen und Wirtschaft.
-            <Link href="/" className="button">
-              mehr dazu
-            </Link>
-          </GridIcon>
-          <GridIcon
-            blobId={3}
-            src="/icons/muscle.svg"
-            title="Klimaneutralität 2040"
-          >
-            Ein verantwortungsvoller und{"\n"}
-            wettbewerbsfähiger Beitrag unserer Stadt.
-            <Link href="/" className="button">
-              mehr dazu
-            </Link>
-          </GridIcon>
-        </IconGrid>
+        <ClaimsOverview />
         <Link href="/" className="button secondary">
           Unsere Forderungen
         </Link>
