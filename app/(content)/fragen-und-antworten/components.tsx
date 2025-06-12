@@ -18,7 +18,8 @@ function Item({ title, children }: ItemProps) {
             width={24}
             height={24}
             src="/icons/chevron-down-circle.svg"
-            alt="FAQ Element öffnen und schließen"
+            alt=""
+            aria-hidden
           />
         </Accordion.Trigger>
       </Accordion.Header>
