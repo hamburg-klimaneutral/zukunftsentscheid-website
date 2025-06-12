@@ -10,9 +10,9 @@ export default function PressReleaseHeroBlock(
   props: PressReleaseHeroBlockProps
 ) {
   return (
-    <Block variant="blue">
+    <Block variant="green">
       <Hero>
-        <h1>{props.pressRelease.date}HELLO</h1>
+        <h1>{props.pressRelease.date}</h1>
         <h2 className="h2 text-center">{props.pressRelease.title}</h2>
       </Hero>
     </Block>

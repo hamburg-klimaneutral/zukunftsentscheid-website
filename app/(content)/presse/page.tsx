@@ -5,7 +5,7 @@ import PressReleaseItem from "@/app/(content)/presse/item";
 export default function PressePage() {
   return (
     <>
-      <Block variant="blue">
+      <Block variant="green">
         <h1 className="h1">Presse</h1>
       </Block>
 
