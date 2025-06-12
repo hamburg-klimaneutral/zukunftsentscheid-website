@@ -1,8 +1,11 @@
-import Block from "@/app/_components/block";
-import ClaimsOverview from "@/app/_components/claims-overview";
-import Hero from "@/app/_components/hero";
-import IconGrid, { GridIcon } from "@/app/_components/icon-grid";
 import Link from "next/link";
+import Image from "next/image";
+
+import Block from "@/app/_components/block";
+import Hero from "@/app/_components/hero";
+import Blob from "@/app/_components/blob";
+import IconGrid, { GridIcon } from "@/app/_components/icon-grid";
+import ClaimsOverview from "@/app/_components/claims-overview";
 
 export default function Claim2024Page() {
   return (
@@ -15,6 +18,26 @@ export default function Claim2024Page() {
       </Block>
 
       <Block className="max-w-2xl text-center">
+        <Blob
+          id={84}
+          size={416}
+          className="fill-pink-light absolute -top-[70%] left-[87%] -z-1 rotate-[150deg]"
+        />
+        <div className="absolute -top-[50%] left-[83%] flex h-[111px] w-[111px] justify-center">
+          <Blob
+            id={70}
+            size={111}
+            className="absolute top-0 left-0 rotate-[137deg] fill-white"
+          />
+          <Image
+            width={53}
+            height={53}
+            className="relative"
+            src="/icons/muscle.svg"
+            alt=""
+            aria-hidden
+          />
+        </div>
         <h2 className="h2">
           Hamburg muss Verantwortung übernehmen - und davon profitieren wir
           alle!
