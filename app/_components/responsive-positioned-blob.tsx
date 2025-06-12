@@ -6,7 +6,7 @@ type RelativePositionedBlobProps = {
   id: number;
   className?: string;
   rotation?: number;
-  heightPercentage: number;
+  sizePercentage: { height: number } | { width: number };
   position: (
     | {
         top: Position;
@@ -24,7 +24,7 @@ type RelativePositionedBlobProps = {
 export default function ResponsivePositionedBlob({
   id,
   className,
-  heightPercentage,
+  sizePercentage,
   position,
   rotation,
 }: RelativePositionedBlobProps) {
@@ -34,15 +34,23 @@ export default function ResponsivePositionedBlob({
     transform += `rotate(${rotation}deg)`;
   }
 
+  const svgSize =
+    "height" in sizePercentage ? { height: "100%" } : { width: "100%" };
+
+  const styleSize =
+    "height" in sizePercentage
+      ? { height: `${sizePercentage.height}%` }
+      : { width: `${sizePercentage.width}%` };
+
   return (
     <svg
-      height={"100%"}
+      {...svgSize}
       viewBox={"0 0 1 1"}
       className={twMerge("absolute inline-block", className)}
       aria-hidden
       style={{
         ...position,
-        height: `${heightPercentage}%`,
+        ...styleSize,
         transform,
       }}
     >

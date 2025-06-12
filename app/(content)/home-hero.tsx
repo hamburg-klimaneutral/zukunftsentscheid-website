@@ -34,13 +34,13 @@ export default function HomeHero() {
             id={4}
             className="fill-green-neon"
             position={{ top: "47%", left: "94.6%" }}
-            heightPercentage={13.2}
+            sizePercentage={{ height: 13.2 }}
           />
           <ResponsivePositionedBlob
             id={45}
             className="fill-blue-light -z-1"
             position={{ top: "41%", left: "81%" }}
-            heightPercentage={48}
+            sizePercentage={{ height: 48 }}
           />
         </figure>
       }

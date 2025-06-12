@@ -7,7 +7,6 @@ import IconGrid, { GridIcon } from "@/app/_components/icon-grid";
 import Logos from "@/app/_components/logos";
 import Timeline from "@/app/_components/timeline";
 import TwingleWidget from "@/app/_components/twingle-widget";
-import Blob from "@/app/_components/blob";
 
 import CollectImage from "@/app/_pictures/sammeln.png";
 import SignatureImage from "@/app/_pictures/unterschriften.png";
@@ -62,18 +61,22 @@ export default function HomePage() {
       </Block>
 
       <Block>
-        <div className="absolute -top-25 -right-40 scale-50 sm:-right-30 sm:scale-100">
-          <Blob
+        <figure className="absolute -top-25 -right-16 aspect-square w-[190px] lg:-right-30 lg:w-[350px]">
+          <ResponsivePositionedBlob
             id={33}
-            size={352}
-            className="fill-green-neon z-1 scale-x-[-1] rotate-50"
+            sizePercentage={{ width: 100 }}
+            rotation={-50}
+            position={{ top: "0%", right: "0%" }}
+            className="fill-green-neon scale-x-[-1]"
           />
-          <Blob
+          <ResponsivePositionedBlob
             id={44}
-            size={120}
-            className="absolute -top-15 right-22 z-1 rotate-90 fill-white"
+            sizePercentage={{ width: 34 }}
+            rotation={90}
+            position={{ top: "-17%", right: "26%" }}
+            className="fill-white"
           />
-        </div>
+        </figure>
         <h2 className="h2 underline-2 text-center whitespace-pre-line">
           Über 139.000 Hamburger*innen unterstützen uns bereits.{"\n"}
           Hilf mit!
@@ -85,7 +88,7 @@ export default function HomePage() {
               id={70}
               className="fill-pink-light absolute"
               position={{ left: "-18%", top: "20%" }}
-              heightPercentage={81}
+              sizePercentage={{ height: 81 }}
             />
             <figure className="blob-[/blobs/36.svg]">
               <Image
@@ -100,7 +103,7 @@ export default function HomePage() {
               className="fill-blue-light absolute"
               position={{ left: "32%", bottom: "8%" }}
               rotation={-55.3}
-              heightPercentage={16.8}
+              sizePercentage={{ height: 16.8 }}
             />
           </figure>
 
@@ -119,7 +122,7 @@ export default function HomePage() {
               className="fill-green-dark absolute"
               position={{ left: "62.5%", bottom: "0%" }}
               rotation={-99}
-              heightPercentage={61.7}
+              sizePercentage={{ height: 61.7 }}
             />
             <figure className="blob-[/blobs/5.svg] hidden sm:block">
               <Image
@@ -134,7 +137,7 @@ export default function HomePage() {
               className="fill-green-neon absolute"
               position={{ left: "66%", bottom: "-1%" }}
               rotation={62.425}
-              heightPercentage={15}
+              sizePercentage={{ height: 15 }}
             />
           </figure>
           <div className="teaser wide">
