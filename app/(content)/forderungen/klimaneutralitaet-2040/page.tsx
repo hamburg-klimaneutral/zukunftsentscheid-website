@@ -141,7 +141,7 @@ export default function Claim2024Page() {
 
       <Block variant="green">
         <h2 className="h2">Unsere Forderungen</h2>
-        <ClaimsOverview activeSlug="2040-klimaneutral" />
+        <ClaimsOverview activeSlug="klimaneutralitaet-2040" />
       </Block>
 
       <GetInvolvedBlock />
