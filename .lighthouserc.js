@@ -12,7 +12,6 @@ module.exports = {
         "unused-javascript": ["error", { maxLength: 1 }], // caused by sentry, whose JS for error-reporting is (luckily) not used
         "unused-css-rules": ["error", { maxLength: 1 }], // can happen with tailwind if some class appears as a string in code that is not actually a css class
         "categories:performance": ["error", { minScore: 0.8 }],
-        "frame-title": "off" // Twingle does not set iframe titles :/
       },
     },
     upload: {

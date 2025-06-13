@@ -16,6 +16,7 @@ export default function HomeHero() {
             className="mb-12 h-auto w-full sm:mb-0 lg:-mb-3"
             src={HeroImage}
             alt="Das Team von Zukunftsentscheid Hamburg präsentiert den Termin der Volksabstimmung am 12.10.2025 vor der Kulisse des Hamburger Rathauses."
+            fetchPriority="high"
             priority
           />
           <div className="h3 text-green-dark absolute top-4 right-10 -rotate-12 transform bg-white px-2.5 py-1 sm:top-1/4 sm:-right-2">
