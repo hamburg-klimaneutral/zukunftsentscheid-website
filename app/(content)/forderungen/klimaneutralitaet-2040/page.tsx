@@ -43,7 +43,7 @@ export default function Claim2024Page() {
         </figure>
       </Block>
 
-      <Block className="z-20 max-w-2xl text-center opacity-50">
+      <Block className="max-w-2xl text-center">
         <h2 className="h2">
           Hamburg muss Verantwortung übernehmen - und davon profitieren wir
           alle!
