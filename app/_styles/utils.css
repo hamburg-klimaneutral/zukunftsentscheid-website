@@ -63,6 +63,10 @@
   @apply font-heading underline-marks text-lg sm:text-xl;
 }
 
+@utility quote-small {
+  @apply text-lg;
+}
+
 @utility underline-marks {
   mark {
     @apply has-underline bg-transparent text-inherit;
