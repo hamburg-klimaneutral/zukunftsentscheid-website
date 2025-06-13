@@ -12,13 +12,15 @@ export default function MainLayout({
       <header className="bg-green-dark py-6 text-white">
         <div className="container m-auto flex items-center justify-between">
           <figure className="shrink-0">
-            <Image
-              src="/logo.svg"
-              alt="Zukunftsentscheid-Hamburg Logo"
-              width={213}
-              height={58}
-              priority
-            />
+            <Link href="/">
+              <Image
+                src="/logo.svg"
+                alt="Zukunftsentscheid-Hamburg Logo"
+                width={213}
+                height={58}
+                priority
+              />
+            </Link>
           </figure>
           {/* Desktop */}
           <Navigation className="hidden lg:block" orientation="horizontal" />

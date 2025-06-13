@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
+    "generate:hh-district-map": "svgr --no-prettier --no-index --out-dir ./app/_svg --filename-case kebab --typescript -- app/_svg_sources && bun format",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -36,6 +37,7 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.1",
     "@lhci/cli": "^0.15.0",
+    "@svgr/cli": "^8.1.0",
     "@tailwindcss/postcss": "^4.1.10",
     "@types/mdx": "^2.0.13",
     "@types/node": "^24.0.1",
