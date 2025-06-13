@@ -4,15 +4,16 @@ import Link from "next/link";
 import Icon from "@/app/icon.png";
 import HeroImage from "@/app/_pictures/12.10.png";
 import Hero from "@/app/_components/hero";
+import ResponsivePositionedBlob from "@/app/_components/responsive-positioned-blob";
 
 export default function HomeHero() {
   return (
     <Hero
       asset={
-        <>
+        <figure className="relative z-0">
           <Image
             sizes="100vw"
-            className="h-auto w-full"
+            className="mb-12 h-auto w-full sm:mb-0 lg:-mb-3"
             src={HeroImage}
             alt="Das Team von Zukunftsentscheid Hamburg präsentiert den Termin der Volksabstimmung am 12.10.2025 vor der Kulisse des Hamburger Rathauses."
             priority
@@ -29,7 +30,19 @@ export default function HomeHero() {
             <br />
             zu Hamburg
           </div>
-        </>
+          <ResponsivePositionedBlob
+            id={4}
+            className="fill-green-neon"
+            position={{ top: "47%", left: "94.6%" }}
+            sizePercentage={{ height: 13.2 }}
+          />
+          <ResponsivePositionedBlob
+            id={45}
+            className="fill-blue-light -z-1"
+            position={{ top: "41%", left: "81%" }}
+            sizePercentage={{ height: 48 }}
+          />
+        </figure>
       }
     >
       <h1 className="h1 block whitespace-pre-line lg:hidden">
