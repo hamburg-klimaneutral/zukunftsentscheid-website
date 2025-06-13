@@ -173,7 +173,7 @@ export default function ForderungenPage() {
         left={{
           variant: "green",
           content: (
-            <div className="flex flex-col items-center px-10 text-center">
+            <div className="flex flex-col items-center text-center md:items-start md:text-left">
               <h2 className="h2 mb-4">Noch Fragen</h2>
               <p className="mb-8">
                 Du hast noch Fragen an uns oder möchtest uns etwas schreiben?
@@ -189,7 +189,7 @@ export default function ForderungenPage() {
         right={{
           variant: "rose",
           content: (
-            <div className="flex flex-col items-center px-10 text-center">
+            <div className="flex flex-col items-center text-center md:items-start md:text-left">
               <h2 className="h2 mb-4">Du brauchst Material?</h2>
               <p className="mb-8">
                 <strong>Wir sind in der Kampstraße 15 – Komm vorbei!</strong>{" "}

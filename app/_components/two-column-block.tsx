@@ -11,6 +11,7 @@ export type BlockProps = {
     content: React.ReactNode;
     className?: string;
   };
+  className?: string;
 };
 
 const VARIANTS = {
@@ -20,41 +21,49 @@ const VARIANTS = {
   rose: "bg-pink-light",
 } as const;
 
-export default function TwoColumnBlock({ left, right }: BlockProps) {
+export default function TwoColumnBlock({ left, right, className }: BlockProps) {
   return (
-    <section className={"relative z-0 overflow-x-clip"}>
+    <div className="relative">
+      {/* backgrounds left + right */}
       <div
         className={twMerge(
-          "absolute left-0 -z-1 h-full w-[50%]",
+          "absolute left-0 -z-1 hidden h-full w-[50%] md:block",
           VARIANTS[left.variant]
         )}
       ></div>
       <div
         className={twMerge(
-          "absolute right-0 -z-1 h-full w-[50%]",
+          "absolute right-0 -z-1 hidden h-full w-[50%] md:block",
           VARIANTS[right.variant]
         )}
       ></div>
-      <div className="container grid grid-cols-2">
-        <div
+
+      {/* content left + right */}
+      <div
+        className={twMerge(
+          "grid grid-cols-1 md:container md:grid-cols-2 md:gap-16",
+          className
+        )}
+      >
+        <section
           className={twMerge(
-            "flex flex-col items-center gap-10 py-14 sm:py-24",
+            "relative z-0 flex flex-col items-center gap-10 overflow-x-clip py-14 max-md:container sm:py-24",
             VARIANTS[left.variant],
             left.className
           )}
         >
           {left.content}
-        </div>
-        <div
+        </section>
+        <section
           className={twMerge(
-            "flex flex-col items-center gap-10 py-14 sm:py-24",
+            "relative z-0 flex flex-col items-center gap-10 overflow-x-clip py-14 max-md:container sm:py-24",
             VARIANTS[right.variant],
             right.className
           )}
         >
           {right.content}
-        </div>
+        </section>
       </div>
-    </section>
+    </div>
   );
 }
