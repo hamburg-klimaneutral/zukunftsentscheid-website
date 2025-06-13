@@ -11,7 +11,7 @@ export const NAVIGATION_ITEMS = [
       { title: "Jährliche Ziele", href: "/forderungen/jährliche-ziele" },
       {
         title: "Klimaneutralität 2040",
-        href: "/forderungen/klimaneutralität-2040",
+        href: "/forderungen/klimaneutralitaet-2040",
       },
     ],
   },
