@@ -10,6 +10,7 @@ import TwingleWidget from "@/app/_components/twingle-widget";
 
 import CollectImage from "@/app/_pictures/sammeln.png";
 import SignatureImage from "@/app/_pictures/unterschriften.png";
+import ResponsivePositionedBlob from "@/app/_components/responsive-positioned-blob";
 
 export default function HomePage() {
   return (
@@ -18,7 +19,7 @@ export default function HomePage() {
         <HomeHero />
       </Block>
 
-      <Block variant="blue" className="pt-24">
+      <Block variant="blue" className="pt-24" negativeZIndex>
         <h2 className="h2 underline-1 max-w-xl text-center">
           Gemeinsam machen wir Hamburgs Klimapolitik sozial, planbar und
           verantwortungsbewusst.
@@ -60,20 +61,52 @@ export default function HomePage() {
       </Block>
 
       <Block>
+        <figure className="absolute -top-25 -right-16 aspect-square w-[190px] lg:-right-30 lg:w-[350px]">
+          <ResponsivePositionedBlob
+            id={33}
+            sizePercentage={{ width: 100 }}
+            rotation={-50}
+            position={{ top: "0%", right: "0%" }}
+            className="fill-green-neon scale-x-[-1]"
+          />
+          <ResponsivePositionedBlob
+            id={44}
+            sizePercentage={{ width: 34 }}
+            rotation={90}
+            position={{ top: "-17%", right: "26%" }}
+            className="fill-white"
+          />
+        </figure>
         <h2 className="h2 underline-2 text-center whitespace-pre-line">
           Über 139.000 Hamburger*innen unterstützen uns bereits.{"\n"}
           Hilf mit!
         </h2>
 
         <div className="content-grid">
-          <figure className="blob-[/blobs/36.svg]">
-            <Image
-              src={CollectImage}
-              sizes="(min-width: 640px) 530px, 100vw"
-              placeholder="blur"
-              alt="Das Team von Zukunftsentscheid Hamburg bei der Unterschriftensammlung"
+          <figure className="relative">
+            <ResponsivePositionedBlob
+              id={70}
+              className="fill-pink-light absolute"
+              position={{ left: "-18%", top: "20%" }}
+              sizePercentage={{ height: 81 }}
+            />
+            <figure className="blob-[/blobs/36.svg]">
+              <Image
+                src={CollectImage}
+                sizes="(min-width: 640px) 530px, 100vw"
+                placeholder="blur"
+                alt="Das Team von Zukunftsentscheid Hamburg bei der Unterschriftensammlung"
+              />
+            </figure>
+            <ResponsivePositionedBlob
+              id={96}
+              className="fill-blue-light absolute"
+              position={{ left: "32%", bottom: "8%" }}
+              rotation={-55.3}
+              sizePercentage={{ height: 16.8 }}
             />
           </figure>
+
           <div className="teaser wide">
             <h3 className="h3">Was ist noch zu tun?</h3>
             <p>
@@ -83,12 +116,28 @@ export default function HomePage() {
               Hilfe ist wertvoll!
             </p>
           </div>
-          <figure className="blob-[/blobs/5.svg] hidden sm:block">
-            <Image
-              src={SignatureImage}
-              sizes="(min-width: 640px) 530px, 100vw"
-              placeholder="blur"
-              alt="Zwei Mitglieder vom Zukunftsentscheid Hamburg präsentieren gesammelte Unterschriften"
+          <figure className="relative">
+            <ResponsivePositionedBlob
+              id={33}
+              className="fill-green-dark absolute"
+              position={{ left: "62.5%", bottom: "0%" }}
+              rotation={-99}
+              sizePercentage={{ height: 61.7 }}
+            />
+            <figure className="blob-[/blobs/5.svg] hidden sm:block">
+              <Image
+                src={SignatureImage}
+                sizes="(min-width: 640px) 530px, 100vw"
+                placeholder="blur"
+                alt="Zwei Mitglieder vom Zukunftsentscheid Hamburg präsentieren gesammelte Unterschriften"
+              />
+            </figure>
+            <ResponsivePositionedBlob
+              id={45}
+              className="fill-green-neon absolute"
+              position={{ left: "66%", bottom: "-1%" }}
+              rotation={62.425}
+              sizePercentage={{ height: 15 }}
             />
           </figure>
           <div className="teaser wide">

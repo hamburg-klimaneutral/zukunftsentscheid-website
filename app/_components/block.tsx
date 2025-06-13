@@ -4,6 +4,7 @@ export type BlockProps = {
   children: React.ReactNode;
   variant?: keyof typeof VARIANTS;
   className?: string;
+  negativeZIndex?: boolean;
 };
 
 const VARIANTS = {
@@ -17,10 +18,15 @@ export default function Block({
   variant = "white",
   children,
   className,
+  negativeZIndex,
 }: BlockProps) {
   return (
     <section
-      className={twMerge(VARIANTS[variant], "relative z-0 overflow-x-clip")}
+      className={twMerge(
+        VARIANTS[variant],
+        "relative z-0 overflow-x-clip",
+        negativeZIndex && "-z-10"
+      )}
     >
       <div
         className={twMerge(
