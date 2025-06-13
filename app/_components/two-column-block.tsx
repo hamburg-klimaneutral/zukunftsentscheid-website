@@ -1,6 +1,6 @@
 import { twMerge } from "tailwind-merge";
 
-export type BlockProps = {
+export type TwoColumnBlockProps = {
   left: {
     variant: keyof typeof VARIANTS;
     content: React.ReactNode;
@@ -21,7 +21,11 @@ const VARIANTS = {
   rose: "bg-pink-light",
 } as const;
 
-export default function TwoColumnBlock({ left, right, className }: BlockProps) {
+export default function TwoColumnBlock({
+  left,
+  right,
+  className,
+}: TwoColumnBlockProps) {
   return (
     <div className="relative">
       {/* backgrounds left + right */}

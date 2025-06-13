@@ -3,15 +3,58 @@ import Hero from "@/app/_components/hero";
 import IconGrid, { GridIcon } from "@/app/_components/icon-grid";
 import Link from "next/link";
 import TwoColumnBlock from "@/app/_components/two-column-block";
+import BlockQuote from "@/app/_components/block-quote";
+import Image from "next/image";
+import GrosseventsImage from "@/app/_pictures/grossevents.png";
+import HaustuerwahlkampfImage from "@/app/_pictures/haustuerwahlkampf.png";
+import InfostaendeImage from "@/app/_pictures/infostaende.png";
+import LokaleVeranstaltungenImage from "@/app/_pictures/lokale_veranstaltungen.png";
+import {
+  DISTRICT_TELEGRAM_INVITE_LINKS,
+  INFO_CHANNEL_INVITE_LINKS,
+} from "@/app/config";
+import SvgHhDistrictMapWithStylesAndLinks from "@/app/_svg/hh-district-map-with-styles-and-links";
 
-export default function ForderungenPage() {
+interface ThisIsHowWeWinGridItemProps {
+  title: string;
+  href: string;
+  asset: React.ReactNode;
+  children: React.ReactNode;
+}
+
+function ThisIsHowWeWinGridItem({
+  asset,
+  title,
+  href,
+  children,
+}: ThisIsHowWeWinGridItemProps) {
+  return (
+    <>
+      <div className="flex flex-col items-center text-center">
+        <figure className="relative mb-10 max-w-xs min-w-1/4 basis-1/2">
+          {asset}
+        </figure>
+
+        <h3 className="h3 mb-4">{title}</h3>
+        <p>{children}</p>
+        <Link href={href} className="button secondary alt mt-6">
+          Mehr dazu
+        </Link>
+      </div>
+    </>
+  );
+}
+
+export default function MitmachenPage() {
   return (
     <>
       <Block variant="green">
         <Hero asset={<></>}>
           <h1>Mitmachen</h1>
           <h2 className="h1">
-            Endlich sozialer Klimaschutz. Du machst den Unterschied!
+            Endlich sozialer Klimaschutz.
+            <br />
+            Du machst den Unterschied!
           </h2>
         </Hero>
       </Block>
@@ -65,12 +108,34 @@ export default function ForderungenPage() {
               Bleib über unsere Infochannel auf Telegram und Whatsapp auf dem
               aktuellen Stand.
               <div className="flex gap-3">
-                <Link href="/" className="button secondary">
+                <a
+                  href={INFO_CHANNEL_INVITE_LINKS.Telegram}
+                  target="_blank"
+                  className="button secondary"
+                >
+                  <Image
+                    src="/icons/telegram-logo.svg"
+                    alt="Telegram Logo"
+                    className="mr-2.5"
+                    width={19}
+                    height={19}
+                  />
                   Telegram
-                </Link>
-                <Link href="/" className="button secondary">
+                </a>
+                <a
+                  href={INFO_CHANNEL_INVITE_LINKS.WhatsApp}
+                  target="_blank"
+                  className="button secondary"
+                >
+                  <Image
+                    src="/icons/whatsapp-logo.svg"
+                    alt="WhatsApp Logo"
+                    className="mr-2.5"
+                    width={19}
+                    height={19}
+                  />
                   WhatsApp
-                </Link>
+                </a>
               </div>
             </div>
           </GridIcon>
@@ -82,17 +147,31 @@ export default function ForderungenPage() {
           >
             <div className="flex grow flex-col items-center justify-between gap-10">
               Nimm mit uns an Aktionen teil, wie Infostände oder
-              Haustürwahlkampf
-              <Link href="/" className="button secondary">
+              Haustürwahlkampf.
+              <Link
+                href="#so-gewinnen-wir-den-entscheid"
+                className="button secondary"
+              >
                 Unsere Aktionen
               </Link>
             </div>
           </GridIcon>
         </IconGrid>
       </Block>
-      <Block variant="green">TODO Zitat</Block>
+      <Block variant="green">
+        <BlockQuote
+          author={"Moni, 65, Rentnerin"}
+          quote={
+            "Ich bin dabei, weil ich mich wirksam fühle und mit tollen Menschen zusammen die Welt retten kann."
+          }
+          className="md:flex-row-reverse"
+        />
+      </Block>
       <Block>
-        <div className="max-w-xl space-y-2 text-center">
+        <div
+          className="max-w-xl space-y-2 text-center"
+          id="so-gewinnen-wir-den-entscheid"
+        >
           <h2 className="h2">So gewinnen wir den Entscheid!</h2>
           <p>
             Mit diesen und vielen weiteren Aktionen, Plakatieren in der Stadt,
@@ -100,9 +179,95 @@ export default function ForderungenPage() {
             machen wir auf uns aufmerksam!
           </p>
         </div>
-        <div>TODO Images</div>
+
+        <div className="grid w-full grid-cols-1 gap-18 md:grid-cols-2">
+          <ThisIsHowWeWinGridItem
+            title="Haustürwahlkampf"
+            href="/mitmachen/abc"
+            asset={
+              <>
+                <figure className="blob-[/blobs/5.svg]">
+                  <Image
+                    src={HaustuerwahlkampfImage}
+                    placeholder="blur"
+                    alt="Haustürwahlkampf"
+                  />
+                </figure>
+              </>
+            }
+          >
+            Klimaschutz betrifft uns alle im Alltag, deshalb gehen wir bis vor
+            die Wohnungstüren und überzeugen!
+          </ThisIsHowWeWinGridItem>
+          <ThisIsHowWeWinGridItem
+            title="Infostände"
+            href="/mitmachen/abc"
+            asset={
+              <>
+                <figure className="blob-[/blobs/67.svg]">
+                  <Image
+                    className="h-auto w-full"
+                    style={{ objectFit: "contain" }}
+                    src={InfostaendeImage}
+                    placeholder="blur"
+                    alt="Infostände"
+                  />
+                </figure>
+              </>
+            }
+          >
+            Wir sind präsent in ganz Hamburg, gesprächsbereit und haben eine
+            gute Zeit bei Infoständen!
+          </ThisIsHowWeWinGridItem>
+          <ThisIsHowWeWinGridItem
+            title="Lokale Veranstaltungen"
+            href="/mitmachen/abc"
+            asset={
+              <>
+                <figure className="blob-[/blobs/36.svg]">
+                  <Image
+                    src={LokaleVeranstaltungenImage}
+                    placeholder="blur"
+                    alt="Lokale Veranstaltungen"
+                  />
+                </figure>
+              </>
+            }
+          >
+            Wir sind in allen Bezirken Hamburgs unterwegs, um die ganze Stadt
+            auf dem Weg zur Klimaneutralität mitzunehmen. Von Stadtteilzentren
+            zu Kirchengemeinden, wir bieten zahlreiche lokale Gesprächsräume an!
+          </ThisIsHowWeWinGridItem>
+          <ThisIsHowWeWinGridItem
+            title="Grossevents"
+            href="/mitmachen/abc"
+            asset={
+              <>
+                <figure className="blob-[/blobs/88.svg]">
+                  <Image
+                    src={GrosseventsImage}
+                    placeholder="blur"
+                    alt="Grossevents"
+                  />
+                </figure>
+              </>
+            }
+          >
+            Auch die größte Institutionen und Namen Hamburgs sind beim
+            Zukunftsentscheid dabei! Das zeigen wir durch diverse Großevents,
+            die Aufmerksamkeit für unser Vorhaben generieren.
+          </ThisIsHowWeWinGridItem>
+        </div>
       </Block>
-      <Block variant="green">TODO Zitat</Block>
+
+      <Block variant="green">
+        <BlockQuote
+          author={"Maik, 45, Beamter"}
+          quote={
+            "Ich bin dabei, weil ich für die Zukunft meiner Kinder kämpfen will."
+          }
+        />
+      </Block>
       <Block variant="blue" className="gap-8">
         <div className="max-w-xl space-y-4 text-center">
           <h2 className="h2">
@@ -140,33 +305,59 @@ export default function ForderungenPage() {
               </p>
             </div>
             <div className="flex flex-wrap gap-3">
-              <Link href="/" className="button secondary alt">
+              <Link
+                href={DISTRICT_TELEGRAM_INVITE_LINKS.Altona}
+                className="button secondary alt"
+              >
                 Altona
               </Link>
-              <Link href="/" className="button secondary alt">
+              <Link
+                href={DISTRICT_TELEGRAM_INVITE_LINKS.Bergedorf}
+                className="button secondary alt"
+              >
                 Bergedorf
               </Link>
-              <Link href="/" className="button secondary alt">
+              <Link
+                href={DISTRICT_TELEGRAM_INVITE_LINKS.Eimsbuettel}
+                className="button secondary alt"
+              >
                 Eimsbüttel
               </Link>
-              <Link href="/" className="button secondary alt">
+              <Link
+                href={DISTRICT_TELEGRAM_INVITE_LINKS.Nord}
+                className="button secondary alt"
+              >
                 Hamburg Nord
               </Link>
-              <Link href="/" className="button secondary alt">
+              <Link
+                href={DISTRICT_TELEGRAM_INVITE_LINKS.Mitte}
+                className="button secondary alt"
+              >
                 Hamburg Mitte
               </Link>
-              <Link href="/" className="button secondary alt">
+              <Link
+                href={DISTRICT_TELEGRAM_INVITE_LINKS.Harburg}
+                className="button secondary alt"
+              >
                 Harburg
               </Link>
-              <Link href="/" className="button secondary alt">
+              <Link
+                href={DISTRICT_TELEGRAM_INVITE_LINKS.Universitaeten}
+                className="button secondary alt"
+              >
                 Universitäten
               </Link>
-              <Link href="/" className="button secondary alt">
+              <Link
+                href={DISTRICT_TELEGRAM_INVITE_LINKS.Wandsbek}
+                className="button secondary alt"
+              >
                 Wandsbek
               </Link>
             </div>
           </div>
-          <div className="mb-8 space-y-4">TODO Karte</div>
+          <div className="mb-8 space-y-4">
+            <SvgHhDistrictMapWithStylesAndLinks />
+          </div>
         </div>
       </Block>
       <TwoColumnBlock

@@ -67,6 +67,10 @@
   @apply text-lg;
 }
 
+@utility quote-big {
+  @apply text-lg sm:text-4xl;
+}
+
 @utility underline-marks {
   mark {
     @apply has-underline bg-transparent text-inherit;
