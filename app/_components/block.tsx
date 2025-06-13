@@ -11,6 +11,7 @@ const VARIANTS = {
   green: "bg-green-dark text-white",
   blue: "bg-blue-light",
   white: "bg-white",
+  pinkLight: "bg-pink-light",
 } as const;
 
 export default function Block({
