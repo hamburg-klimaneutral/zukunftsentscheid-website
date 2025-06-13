@@ -16,11 +16,11 @@ import ResponsivePositionedBlob from "@/app/_components/responsive-positioned-bl
 export default function HomePage() {
   return (
     <main>
-      <Block variant="green">
+      <Block variant="green" blockClassName="z-10">
         <HomeHero />
       </Block>
 
-      <Block variant="blue" className="pt-24" negativeZIndex>
+      <Block variant="blue" className="pt-24">
         <h2 className="h2 underline-1 max-w-xl text-center">
           Gemeinsam machen wir Hamburgs Klimapolitik sozial, planbar und
           verantwortungsbewusst.

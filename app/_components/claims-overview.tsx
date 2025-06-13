@@ -52,7 +52,7 @@ export default function ClaimsOverview({
       >
         Ein verantwortungsvoller und{"\n"}
         wettbewerbsfähiger Beitrag unserer Stadt.
-        <ActiveItemIndicatorOrMoreLink slug="2040-klimaneutral" />
+        <ActiveItemIndicatorOrMoreLink slug="klimaneutralitaet-2040" />
       </GridIcon>
     </IconGrid>
   );

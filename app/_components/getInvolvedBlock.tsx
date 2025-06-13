@@ -1,9 +1,15 @@
 import Link from "next/link";
-import Block from "@/app/_components/block";
+import Block, { BlockProps } from "@/app/_components/block";
 
-export default function GetInvolvedBlock() {
+interface GetInvolvedBlockProps {
+  variant?: BlockProps["variant"];
+}
+
+export default function GetInvolvedBlock({
+  variant = "pinkLight",
+}: GetInvolvedBlockProps) {
   return (
-    <Block variant="pinkLight">
+    <Block variant={variant}>
       <div className="flex max-w-2xl flex-col items-center gap-4 text-center">
         <h2 className="h2 underline-4">
           Den Entscheid gewinnen wir nur gemeinsam:

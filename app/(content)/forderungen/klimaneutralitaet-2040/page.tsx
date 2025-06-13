@@ -1,43 +1,49 @@
-import Link from "next/link";
 import Image from "next/image";
-
 import Block from "@/app/_components/block";
 import Hero from "@/app/_components/hero";
-import Blob from "@/app/_components/blob";
 import IconGrid, { GridIcon } from "@/app/_components/icon-grid";
 import ClaimsOverview from "@/app/_components/claims-overview";
+import GetInvolvedBlock from "@/app/_components/getInvolvedBlock";
+import ResponsivePositionedBlob from "@/app/_components/responsive-positioned-blob";
 
 export default function Claim2024Page() {
   return (
     <main>
-      <Block variant="green">
+      <Block variant="green" blockClassName="z-10">
         <Hero>
           <h1>Klimaneutralität 2040</h1>
           <h2 className="h1">2045 ist zu spät!</h2>
         </Hero>
+
+        <figure className="absolute right-[-230px] bottom-[-60px] aspect-square w-[270px] sm:right-[-350px] sm:bottom-[-135px] sm:w-[480px] lg:right-[-260px]">
+          <ResponsivePositionedBlob
+            id={84}
+            sizePercentage={{ width: 100 }}
+            rotation={65}
+            position={{ top: "0%", left: "0%" }}
+            className="fill-pink-light scale-x-[-1]"
+          />
+          <div className="absolute top-[27%] left-[-7%] h-full w-[25%]">
+            <ResponsivePositionedBlob
+              id={70}
+              sizePercentage={{ width: 100 }}
+              rotation={-40}
+              position={{ top: "0%", right: "0%" }}
+              className="scale-x-[-1] fill-white"
+            />
+            <Image
+              width={53}
+              height={53}
+              className="relative top-[7%] left-[25%] w-[45%]"
+              src="/icons/muscle.svg"
+              alt=""
+              aria-hidden
+            />
+          </div>
+        </figure>
       </Block>
 
-      <Block className="max-w-2xl text-center">
-        <Blob
-          id={84}
-          size={416}
-          className="fill-pink-light absolute -top-[70%] left-[87%] -z-1 rotate-[150deg]"
-        />
-        <div className="absolute -top-[50%] left-[83%] flex h-[111px] w-[111px] justify-center">
-          <Blob
-            id={70}
-            size={111}
-            className="absolute top-0 left-0 rotate-[137deg] fill-white"
-          />
-          <Image
-            width={53}
-            height={53}
-            className="relative"
-            src="/icons/muscle.svg"
-            alt=""
-            aria-hidden
-          />
-        </div>
+      <Block className="z-20 max-w-2xl text-center opacity-50">
         <h2 className="h2">
           Hamburg muss Verantwortung übernehmen - und davon profitieren wir
           alle!
@@ -51,7 +57,7 @@ export default function Claim2024Page() {
         </p>
       </Block>
 
-      <Block variant="green" className="gap-14">
+      <Block variant="blue" className="gap-14">
         <div className="text-center">
           <h2 className="text-tiny mb-2">Gründe für 2040</h2>
           <h3 className="h2">2040 ist möglich und nötig</h3>
@@ -62,7 +68,7 @@ export default function Claim2024Page() {
             blobId={35}
             src="/icons/landmark.svg"
             title="Auch die Handelskammer unterstützt 2040"
-            className="fill-pink-light"
+            className="fill-white"
           >
             “Klimaneutralität und internationale Wettbewerbsfähigkeit bedingen
             einander”. Damit unsere Stadt wettbewerbsfähig bleibt, muss “Hamburg
@@ -74,7 +80,7 @@ export default function Claim2024Page() {
             blobId={2}
             src="/icons/radio-tower.svg"
             title="Mit Hamburg eine Signalwirkung bewirken"
-            className="fill-pink-light"
+            className="fill-white"
           >
             Hamburg ist eine der größten und wirtschaftlich stärksten Städte
             Deutschlands. Eine Vorreiterrolle kann bundesweit wie international
@@ -86,7 +92,7 @@ export default function Claim2024Page() {
             blobId={34}
             src="/icons/briefcase.svg"
             title="Innovationen fördern & Arbeitsplätze sichern"
-            className="fill-pink-light"
+            className="fill-white"
           >
             Frühzeitige Investitionen in erneuerbare Energien, Energieeffizienz,
             Gebäudesanierung, nachhaltige Mobilität und Kreislaufwirtschaft
@@ -98,7 +104,7 @@ export default function Claim2024Page() {
             blobId={5}
             src="/icons/piggy.svg"
             title="Schlau & Früh sparen"
-            className="fill-pink-light"
+            className="fill-white"
           >
             Spätere Maßnahmen sind oft teurer. Frühzeitige Investitionen in
             Klimaschutzmaßnahmen verhindern hohe Folgekosten durch den
@@ -108,7 +114,7 @@ export default function Claim2024Page() {
             blobId={3}
             src="/icons/ship.svg"
             title="Im Norden sind wir realistisch"
-            className="fill-pink-light"
+            className="fill-white"
           >
             Dabei ist Hamburg natürlich darauf angewiesen, dass auf
             bundesdeutscher und europäischer Ebene die Umsetzung der
@@ -124,7 +130,7 @@ export default function Claim2024Page() {
             blobId={66}
             src="/icons/history.svg"
             title="Damit wir nicht das Schlusslicht im Norden sind"
-            className="fill-pink-light"
+            className="fill-white"
           >
             Bremen, Niedersachsen, Schleswig-Holstein und Mecklenburg-Vorpommern
             wollen alle bis 2040 klimaneutral sein. Rheinland-Pfalz und
@@ -133,24 +139,12 @@ export default function Claim2024Page() {
         </IconGrid>
       </Block>
 
-      <Block variant="blue">
+      <Block variant="green">
         <h2 className="h2">Unsere Forderungen</h2>
         <ClaimsOverview activeSlug="2040-klimaneutral" />
       </Block>
 
-      <Block variant="green" className="max-w-xl text-center">
-        <h2 className="h2">
-          Den Entscheid gewinnen wir nur gemeinsam:{"\n"}
-          Sei dabei!
-        </h2>
-        <p>
-          Komm zu einem unserer Infotreffen - jeden Mittwoch um 18:30 Uhr in der
-          Kampstraße 15. Oder oder unterstütze uns bei Aktionen!
-        </p>
-        <Link href="/mitmachen" className="button primary">
-          Mitmachen
-        </Link>
-      </Block>
+      <GetInvolvedBlock />
     </main>
   );
 }
