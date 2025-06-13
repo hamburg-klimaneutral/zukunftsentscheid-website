@@ -9,7 +9,7 @@ export default function HomeHero() {
   return (
     <Hero
       asset={
-        <div className="-mt-6 -mb-32 -ml-12 sm:-ml-0">
+        <>
           <Image
             sizes="100vw"
             className="h-auto w-full"
@@ -29,7 +29,7 @@ export default function HomeHero() {
             <br />
             zu Hamburg
           </div>
-        </div>
+        </>
       }
     >
       <h1 className="h1 block whitespace-pre-line lg:hidden">
