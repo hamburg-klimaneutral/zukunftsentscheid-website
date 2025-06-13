@@ -51,9 +51,11 @@ export default function Claim2024Page() {
         </p>
       </Block>
 
-      <Block variant="green">
-        <h2 className="text-tiny">2040 ist möglich und nötig</h2>
-        <h3 className="h2">2040 ist möglich und nötig</h3>
+      <Block variant="green" className="gap-14">
+        <div className="text-center">
+          <h2 className="text-tiny mb-2">Gründe für 2040</h2>
+          <h3 className="h2">2040 ist möglich und nötig</h3>
+        </div>
 
         <IconGrid>
           <GridIcon
