@@ -2,6 +2,7 @@ export const NAVIGATION_ITEMS = [
   {
     title: "Unsere Forderungen",
     items: [
+      { title: "Zur Übersicht", href: "/forderungen" },
       { title: "Gesetzestext", href: "/forderungen/gesetzestext" },
       { title: "Gesetzesbegründung", href: "/forderungen/gesetzesbegründung" },
       {
