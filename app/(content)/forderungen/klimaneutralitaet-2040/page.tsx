@@ -57,7 +57,7 @@ export default function Claim2024Page() {
         </p>
       </Block>
 
-      <Block variant="blue" className="gap-14">
+      <Block variant="green" className="gap-14">
         <div className="text-center">
           <h2 className="text-tiny mb-2">Gründe für 2040</h2>
           <h3 className="h2">2040 ist möglich und nötig</h3>
@@ -68,7 +68,7 @@ export default function Claim2024Page() {
             blobId={35}
             src="/icons/landmark.svg"
             title="Auch die Handelskammer unterstützt 2040"
-            className="fill-white"
+            className="fill-pink-light"
           >
             “Klimaneutralität und internationale Wettbewerbsfähigkeit bedingen
             einander”. Damit unsere Stadt wettbewerbsfähig bleibt, muss “Hamburg
@@ -80,7 +80,7 @@ export default function Claim2024Page() {
             blobId={2}
             src="/icons/radio-tower.svg"
             title="Mit Hamburg eine Signalwirkung bewirken"
-            className="fill-white"
+            className="fill-pink-light"
           >
             Hamburg ist eine der größten und wirtschaftlich stärksten Städte
             Deutschlands. Eine Vorreiterrolle kann bundesweit wie international
@@ -92,7 +92,7 @@ export default function Claim2024Page() {
             blobId={34}
             src="/icons/briefcase.svg"
             title="Innovationen fördern & Arbeitsplätze sichern"
-            className="fill-white"
+            className="fill-pink-light"
           >
             Frühzeitige Investitionen in erneuerbare Energien, Energieeffizienz,
             Gebäudesanierung, nachhaltige Mobilität und Kreislaufwirtschaft
@@ -104,7 +104,7 @@ export default function Claim2024Page() {
             blobId={5}
             src="/icons/piggy.svg"
             title="Schlau & Früh sparen"
-            className="fill-white"
+            className="fill-pink-light"
           >
             Spätere Maßnahmen sind oft teurer. Frühzeitige Investitionen in
             Klimaschutzmaßnahmen verhindern hohe Folgekosten durch den
@@ -114,7 +114,7 @@ export default function Claim2024Page() {
             blobId={3}
             src="/icons/ship.svg"
             title="Im Norden sind wir realistisch"
-            className="fill-white"
+            className="fill-pink-light"
           >
             Dabei ist Hamburg natürlich darauf angewiesen, dass auf
             bundesdeutscher und europäischer Ebene die Umsetzung der
@@ -130,7 +130,7 @@ export default function Claim2024Page() {
             blobId={66}
             src="/icons/history.svg"
             title="Damit wir nicht das Schlusslicht im Norden sind"
-            className="fill-white"
+            className="fill-pink-light"
           >
             Bremen, Niedersachsen, Schleswig-Holstein und Mecklenburg-Vorpommern
             wollen alle bis 2040 klimaneutral sein. Rheinland-Pfalz und
@@ -139,12 +139,12 @@ export default function Claim2024Page() {
         </IconGrid>
       </Block>
 
-      <Block variant="green">
+      <Block variant="blue">
         <h2 className="h2">Unsere Forderungen</h2>
         <ClaimsOverview activeSlug="klimaneutralitaet-2040" />
       </Block>
 
-      <GetInvolvedBlock />
+      <GetInvolvedBlock variant="green" />
     </main>
   );
 }
