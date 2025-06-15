@@ -7,7 +7,7 @@ export const NAVIGATION_ITEMS = [
       { title: "Gesetzesbegründung", href: "/forderungen/gesetzesbegründung" },
       {
         title: "Sozialverträglichkeit",
-        href: "/forderungen/sozialverträglichkeit",
+        href: "/forderungen/sozialvertraeglichkeit",
       },
       { title: "Jährliche Ziele", href: "/forderungen/jaehrliche-ziele" },
       {

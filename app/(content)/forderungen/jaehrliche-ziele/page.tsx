@@ -9,15 +9,20 @@ import SvgDigrammJahresemissionenHamburgerZukunftsentscheid from "@/app/_svg/dig
 import SvgDiagrammJahresemissionenKlimaschutzgesetz from "@/app/_svg/diagramm-jahresemissionen-klimaschutzgesetz";
 import SvgDiagrammJahresemissionenHamburgerZukunftsentscheidVergleichSzenario from "@/app/_svg/diagramm-jahresemissionen-hamburger-zukunftsentscheid-vergleich-szenario";
 import Chip from "@/app/_components/chip";
+import ForderungenSubpageHeaderBlob from "@/app/(content)/forderungen/headerBlob";
 
 export default function JaehrlicheZielePage() {
   return (
     <>
-      <Block variant="green">
+      <Block variant="green" blockClassName="z-10">
         <Hero>
           <h1>Jährliche Ziele</h1>
-          <h2 className="h1">Damit wir wissen, wo wir stehen</h2>
+          <h2 className="h1 max-w-lg text-center">
+            Damit wir wissen, wo wir stehen
+          </h2>
         </Hero>
+
+        <ForderungenSubpageHeaderBlob iconSrc="/icons/clock.svg" />
       </Block>
       <Block>
         <div className="grid w-full grid-cols-1 items-center justify-items-center gap-8 lg:grid-cols-2 lg:grid-rows-2 lg:justify-between lg:gap-12">
