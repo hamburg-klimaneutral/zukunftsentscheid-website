@@ -18,7 +18,7 @@ export default function NotFound() {
             Irgendwas ist hier schief gelaufen. Komm einfach schnell zurück zu
             unserer Startseite.
           </p>
-          <Link href="/" className="button primary">
+          <Link href="/" className="button secondary alt">
             Startseite
           </Link>
         </Block>
