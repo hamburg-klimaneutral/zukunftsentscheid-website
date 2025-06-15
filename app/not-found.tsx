@@ -14,7 +14,7 @@ export default function NotFound() {
           </Hero>
         </Block>
         <Block className="gap-8">
-          <p className="max-w-xl text-center">
+          <p className="max-w-lg text-center">
             Irgendwas ist hier schief gelaufen. Komm einfach schnell zurück zu
             unserer Startseite.
           </p>
