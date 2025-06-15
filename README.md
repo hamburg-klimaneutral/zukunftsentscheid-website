@@ -24,6 +24,12 @@ Visit [http://localhost:3000](http://localhost:3000)
 
 ## Scripts
 
+### Generate React Components from SVG
+
+1. Store `.svg` files in `/app/_svg_sources`
+2. Run `generate:svg`
+3. The components are generated to `/app/_svg`
+
 ### Process Blobs
 
 Convert individual blob SVG files into reusable symbol-based SVGs:
