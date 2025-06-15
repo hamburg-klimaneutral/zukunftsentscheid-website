@@ -64,7 +64,7 @@
 }
 
 @utility quote-small {
-  @apply text-lg;
+  @apply text-lg leading-[38px] font-medium;
 }
 
 @utility quote-big {
