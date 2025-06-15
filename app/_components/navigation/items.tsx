@@ -9,7 +9,7 @@ export const NAVIGATION_ITEMS = [
         title: "Sozialverträglichkeit",
         href: "/forderungen/sozialverträglichkeit",
       },
-      { title: "Jährliche Ziele", href: "/forderungen/jährliche-ziele" },
+      { title: "Jährliche Ziele", href: "/forderungen/jaehrliche-ziele" },
       {
         title: "Klimaneutralität 2040",
         href: "/forderungen/klimaneutralitaet-2040",

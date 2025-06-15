@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "generate:hh-district-map": "svgr --no-prettier --no-index --out-dir ./app/_svg --filename-case kebab --typescript -- app/_svg_sources && bun format",
+    "generate:svg": "svgr --no-prettier --no-index --out-dir ./app/_svg --filename-case kebab --typescript -- app/_svg_sources && bun format",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
