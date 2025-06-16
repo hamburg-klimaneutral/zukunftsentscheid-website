@@ -4,7 +4,7 @@
   .content-grid {
     @apply grid grid-flow-dense grid-rows-1 items-center justify-between gap-x-20 gap-y-6 sm:grid-rows-2;
     /* Swap column for odd items */
-    @apply [&>*:nth-child(4n+3)]:col-2 [&>*:nth-child(4n+4)]:col-1;
+    @apply sm:[&>*:nth-child(4n+3)]:col-2 sm:[&>*:nth-child(4n+4)]:col-1;
 
     figure {
       @apply max-w-[532px];

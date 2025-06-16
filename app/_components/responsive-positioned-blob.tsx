@@ -7,6 +7,7 @@ type RelativePositionedBlobProps = {
   className?: string;
   rotation?: number;
   sizePercentage: { height: number } | { width: number };
+  mirror?: boolean;
   position: (
     | {
         top: Position;
@@ -27,6 +28,7 @@ export default function ResponsivePositionedBlob({
   sizePercentage,
   position,
   rotation,
+  mirror,
 }: RelativePositionedBlobProps) {
   let transform = "";
 
@@ -46,7 +48,11 @@ export default function ResponsivePositionedBlob({
     <svg
       {...svgSize}
       viewBox={"0 0 1 1"}
-      className={twMerge("absolute inline-block", className)}
+      className={twMerge(
+        "absolute inline-block",
+        mirror && "scale-x-[-1]",
+        className
+      )}
       aria-hidden
       style={{
         ...position,
