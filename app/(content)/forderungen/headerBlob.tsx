@@ -15,23 +15,24 @@ export default function ForderungenSubpageHeaderBlob({
         position={{ top: "0%", left: "0%" }}
         className="fill-pink-light scale-x-[-1]"
       />
-      <div className="absolute top-[27%] left-[-7%] h-full w-[25%]">
-        <ResponsivePositionedBlob
-          id={70}
-          sizePercentage={{ width: 100 }}
-          rotation={-40}
-          position={{ top: "0%", right: "0%" }}
-          className="scale-x-[-1] fill-white"
-        />
+
+      <ResponsivePositionedBlob
+        id={70}
+        sizePercentage={{ width: 25 }}
+        rotation={-40}
+        mirror
+        position={{ top: "26%", left: "-10%" }}
+        className="fill-white"
+      >
         <Image
           width={53}
           height={53}
-          className="relative top-[7%] left-[25%] w-[45%]"
+          className="absolute top-[28%] left-[28%] w-[45%]"
           src={iconSrc}
           alt=""
           aria-hidden
         />
-      </div>
+      </ResponsivePositionedBlob>
     </figure>
   );
 }

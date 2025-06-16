@@ -46,7 +46,7 @@ export default function SozialvertraeglichkeitPage() {
               src={GuenstigerOepnv}
               sizes="(min-width: 640px) 530px, 100vw"
               placeholder="blur"
-              alt="Das Team von Zukunftsentscheid Hamburg bei der Unterschriftensammlung"
+              alt="Symbolbild: Die U3 an den Landungsbrücken"
             />
           </ImageBlob68Rotated>
           <div>
@@ -69,7 +69,7 @@ export default function SozialvertraeglichkeitPage() {
               src={SonneFuerAlle}
               sizes="(min-width: 640px) 530px, 100vw"
               placeholder="blur"
-              alt="Das Team von Zukunftsentscheid Hamburg bei der Unterschriftensammlung"
+              alt="Symbolbild: Verlegen von Solarmodulen"
             />
           </ImageBlob88Rotated>
           <div>
@@ -97,7 +97,7 @@ export default function SozialvertraeglichkeitPage() {
               src={SauberesHeizen}
               sizes="(min-width: 640px) 530px, 100vw"
               placeholder="blur"
-              alt="Das Team von Zukunftsentscheid Hamburg bei der Unterschriftensammlung"
+              alt="Symbolbild: Sanierung eines Fensterrahmens."
             />
           </ImageBlob36Alt>
           <div>

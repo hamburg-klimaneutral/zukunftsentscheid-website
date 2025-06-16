@@ -9,6 +9,7 @@ import GrosseventsImage from "@/app/_pictures/grossevents.png";
 import HaustuerwahlkampfImage from "@/app/_pictures/haustuerwahlkampf.png";
 import InfostaendeImage from "@/app/_pictures/infostaende.png";
 import LokaleVeranstaltungenImage from "@/app/_pictures/lokale_veranstaltungen.png";
+import QuoteAuthor from "@/app/_pictures/placeholders/532.png";
 import {
   DISTRICT_TELEGRAM_INVITE_LINKS,
   INFO_CHANNEL_INVITE_LINKS,
@@ -160,6 +161,9 @@ export default function MitmachenPage() {
       </Block>
       <Block variant="green">
         <BlockQuote
+          imageSrc={QuoteAuthor}
+          blobClassName={"fill-green-neon"}
+          quoteSignClassName={"fill-white"}
           author={"Moni, 65, Rentnerin"}
           quote={
             "Ich bin dabei, weil ich mich wirksam fühle und mit tollen Menschen zusammen die Welt retten kann."
@@ -262,6 +266,9 @@ export default function MitmachenPage() {
 
       <Block variant="green">
         <BlockQuote
+          imageSrc={QuoteAuthor}
+          blobClassName={"fill-green-neon"}
+          quoteSignClassName={"fill-white"}
           author={"Maik, 45, Beamter"}
           quote={
             "Ich bin dabei, weil ich für die Zukunft meiner Kinder kämpfen will."
