@@ -1,34 +1,29 @@
 import Image from "next/image";
 import { twMerge } from "tailwind-merge";
 
-export default function Timeline() {
+interface RootProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+function Root({ children, className }: RootProps) {
   return (
-    <ul className="flex flex-col gap-20">
-      <TimelineItem completed title="Volksinitiative">
-        <strong>Vorgabe:</strong> 10.000 Unterschriften in 6 Monaten
-        <br />
-        <strong>Ergebnis:</strong> 23.316 Unterschriften in 4 Wochen
-      </TimelineItem>
-      <TimelineItem completed title="Volksbegehren">
-        <strong>Vorgabe:</strong> 65.835 Unterschriften
-        <br />
-        <strong>Ergebnis:</strong> 106.374 Unterschriften nach 3 Wochen
-      </TimelineItem>
-      <TimelineItem title="Volksentscheid">
-        <strong>Vorgabe:</strong> Die Mehrheit der Hamburgerinnen und Hamburger,
-        die zur Bürgerschaft wahlberechtigt sind, stimmt dafür. Stimmt die
-        Mehrheit für den Gesetzestext, tritt er innerhalb eines Monats in Kraft.
-      </TimelineItem>
-    </ul>
+    <ul className={twMerge("flex flex-col gap-20", className)}>{children}</ul>
   );
 }
 
-function TimelineItem({
+function Item({
   title,
+  time,
+  iconSrc,
   completed,
   children,
+  className,
 }: {
+  className?: string;
   title: string;
+  iconSrc?: string;
+  time?: string;
   completed?: boolean;
   children: React.ReactNode;
 }) {
@@ -52,14 +47,33 @@ function TimelineItem({
           alt=""
           aria-hidden
         />
-        {completed && (
-          <div className="bg-green-dark -mt-1 -mb-11 w-1.5 flex-1 group-last:hidden" />
-        )}
+        <div
+          className={twMerge(
+            "-mt-1 -mb-11 w-1.5 flex-1 group-last:hidden",
+            completed ? "bg-green-dark" : "bg-blue-light"
+          )}
+        />
       </figure>
       <div className="flex flex-col gap-2">
-        <h3 className="h3">{title}</h3>
-        <p className="max-w-[400px]">{children}</p>
+        {time && <p>{time}</p>}
+        <div
+          className={twMerge(
+            "flex flex-row items-center gap-2",
+            time && "mb-2"
+          )}
+        >
+          {iconSrc && (
+            <Image src={iconSrc} alt="" width={32} height={32} aria-hidden />
+          )}
+          <h3 className="h3">{title}</h3>
+        </div>
+        <div className={className}>{children}</div>
       </div>
     </li>
   );
 }
+
+export default {
+  Root,
+  Item,
+};

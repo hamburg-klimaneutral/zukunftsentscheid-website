@@ -5,7 +5,6 @@ import Block from "@/app/_components/block";
 import HomeHero from "./home-hero";
 import IconGrid, { GridIcon } from "@/app/_components/icon-grid";
 import Logos from "@/app/_components/logos";
-import Timeline from "@/app/_components/timeline";
 import TwingleWidget from "@/app/_components/twingle-widget";
 
 import CollectImage from "@/app/_pictures/sammeln.png";
@@ -14,6 +13,7 @@ import ClaimsOverview from "../_components/claims-overview";
 import ImageBlob36 from "@/app/_components/blob-images/36";
 import ImageBlob5 from "@/app/_components/blob-images/5";
 import SectionBorderDecorationBlob33 from "@/app/_components/blob-section-decorators/33";
+import CompactTimeline from "@/app/_components/timeline-compact";
 
 export default function HomePage() {
   return (
@@ -174,12 +174,12 @@ export default function HomePage() {
             Hamburger Zukunftsentscheid unterstützen. Schon seit Juni 2023
             arbeiten viele Menschen daran, dass wir das schaffen.
           </p>
-          <Link className="button secondary" href="/">
+          <Link className="button secondary" href="/so-funktionierts">
             So funktionierts
           </Link>
         </div>
 
-        <Timeline />
+        <CompactTimeline />
       </Block>
 
       <Block variant="green" className="justify-around sm:flex-row">
