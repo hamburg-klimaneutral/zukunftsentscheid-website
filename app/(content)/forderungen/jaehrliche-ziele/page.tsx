@@ -5,11 +5,9 @@ import GetInvolvedBlock from "@/app/_components/getInvolvedBlock";
 import InfoBox from "@/app/_components/info-box";
 import KalenderEmissionsermittlungBundesweit from "@/app/_svg/kalender-emissionsermittlung-bundesweit";
 import KalenderEmissionsermittlungHamburg from "@/app/_svg/kalender-emissionsermittlung-hamburg";
-import SvgDigrammJahresemissionenHamburgerZukunftsentscheid from "@/app/_svg/digramm-jahresemissionen-hamburger-zukunftsentscheid";
-import SvgDiagrammJahresemissionenKlimaschutzgesetz from "@/app/_svg/diagramm-jahresemissionen-klimaschutzgesetz";
-import SvgDiagrammJahresemissionenHamburgerZukunftsentscheidVergleichSzenario from "@/app/_svg/diagramm-jahresemissionen-hamburger-zukunftsentscheid-vergleich-szenario";
 import Chip from "@/app/_components/chip";
 import ForderungenSubpageHeaderBlob from "@/app/(content)/forderungen/headerBlob";
+import Image from "next/image";
 
 export default function JaehrlicheZielePage() {
   return (
@@ -48,10 +46,11 @@ export default function JaehrlicheZielePage() {
             </div>
           </div>
           <div className="w-full max-w-md">
-            <SvgDiagrammJahresemissionenKlimaschutzgesetz
-              viewBox={"0 0 602 341"}
-              width={"100%"}
-              height={"auto"}
+            <Image
+              src="/diagrams/diagramm-jahresemissionen-klimaschutzgesetz.svg"
+              width={602}
+              height={341}
+              alt="Diagramm der im Klimaschutzgesetz festgelegten CO2 Reduktionsziele"
             />
           </div>
           <div className="max-w-md space-y-2">
@@ -83,10 +82,11 @@ export default function JaehrlicheZielePage() {
             </div>
           </div>
           <div className="w-full max-w-md">
-            <SvgDigrammJahresemissionenHamburgerZukunftsentscheid
-              viewBox={"0 0 602 341"}
-              width={"100%"}
-              height={"auto"}
+            <Image
+              src="/diagrams/digramm-jahresemissionen-hamburger-zukunftsentscheid.svg"
+              width={602}
+              height={341}
+              alt="Diagramm der im Hamburger Zukunftsentscheid festgelegten CO2 Reduktionsziele"
             />
           </div>
         </div>
@@ -99,10 +99,11 @@ export default function JaehrlicheZielePage() {
           </h3>
         </div>
         <div>
-          <SvgDiagrammJahresemissionenHamburgerZukunftsentscheidVergleichSzenario
-            className="max-w-full"
-            viewBox={"0 0 602 371"}
-            height={"auto"}
+          <Image
+            src="/diagrams/diagramm-jahresemissionen-hamburger-zukunftsentscheid-vergleich-szenario.svg"
+            width={602}
+            height={371}
+            alt="Diagramm der im Hamburger Zukunftsentscheid festgelegten CO2 Reduktionsziele im Vergleich mit den Ergebnissen des Szenario B"
           />
         </div>
         <div className="grid w-full grid-cols-1 justify-items-center gap-8 md:grid-cols-2 md:justify-between md:gap-12">
