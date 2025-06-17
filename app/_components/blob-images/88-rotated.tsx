@@ -6,6 +6,7 @@ export default function ImageBlob88Rotated({
   children,
   firstBlobClassName,
   secondBlobClassName,
+  secondBlobChildren,
   className,
 }: ImageBlobProps) {
   return (
@@ -25,7 +26,9 @@ export default function ImageBlob88Rotated({
         position={{ left: "32%", bottom: "8%" }}
         rotation={-55.3}
         sizePercentage={{ height: 16.8 }}
-      />
+      >
+        {secondBlobChildren}
+      </ResponsivePositionedBlob>
     </figure>
   );
 }

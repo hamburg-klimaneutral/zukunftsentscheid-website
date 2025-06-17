@@ -3,4 +3,5 @@ export interface ImageBlobProps {
   children: React.ReactNode;
   firstBlobClassName: string;
   secondBlobClassName: string;
+  secondBlobChildren?: React.ReactNode;
 }

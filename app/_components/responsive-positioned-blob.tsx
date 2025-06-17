@@ -20,6 +20,7 @@ type RelativePositionedBlobProps = {
         }
       | { right: Position }
     );
+  children?: React.ReactNode;
 };
 
 export default function ResponsivePositionedBlob({
@@ -29,6 +30,7 @@ export default function ResponsivePositionedBlob({
   position,
   rotation,
   mirror,
+  children,
 }: RelativePositionedBlobProps) {
   let transform = "";
 
@@ -45,22 +47,23 @@ export default function ResponsivePositionedBlob({
       : { width: `${sizePercentage.width}%` };
 
   return (
-    <svg
-      {...svgSize}
-      viewBox={"0 0 1 1"}
-      className={twMerge(
-        "absolute inline-block",
-        mirror && "scale-x-[-1]",
-        className
-      )}
-      aria-hidden
+    <figure
+      className={twMerge("absolute inline-block", className)}
       style={{
         ...position,
         ...styleSize,
-        transform,
       }}
     >
-      <use href={`/blobs/${id}.svg#${id}`} />
-    </svg>
+      <svg
+        {...svgSize}
+        viewBox={"0 0 1 1"}
+        aria-hidden
+        style={{ transform }}
+        className={twMerge(mirror && "scale-x-[-1]")}
+      >
+        <use href={`/blobs/${id}.svg#${id}`} />
+      </svg>
+      {children}
+    </figure>
   );
 }

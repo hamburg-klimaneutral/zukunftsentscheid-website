@@ -28,7 +28,7 @@ export default function HomePage() {
           verantwortungsbewusst.
         </h2>
         <ClaimsOverview />
-        <Link href="/" className="button secondary">
+        <Link href="/forderungen" className="button secondary">
           Unsere Forderungen
         </Link>
       </Block>

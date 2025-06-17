@@ -18,7 +18,7 @@
     @apply outline-focus outline-2 outline-offset-2;
   }
 
-  &:not(.primary):not(.secondary) {
+  &:not(.primary):not(.secondary):not(.tertiary) {
     @apply text-green-dark relative py-1;
 
     &:hover:before {
@@ -43,6 +43,22 @@
 
     &.alt {
       @apply bg-green-neon hover:bg-green-neon-80 text-green-dark;
+    }
+  }
+
+  &.tertiary {
+    @apply text-green-dark relative py-1;
+
+    &.alt {
+      @apply text-blue-light;
+    }
+
+    &:hover:before {
+      @apply translate-x-1.5;
+    }
+
+    &:before {
+      @apply pointer-events-none mr-2.5 h-6 w-6 bg-[url(/icons/arrow-right-blue-light.svg)] transition-transform content-[''];
     }
   }
 }

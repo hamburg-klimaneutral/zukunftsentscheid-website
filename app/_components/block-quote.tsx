@@ -1,17 +1,23 @@
 import { twMerge } from "tailwind-merge";
 import Image from "next/image";
-import SignatureImage from "@/app/_pictures/unterschriften.png";
+import ImageBlob36Quote from "@/app/_components/blob-images/36-quote";
 
 interface TextQuoteProps {
+  imageSrc: React.ComponentProps<typeof Image>["src"];
   author: string;
   quote: string;
   className?: string;
+  blobClassName: string;
+  quoteSignClassName: string;
 }
 
 export default function BlockQuote({
+  imageSrc,
   author,
   quote,
   className,
+  blobClassName,
+  quoteSignClassName,
 }: TextQuoteProps) {
   return (
     <>
@@ -21,10 +27,13 @@ export default function BlockQuote({
           className
         )}
       >
-        <figure className="relative max-w-xs min-w-1/4 basis-1/2">
-          <figure className="blob-[/blobs/36.svg]">
-            <Image src={SignatureImage} placeholder="blur" alt={author} />
-          </figure>
+        <figure className="max-w-xs min-w-1/4 basis-1/2">
+          <ImageBlob36Quote
+            firstBlobClassName={blobClassName}
+            secondBlobClassName={quoteSignClassName}
+          >
+            <Image src={imageSrc} placeholder="blur" alt={author} />
+          </ImageBlob36Quote>
         </figure>
 
         <div
