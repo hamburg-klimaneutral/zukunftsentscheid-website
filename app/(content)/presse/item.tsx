@@ -10,12 +10,22 @@ export default function PressReleaseItem({
   pressRelease,
 }: PressReleaseItemProps) {
   return (
-    <article className="border-blue-light flex max-w-xl flex-col border p-5">
-      <p className="pb-2">{pressRelease.date}</p>
-      <h3 className="h3 pb-4">{pressRelease.title}</h3>
-      <p>{pressRelease.description}</p>
+    <article className="border-blue-light flex w-full flex-col gap-6 border p-5 md:flex-row">
+      {pressRelease.image && (
+        <div className="hidden shrink-0 basis-1/3 md:block">
+          {pressRelease.image}
+        </div>
+      )}
+      <div className="flex max-w-xl shrink flex-col">
+        <p className="pb-2">{pressRelease.date}</p>
+        <h3 className="h3 pb-4">{pressRelease.title}</h3>
+        {pressRelease.image && (
+          <div className="mb-4 w-full md:hidden">{pressRelease.image}</div>
+        )}
+        <p>{pressRelease.description}</p>
+      </div>
       <Link
-        className="mt-4 self-end"
+        className="ml-auto shrink-0 self-end"
         title={`Zur Pressemitteilung "${pressRelease.title}" vom ${pressRelease.date}`}
         href={`/presse/${pressRelease.slug}/`}
       >

@@ -5,4 +5,5 @@ export interface PressRelease {
   date: string;
   slug: string;
   description: JSX.Element;
+  image?: React.ReactNode;
 }
