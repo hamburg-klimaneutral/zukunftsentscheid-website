@@ -1,11 +1,12 @@
 import Hero from "@/app/_components/hero";
 import Block from "@/app/_components/block";
-import GetInvolvedBlock from "@/app/_components/getInvolvedBlock";
+import GetInvolved from "@/app/_components/getInvolved";
 import Image from "next/image";
 import HeaderImage from "@/app/_pictures/placeholders/369x433.png";
 import Sozialvertraeglichkeit from "@/app/_pictures/placeholders/3384x2512.png";
 import JaehrlicheZiele from "@/app/_pictures/placeholders/3276x2551.png";
 import Klimaneutralitaet2040 from "@/app/_pictures/placeholders/2731x2731.png";
+import WirBrauchenEinNeuesGesetz from "@/app/_pictures/placeholders/2731x2731.png";
 import QuoteAuthor from "@/app/_pictures/placeholders/532.png";
 import ImageBlob36Alt from "@/app/_components/blob-images/36-alt";
 import ImageBlob88Rotated from "@/app/_components/blob-images/88-rotated";
@@ -14,9 +15,9 @@ import Link from "next/link";
 import BlockQuote from "@/app/_components/block-quote";
 import IconGrid, { GridIcon } from "@/app/_components/icon-grid";
 import ImageBlob36 from "@/app/_components/blob-images/36";
-import CollectImage from "@/app/_pictures/sammeln.png";
 import InfoBox from "@/app/_components/info-box";
 import ImageBlob45Rotated from "@/app/_components/blob-images/45-rotated";
+import SectionBorderDecorationBlob43LeftBottom from "@/app/_components/blob-section-decorators/43-left-bottom";
 
 export default function ForderungenPage() {
   return (
@@ -278,14 +279,14 @@ export default function ForderungenPage() {
       <Block>
         <div className="content-grid">
           <ImageBlob36
-            firstBlobClassName="fill-pink-light"
+            firstBlobClassName="fill-green-neon"
             secondBlobClassName="fill-blue-light"
           >
             <Image
-              src={CollectImage}
+              src={WirBrauchenEinNeuesGesetz}
               sizes="(min-width: 640px) 530px, 100vw"
               placeholder="blur"
-              alt="Das Team von Zukunftsentscheid Hamburg bei der Unterschriftensammlung"
+              alt=""
             />
           </ImageBlob36>
           <div className="teaser wide">
@@ -333,7 +334,13 @@ export default function ForderungenPage() {
         </div>
       </Block>
 
-      <GetInvolvedBlock variant="pinkLight" />
+      <Block variant="pinkLight">
+        <SectionBorderDecorationBlob43LeftBottom
+          firstBlobClassName="fill-white"
+          secondBlobClassName="fill-green-neon"
+        />
+        <GetInvolved />
+      </Block>
 
       <Block variant="green" className="gap-14">
         <div className="text-center">

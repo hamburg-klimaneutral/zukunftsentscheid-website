@@ -15,6 +15,11 @@ import {
   INFO_CHANNEL_INVITE_LINKS,
 } from "@/app/config";
 import SvgHhDistrictMapWithStylesAndLinks from "@/app/_svg/hh-district-map-with-styles-and-links";
+import SectionBorderDecorationBlob33RightTop from "@/app/_components/blob-section-decorators/33-right-top";
+import SectionBorderDecorationBlob43LeftBottom from "@/app/_components/blob-section-decorators/43-left-bottom";
+import SectionBorderDecorationBlob70RightCenter from "@/app/_components/blob-section-decorators/70-right-center";
+import ImageBlob38Rotated from "@/app/_components/blob-images/38-rotated";
+import HeaderImage from "@/app/_pictures/placeholders/369x433.png";
 
 interface ThisIsHowWeWinGridItemProps {
   title: string;
@@ -50,7 +55,22 @@ export default function MitmachenPage() {
   return (
     <>
       <Block variant="green">
-        <Hero asset={<></>}>
+        <Hero
+          asset={
+            <ImageBlob38Rotated
+              firstBlobClassName="fill-pink-light"
+              secondBlobClassName="fill-white"
+            >
+              {/* TODO: replace image and set alt tag */}
+              <Image
+                src={HeaderImage}
+                sizes="(min-width: 640px) 530px, 100vw"
+                placeholder="blur"
+                alt=""
+              />
+            </ImageBlob38Rotated>
+          }
+        >
           <h1>Mitmachen</h1>
           <h2 className="h1">
             Endlich sozialer Klimaschutz.
@@ -265,6 +285,12 @@ export default function MitmachenPage() {
       </Block>
 
       <Block variant="green">
+        <figure className="absolute top-[70%] right-[-3%]">
+          <SectionBorderDecorationBlob33RightTop
+            firstBlobClassName={"fill-pink-light"}
+            secondBlobClassName={"fill-green-neon"}
+          />
+        </figure>
         <BlockQuote
           imageSrc={QuoteAuthor}
           blobClassName={"fill-green-neon"}
@@ -276,6 +302,10 @@ export default function MitmachenPage() {
         />
       </Block>
       <Block variant="blue" className="gap-8">
+        <SectionBorderDecorationBlob43LeftBottom
+          firstBlobClassName="fill-green-dark"
+          secondBlobClassName="fill-green-neon"
+        />
         <div className="max-w-xl space-y-4 text-center">
           <h2 className="h2">
             Unterstütze uns als ehrenamtlicher Professional
@@ -404,6 +434,12 @@ export default function MitmachenPage() {
             </div>
           ),
         }}
+        appendChildren={
+          <SectionBorderDecorationBlob70RightCenter
+            firstBlobClassName="fill-white"
+            secondBlobClassName="fill-blue-light"
+          />
+        }
       />
     </>
   );

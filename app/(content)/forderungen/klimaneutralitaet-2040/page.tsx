@@ -2,8 +2,9 @@ import Block from "@/app/_components/block";
 import Hero from "@/app/_components/hero";
 import IconGrid, { GridIcon } from "@/app/_components/icon-grid";
 import ClaimsOverview from "@/app/_components/claims-overview";
-import GetInvolvedBlock from "@/app/_components/getInvolvedBlock";
+import GetInvolved from "@/app/_components/getInvolved";
 import ForderungenSubpageHeaderBlob from "@/app/(content)/forderungen/headerBlob";
+import SectionBorderDecorationBlob8LeftTop from "@/app/_components/blob-section-decorators/8-left-top";
 
 export default function Claim2024Page() {
   return (
@@ -114,11 +115,17 @@ export default function Claim2024Page() {
       </Block>
 
       <Block variant="blue">
+        <SectionBorderDecorationBlob8LeftTop
+          firstBlobClassName="fill-pink-light"
+          secondBlobClassName="fill-green-neon"
+        />
         <h2 className="h2">Unsere Forderungen</h2>
         <ClaimsOverview activeSlug="klimaneutralitaet-2040" />
       </Block>
 
-      <GetInvolvedBlock variant="green" />
+      <Block variant="green">
+        <GetInvolved />
+      </Block>
     </main>
   );
 }

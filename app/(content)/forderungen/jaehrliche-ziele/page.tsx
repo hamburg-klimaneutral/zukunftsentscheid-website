@@ -1,13 +1,15 @@
 import Block from "@/app/_components/block";
 import Hero from "@/app/_components/hero";
 import ClaimsOverview from "@/app/_components/claims-overview";
-import GetInvolvedBlock from "@/app/_components/getInvolvedBlock";
+import GetInvolved from "@/app/_components/getInvolved";
 import InfoBox from "@/app/_components/info-box";
 import KalenderEmissionsermittlungBundesweit from "@/app/_svg/kalender-emissionsermittlung-bundesweit";
 import KalenderEmissionsermittlungHamburg from "@/app/_svg/kalender-emissionsermittlung-hamburg";
 import Chip from "@/app/_components/chip";
 import ForderungenSubpageHeaderBlob from "@/app/(content)/forderungen/headerBlob";
 import Image from "next/image";
+import SectionBorderDecorationBlob65LeftTop from "@/app/_components/blob-section-decorators/65-left-top";
+import SectionBorderDecorationBlob55LeftTop from "@/app/_components/blob-section-decorators/55-left-top";
 
 export default function JaehrlicheZielePage() {
   return (
@@ -92,6 +94,10 @@ export default function JaehrlicheZielePage() {
         </div>
       </Block>
       <Block variant="green">
+        <SectionBorderDecorationBlob55LeftTop
+          firstBlobClassName="fill-blue-light"
+          secondBlobClassName="fill-pink-dark"
+        />
         <div className="max-w-md text-center">
           <h2 className="text-tiny mb-2">Ambitioniert aber realistisch</h2>
           <h3 className="h2">
@@ -221,11 +227,17 @@ export default function JaehrlicheZielePage() {
       </Block>
 
       <Block variant="blue">
+        <SectionBorderDecorationBlob65LeftTop
+          firstBlobClassName="fill-green-dark"
+          secondBlobClassName="fill-green-neon"
+        />
         <h2 className="h2">Unsere Forderungen</h2>
         <ClaimsOverview activeSlug="jaehrliche-ziele" />
       </Block>
 
-      <GetInvolvedBlock variant="green" />
+      <Block variant="green">
+        <GetInvolved />
+      </Block>
     </>
   );
 }

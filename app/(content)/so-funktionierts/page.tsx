@@ -2,6 +2,9 @@ import Block from "@/app/_components/block";
 import Timeline from "@/app/_components/timeline";
 import TimelineItems from "./timeline-items.mdx";
 import Hero from "@/app/_components/hero";
+import SectionBorderDecorationBlob33Header from "@/app/_components/blob-section-decorators/33-header";
+import SectionBorderDecorationBlob43LeftBottom from "@/app/_components/blob-section-decorators/43-left-bottom";
+import GetInvolved from "@/app/_components/getInvolved";
 
 export default function AblaufPage() {
   return (
@@ -13,6 +16,10 @@ export default function AblaufPage() {
         </Hero>
       </Block>
       <Block className="gap-24">
+        <SectionBorderDecorationBlob33Header
+          firstBlobClassName="fill-blue-light"
+          secondBlobClassName="fill-pink-light"
+        />
         <div className="max-w-xl space-y-4">
           <p>
             Damit ein Gesetz ein einer Volksabstimmung beschlossen werden kann,
@@ -28,6 +35,13 @@ export default function AblaufPage() {
         <Timeline.Root className="max-w-2xl">
           <TimelineItems />
         </Timeline.Root>
+      </Block>
+      <Block variant="pinkLight">
+        <SectionBorderDecorationBlob43LeftBottom
+          firstBlobClassName="fill-white"
+          secondBlobClassName="fill-green-neon"
+        />
+        <GetInvolved />
       </Block>
     </main>
   );
