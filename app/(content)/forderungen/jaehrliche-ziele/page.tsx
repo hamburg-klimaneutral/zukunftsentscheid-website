@@ -1,7 +1,7 @@
 import Block from "@/app/_components/block";
 import Hero from "@/app/_components/hero";
 import ClaimsOverview from "@/app/_components/claims-overview";
-import GetInvolvedBlock from "@/app/_components/getInvolvedBlock";
+import GetInvolved from "@/app/_components/getInvolved";
 import InfoBox from "@/app/_components/info-box";
 import KalenderEmissionsermittlungBundesweit from "@/app/_svg/kalender-emissionsermittlung-bundesweit";
 import KalenderEmissionsermittlungHamburg from "@/app/_svg/kalender-emissionsermittlung-hamburg";
@@ -225,7 +225,9 @@ export default function JaehrlicheZielePage() {
         <ClaimsOverview activeSlug="jaehrliche-ziele" />
       </Block>
 
-      <GetInvolvedBlock variant="green" />
+      <Block variant="green">
+        <GetInvolved />
+      </Block>
     </>
   );
 }

@@ -3,6 +3,7 @@ import Hero from "@/app/_components/hero";
 import ExampleOne from "./items/exampleOne.mdx";
 import ExampleTwo from "./items/exampleTwo.mdx";
 import { FAQ } from "./components";
+import GetInvolved from "@/app/_components/getInvolved";
 
 export default function FragenUndAntwortenPage() {
   return (
@@ -25,6 +26,9 @@ export default function FragenUndAntwortenPage() {
           <FAQ.Section title="Beispiel 2">
             <ExampleTwo />
           </FAQ.Section>
+        </Block>
+        <Block variant="green">
+          <GetInvolved />
         </Block>
       </FAQ.Root>
     </>

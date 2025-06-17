@@ -1,6 +1,6 @@
 import Hero from "@/app/_components/hero";
 import Block from "@/app/_components/block";
-import GetInvolvedBlock from "@/app/_components/getInvolvedBlock";
+import GetInvolved from "@/app/_components/getInvolved";
 import Image from "next/image";
 import HeaderImage from "@/app/_pictures/placeholders/369x433.png";
 import Sozialvertraeglichkeit from "@/app/_pictures/placeholders/3384x2512.png";
@@ -333,7 +333,9 @@ export default function ForderungenPage() {
         </div>
       </Block>
 
-      <GetInvolvedBlock variant="pinkLight" />
+      <Block variant="pinkLight">
+        <GetInvolved />
+      </Block>
 
       <Block variant="green" className="gap-14">
         <div className="text-center">
