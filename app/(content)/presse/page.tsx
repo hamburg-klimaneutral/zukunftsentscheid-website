@@ -9,7 +9,7 @@ export default function PressePage() {
         <h1 className="h1">Presse</h1>
       </Block>
 
-      <Block>
+      <Block className="max-w-5xl">
         {PRESS_RELEASES.map((item) => (
           <PressReleaseItem key={item.title} pressRelease={item} />
         ))}
