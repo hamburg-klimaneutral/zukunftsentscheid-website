@@ -6,7 +6,7 @@ export default function SectionBorderDecorationBlob65LeftTop({
   secondBlobClassName,
 }: SectionBorderDecorationBlobProps) {
   return (
-    <figure className="absolute -top-25 -left-16 aspect-square w-[190px] lg:-left-30 lg:w-[350px]">
+    <figure className="absolute -top-35 -left-16 aspect-square w-[190px] lg:-left-105 lg:w-[650px]">
       <ResponsivePositionedBlob
         id={65}
         sizePercentage={{ width: 100 }}
@@ -15,8 +15,8 @@ export default function SectionBorderDecorationBlob65LeftTop({
       />
       <ResponsivePositionedBlob
         id={23}
-        sizePercentage={{ width: 34 }}
-        position={{ top: "-17%", right: "26%" }}
+        sizePercentage={{ width: 12 }}
+        position={{ top: "67%", right: "20%" }}
         className={secondBlobClassName}
       />
     </figure>

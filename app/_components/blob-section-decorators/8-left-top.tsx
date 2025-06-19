@@ -6,17 +6,19 @@ export default function SectionBorderDecorationBlob8LeftTop({
   secondBlobClassName,
 }: SectionBorderDecorationBlobProps) {
   return (
-    <figure className="absolute -top-25 -left-16 aspect-square w-[190px] lg:-left-30 lg:w-[350px]">
+    <figure className="absolute -top-75 -left-16 aspect-square w-[190px] lg:-left-26 lg:w-[340px]">
       <ResponsivePositionedBlob
         id={8}
         sizePercentage={{ width: 100 }}
         position={{ top: "0%", right: "0%" }}
         className={firstBlobClassName}
+        rotation={270}
+        mirror
       />
       <ResponsivePositionedBlob
         id={78}
-        sizePercentage={{ width: 34 }}
-        position={{ top: "-17%", right: "26%" }}
+        sizePercentage={{ width: 20 }}
+        position={{ top: "85%", right: "55%" }}
         className={secondBlobClassName}
       />
     </figure>
