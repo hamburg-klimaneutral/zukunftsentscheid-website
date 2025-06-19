@@ -1,7 +1,7 @@
 import Hero from "@/app/_components/hero";
 import Block from "@/app/_components/block";
 import ClaimsOverview from "@/app/_components/claims-overview";
-import GetInvolvedBlock from "@/app/_components/getInvolvedBlock";
+import GetInvolved from "@/app/_components/getInvolved";
 import InfoBox from "@/app/_components/info-box";
 import ForderungenSubpageHeaderBlob from "@/app/(content)/forderungen/headerBlob";
 import Image from "next/image";
@@ -144,7 +144,9 @@ export default function SozialvertraeglichkeitPage() {
         <ClaimsOverview activeSlug="sozialvertraeglichkeit" />
       </Block>
 
-      <GetInvolvedBlock variant="green" />
+      <Block variant="green">
+        <GetInvolved />
+      </Block>
     </main>
   );
 }

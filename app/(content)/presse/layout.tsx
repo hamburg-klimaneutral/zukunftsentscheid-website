@@ -1,4 +1,5 @@
-import GetInvolvedBlock from "@/app/_components/getInvolvedBlock";
+import GetInvolved from "@/app/_components/getInvolved";
+import Block from "@/app/_components/block";
 
 export default function PressLayout({
   children,
@@ -8,7 +9,9 @@ export default function PressLayout({
   return (
     <>
       {children}
-      <GetInvolvedBlock />
+      <Block variant="pinkLight">
+        <GetInvolved />
+      </Block>
     </>
   );
 }

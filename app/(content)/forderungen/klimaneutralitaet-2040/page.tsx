@@ -2,7 +2,7 @@ import Block from "@/app/_components/block";
 import Hero from "@/app/_components/hero";
 import IconGrid, { GridIcon } from "@/app/_components/icon-grid";
 import ClaimsOverview from "@/app/_components/claims-overview";
-import GetInvolvedBlock from "@/app/_components/getInvolvedBlock";
+import GetInvolved from "@/app/_components/getInvolved";
 import ForderungenSubpageHeaderBlob from "@/app/(content)/forderungen/headerBlob";
 
 export default function Claim2024Page() {
@@ -118,7 +118,9 @@ export default function Claim2024Page() {
         <ClaimsOverview activeSlug="klimaneutralitaet-2040" />
       </Block>
 
-      <GetInvolvedBlock variant="green" />
+      <Block variant="green">
+        <GetInvolved />
+      </Block>
     </main>
   );
 }

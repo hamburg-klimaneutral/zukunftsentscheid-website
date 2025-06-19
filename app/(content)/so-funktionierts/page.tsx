@@ -2,6 +2,7 @@ import Block from "@/app/_components/block";
 import Timeline from "@/app/_components/timeline";
 import TimelineItems from "./timeline-items.mdx";
 import Hero from "@/app/_components/hero";
+import GetInvolved from "@/app/_components/getInvolved";
 
 export default function AblaufPage() {
   return (
@@ -28,6 +29,9 @@ export default function AblaufPage() {
         <Timeline.Root className="max-w-2xl">
           <TimelineItems />
         </Timeline.Root>
+      </Block>
+      <Block variant="pinkLight">
+        <GetInvolved />
       </Block>
     </main>
   );
