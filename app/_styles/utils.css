@@ -87,6 +87,18 @@
   @apply text-lg sm:text-4xl;
 }
 
+@utility paragraph-gap {
+  @apply space-y-4;
+}
+
+@utility addition {
+  @apply bg-green-neon px-1 font-bold;
+}
+
+@utility removal {
+  @apply bg-pink-light px-1 font-bold line-through;
+}
+
 @utility underline-marks {
   mark {
     @apply has-underline bg-transparent text-inherit;
