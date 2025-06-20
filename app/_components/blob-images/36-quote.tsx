@@ -15,14 +15,15 @@ export default function ImageBlob36Quote({
       <ResponsivePositionedBlob
         id={70}
         className={twMerge("absolute", firstBlobClassName)}
-        position={{ left: "-18%", top: "20%" }}
-        sizePercentage={{ height: 81 }}
+        position={{ left: "25%", top: "-12%" }}
+        sizePercentage={{ height: 85 }}
+        rotation={5}
       />
       <figure className="blob-[/blobs/36.svg]">{children}</figure>
       {/* TODO: position image */}
       <figure
         className={twMerge(
-          "relative top-[7%] left-[25%] w-[30%]",
+          "relative -top-37 left-80 w-[30%]",
           secondBlobClassName
         )}
       >

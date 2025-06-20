@@ -14,17 +14,18 @@ export default function ImageBlob38Rotated({
       <ResponsivePositionedBlob
         id={40}
         className={firstBlobClassName}
-        position={{ left: "-18%", top: "20%" }}
-        sizePercentage={{ height: 81 }}
+        position={{ left: "28%", top: "-15%" }}
+        sizePercentage={{ height: 90 }}
+        rotation={135}
       />
       <figure className="blob-[/blobs/38-rotated.svg]">{children}</figure>
       {/* TODO: position blob */}
       <ResponsivePositionedBlob
         id={84}
         className={secondBlobClassName}
-        position={{ left: "32%", bottom: "8%" }}
+        position={{ left: "110%", bottom: "68%" }}
         rotation={-55.3}
-        sizePercentage={{ height: 16.8 }}
+        sizePercentage={{ height: 12 }}
       ></ResponsivePositionedBlob>
     </figure>
   );

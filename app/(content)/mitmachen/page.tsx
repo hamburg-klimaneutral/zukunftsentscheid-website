@@ -67,6 +67,7 @@ export default function MitmachenPage() {
                 sizes="(min-width: 640px) 530px, 100vw"
                 placeholder="blur"
                 alt=""
+                width={640}
               />
             </ImageBlob38Rotated>
           }

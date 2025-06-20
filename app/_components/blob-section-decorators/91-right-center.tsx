@@ -10,13 +10,13 @@ export default function SectionBorderDecorationBlob91RightCenter({
       <ResponsivePositionedBlob
         id={91}
         sizePercentage={{ width: 100 }}
-        position={{ top: "0%", right: "0%" }}
+        position={{ top: "-40%", right: "0%" }}
         className={firstBlobClassName}
       />
       <ResponsivePositionedBlob
         id={21}
         sizePercentage={{ width: 12 }}
-        position={{ top: "57%", right: "86%" }}
+        position={{ top: "19%", right: "82%" }}
         className={secondBlobClassName}
       />
     </figure>

@@ -15,17 +15,17 @@ export default function ImageBlob88Rotated({
       <ResponsivePositionedBlob
         id={42}
         className={twMerge("absolute", firstBlobClassName)}
-        position={{ left: "-18%", top: "20%" }}
-        sizePercentage={{ height: 81 }}
+        position={{ left: "38%", top: "-30%" }}
+        sizePercentage={{ height: 130 }}
       />
       <figure className="blob-[/blobs/88-rotated.svg]">{children}</figure>
       {/* TODO: position blob */}
       <ResponsivePositionedBlob
         id={18}
         className={twMerge("absolute", secondBlobClassName)}
-        position={{ left: "32%", bottom: "8%" }}
+        position={{ left: "78%", bottom: "25%" }}
         rotation={-55.3}
-        sizePercentage={{ height: 16.8 }}
+        sizePercentage={{ height: 25 }}
       >
         {secondBlobChildren}
       </ResponsivePositionedBlob>
