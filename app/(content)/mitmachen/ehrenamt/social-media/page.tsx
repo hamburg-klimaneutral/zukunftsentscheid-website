@@ -36,12 +36,12 @@ export default function AblaufPage() {
             Arbeit, für die wir ehrenamtliche Unterstüzung suchen!
           </p>
           <h2 className="h2">Zeitaufwand</h2>
-          <ul>
+          <ul className="list-disc">
             <li>Je nach Arbeitspaket</li>
             <li>Ab 3-4 Stunden pro Woche (gerne mehr)</li>
           </ul>
           <h2 className="h2">Mögliche Aufgaben</h2>
-          <ul>
+          <ul className="list-disc">
             <li>
               Betreuung unserer Social Media Accounts auf Instagram, TikTok und
               LinkedIn
@@ -61,7 +61,7 @@ export default function AblaufPage() {
             </i>
           </p>
           <h2 className="h2">Was wir suchen</h2>
-          <ul>
+          <ul className="list-disc">
             <li>
               Personen mit Erfahrung im Bereich Social Media Management oder
               Digitaler Kommunikation oder Influencer Management
@@ -76,7 +76,7 @@ export default function AblaufPage() {
             <li>Standort Hamburg ist nicht notwendig</li>
           </ul>
           <h2 className="h2">Was wir bieten</h2>
-          <ul>
+          <ul className="list-disc">
             <li>
               Die Möglichkeit, eigene Fähigkeiten selbstwirksam für mehr
               Klimaschutz in Hamburg einzusetzen

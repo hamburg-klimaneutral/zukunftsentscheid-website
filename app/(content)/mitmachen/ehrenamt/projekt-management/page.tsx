@@ -38,12 +38,12 @@ export default function AblaufPage() {
             Events und Veranstaltungen.
           </p>
           <h2 className="h2">Zeitaufwand</h2>
-          <ul>
+          <ul className="list-disc">
             <li>Je nach Arbeitspaket</li>
             <li>Ab 3-4 Stunden pro Woche (gerne mehr)</li>
           </ul>
           <h2 className="h2">Mögliche Aufgaben</h2>
-          <ul>
+          <ul className="list-disc">
             <li>
               Koordination von crossfunktionalen Teams auf einzelnen
               Arbeitspaketen – viele davon im Schwerpunktbereich Kommunikation /
@@ -68,7 +68,7 @@ export default function AblaufPage() {
             </i>
           </p>
           <h2 className="h2">Beispiele für Arbeitspakete</h2>
-          <ul>
+          <ul className="list-disc">
             <li>Organisation von Presse-Events oder Veranstaltungen</li>
             <li>
               Koordination von Creatives bei der Erstellung von Werbematerialien
@@ -80,7 +80,7 @@ export default function AblaufPage() {
             <li>und vieles mehr</li>
           </ul>
           <h2 className="h2">Was wir suchen</h2>
-          <ul>
+          <ul className="list-disc">
             <li>
               Personen mit Erfahrung im Bereich Projekt Management, Brand
               Management oder Event Management
@@ -93,7 +93,7 @@ export default function AblaufPage() {
             <li>Strukturiertes Arbeiten</li>
           </ul>
           <h2 className="h2">Was wir bieten</h2>
-          <ul>
+          <ul className="list-disc">
             <li>
               Die Möglichkeit, eigene Fähigkeiten selbstwirksam für mehr
               Klimaschutz in Hamburg einzusetzen

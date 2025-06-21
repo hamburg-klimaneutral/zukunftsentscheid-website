@@ -36,7 +36,7 @@ export default function AblaufPage() {
             wir ehrenamtliche Unterstützung suchen!
           </p>
           <h2 className="h2">Zeitaufwand</h2>
-          <ul>
+          <ul className="list-disc">
             <li>Je nach Arbeitspaket</li>
             <li>Ab 3-4 Stunden pro Woche (gerne mehr)</li>
             <li>
@@ -45,7 +45,7 @@ export default function AblaufPage() {
             </li>
           </ul>
           <h2 className="h2">Mögliche Aufgaben</h2>
-          <ul>
+          <ul className="list-disc">
             <li>
               Konzeption von öffentlichem Auftritt: Entwicklung von kreativen
               Kernideen, Headlines, CI-Gestaltung
@@ -70,7 +70,7 @@ export default function AblaufPage() {
             </i>
           </p>
           <h2 className="h2">Was wir suchen</h2>
-          <ul>
+          <ul className="list-disc">
             <li>
               Creatives mit erster Berufserfahrung in einem der Bereiche Text,
               Design, Art Konzeption, Foto/Film
@@ -84,7 +84,7 @@ export default function AblaufPage() {
             <li>Standort Hamburg ist nicht notwendig</li>
           </ul>
           <h2 className="h2">Was wir bieten</h2>
-          <ul>
+          <ul className="list-disc">
             <li>
               Die Möglichkeit, eigene Fähigkeiten selbstwirksam für mehr
               Klimaschutz in Hamburg einzusetzen
