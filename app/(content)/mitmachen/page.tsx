@@ -287,7 +287,7 @@ export default function MitmachenPage() {
             unterschiedlichen Bereichen ehrenamtlich mitarbeiten.
           </p>
         </div>
-        <Link href="/" className="button secondary">
+        <Link href="/mitmachen/ehrenamt" className="button secondary">
           Mehr Informationen
         </Link>
       </Block>
