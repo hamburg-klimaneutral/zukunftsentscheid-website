@@ -9,7 +9,8 @@ import Chip from "@/app/_components/chip";
 import ForderungenSubpageHeaderBlob from "@/app/(content)/forderungen/headerBlob";
 import Image from "next/image";
 import SectionBorderDecorationBlob65LeftTop from "@/app/_components/blob-section-decorators/65-left-top";
-import SectionBorderDecorationBlob55LeftTop from "@/app/_components/blob-section-decorators/55-left-top";
+import SectionBorderDecorationBlob8LeftTop from "@/app/_components/blob-section-decorators/8-left-top";
+import SectionBorderDecorationBlob33RightTop from "@/app/_components/blob-section-decorators/33-right-top";
 
 export default function JaehrlicheZielePage() {
   return (
@@ -94,10 +95,12 @@ export default function JaehrlicheZielePage() {
         </div>
       </Block>
       <Block variant="green">
-        <SectionBorderDecorationBlob55LeftTop
-          firstBlobClassName="fill-blue-light"
-          secondBlobClassName="fill-pink-dark"
-        />
+        <figure className="absolute top-30 left-0">
+          <SectionBorderDecorationBlob8LeftTop
+            firstBlobClassName="fill-blue-light"
+            secondBlobClassName="fill-pink-dark"
+          />
+        </figure>
         <div className="max-w-md text-center">
           <h2 className="text-tiny mb-2">Ambitioniert aber realistisch</h2>
           <h3 className="h2">
@@ -158,6 +161,10 @@ export default function JaehrlicheZielePage() {
       </Block>
 
       <Block variant="blue">
+        <SectionBorderDecorationBlob33RightTop
+          firstBlobClassName={"fill-pink-light"}
+          secondBlobClassName={"fill-white"}
+        />
         <div className="grid w-full grid-cols-1 items-center justify-items-center gap-8 md:grid-cols-2 md:justify-between md:gap-12">
           <div className="max-w-md space-y-2">
             <p className="text-tiny">Dauer der Emissionsermittlung</p>
