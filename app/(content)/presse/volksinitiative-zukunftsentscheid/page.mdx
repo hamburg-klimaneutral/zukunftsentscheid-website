@@ -2,10 +2,20 @@ import Block from "../../../_components/block";
 import TextQuote from "../../../_components/text-quote";
 import PressReleaseHeroBlock from "../hero-block";
 import pressRelease from "./release";
+import SectionBorderDecorationBlob91LeftCenter from "../../../_components/blob-section-decorators/91-left-center";
+import SectionBorderDecorationBlob33Header from "../../../_components/blob-section-decorators/33-header";
 
 <PressReleaseHeroBlock title={pressRelease.title} date={pressRelease.date} />
 
 <Block>
+    <SectionBorderDecorationBlob91LeftCenter
+        firstBlobClassName="fill-pink-light"
+        secondBlobClassName="fill-green-neon"
+    />
+    <SectionBorderDecorationBlob33Header
+        firstBlobClassName="fill-blue-light"
+        secondBlobClassName="fill-pink-light"
+    />
     <div className="markdown max-w-xl">
         Als Reaktion auf die geplante Novellierung des Hamburger Klimaschutzgesetzes werden ab 2024 in Hamburg
         Unterschriften für die Volksinitiative „Zukunftsentscheid“ gesammelt. Gemeinsam mit einem breiten Bündnis

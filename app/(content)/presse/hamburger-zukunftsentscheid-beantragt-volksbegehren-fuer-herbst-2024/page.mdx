@@ -2,10 +2,20 @@ import Block from "../../../_components/block";
 import TextQuote from "../../../_components/text-quote";
 import PressReleaseHeroBlock from "../hero-block";
 import pressRelease from "./release";
+import SectionBorderDecorationBlob91LeftCenter from "../../../_components/blob-section-decorators/91-left-center";
+import SectionBorderDecorationBlob33Header from "../../../_components/blob-section-decorators/33-header";
 
 <PressReleaseHeroBlock title={pressRelease.title} date={pressRelease.date} />
 
 <Block>
+    <SectionBorderDecorationBlob91LeftCenter
+        firstBlobClassName="fill-pink-light"
+        secondBlobClassName="fill-green-neon"
+    />
+    <SectionBorderDecorationBlob33Header
+        firstBlobClassName="fill-blue-light"
+        secondBlobClassName="fill-pink-light"
+    />
     <div className="max-w-xl">
         Der Hamburger Zukunftsentscheid hat heute beim Senat die Durchführung des Volksbegehrens für die von der
         Initiative vorgeschlagene Änderung des Klimaschutzgesetzes beantragt. Das Volksbegehren wird im September und

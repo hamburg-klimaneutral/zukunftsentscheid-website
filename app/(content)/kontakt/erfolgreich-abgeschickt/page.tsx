@@ -2,6 +2,7 @@ import Block from "@/app/_components/block";
 import { GridIcon } from "@/app/_components/icon-grid";
 import Link from "next/link";
 import Hero from "@/app/_components/hero";
+import SectionBorderDecorationBlob33Header from "@/app/_components/blob-section-decorators/33-header";
 
 export default function ContactSuccessPage() {
   return (
@@ -13,6 +14,10 @@ export default function ContactSuccessPage() {
         </Hero>
       </Block>
       <Block>
+        <SectionBorderDecorationBlob33Header
+          firstBlobClassName="fill-blue-light"
+          secondBlobClassName="fill-green-neon"
+        />
         <GridIcon
           blobId={66}
           src="/icons/book-heart.svg"
