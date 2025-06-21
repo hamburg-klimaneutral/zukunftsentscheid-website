@@ -1,0 +1,17 @@
+export const YearlyEmissions = [
+  { year: 2026, emissions: "9.611", percentage: "53%" },
+  { year: 2027, emissions: "8.745", percentage: "57%" },
+  { year: 2028, emissions: "7.880", percentage: "62%" },
+  { year: 2029, emissions: "7.014", percentage: "66%" },
+  { year: 2030, emissions: "6.148", percentage: "70%" },
+  { year: 2031, emissions: "5.441", percentage: "73%" },
+  { year: 2032, emissions: "4.735", percentage: "77%" },
+  { year: 2033, emissions: "4.028", percentage: "80%" },
+  { year: 2034, emissions: "3.321", percentage: "84%" },
+  { year: 2035, emissions: "2.615", percentage: "87%" },
+  { year: 2036, emissions: "2.176", percentage: "89%" },
+  { year: 2037, emissions: "1.738", percentage: "92%" },
+  { year: 2038, emissions: "1.300", percentage: "94%" },
+  { year: 2039, emissions: "862", percentage: "96%" },
+  { year: 2040, emissions: "424", percentage: "98%" },
+] as const;
