@@ -29,7 +29,7 @@ export default function TwoColumnBlock({
   appendChildren,
 }: TwoColumnBlockProps) {
   return (
-    <div className="relative">
+    <div className="relative overflow-x-clip">
       {/* backgrounds left + right */}
       <div
         className={twMerge(

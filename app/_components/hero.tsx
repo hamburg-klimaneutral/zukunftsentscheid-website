@@ -14,11 +14,7 @@ export default function Hero({
         asset ? "justify-between" : "justify-center"
       )}
     >
-      {asset && (
-        <figure className="relative -mt-6 -mb-32 -ml-12 basis-1/2 sm:-ml-0">
-          {asset}
-        </figure>
-      )}
+      {asset}
       <div
         className={twMerge(
           "relative flex flex-col gap-4 whitespace-pre-line",

@@ -19,6 +19,7 @@ export default function SectionBorderDecorationBlob8LeftTop({
         id={78}
         sizePercentage={{ width: 20 }}
         position={{ top: "85%", right: "55%" }}
+        rotation={265}
         className={secondBlobClassName}
       />
     </figure>

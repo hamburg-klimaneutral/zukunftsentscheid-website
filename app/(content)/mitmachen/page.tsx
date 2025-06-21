@@ -19,7 +19,7 @@ import SectionBorderDecorationBlob33RightTop from "@/app/_components/blob-sectio
 import SectionBorderDecorationBlob43LeftBottom from "@/app/_components/blob-section-decorators/43-left-bottom";
 import SectionBorderDecorationBlob70RightCenter from "@/app/_components/blob-section-decorators/70-right-center";
 import ImageBlob38Rotated from "@/app/_components/blob-images/38-rotated";
-import HeaderImage from "@/app/_pictures/placeholders/369x433.png";
+import HeaderImage from "@/app/_pictures/mitmachen.png";
 
 interface ThisIsHowWeWinGridItemProps {
   title: string;
@@ -54,22 +54,22 @@ function ThisIsHowWeWinGridItem({
 export default function MitmachenPage() {
   return (
     <>
-      <Block variant="green">
+      <Block variant="green" blockClassName="z-10">
         <Hero
           asset={
-            <ImageBlob38Rotated
-              firstBlobClassName="fill-pink-light"
-              secondBlobClassName="fill-white"
-            >
-              {/* TODO: replace image and set alt tag */}
-              <Image
-                src={HeaderImage}
-                sizes="(min-width: 640px) 530px, 100vw"
-                placeholder="blur"
-                alt=""
-                width={640}
-              />
-            </ImageBlob38Rotated>
+            <figure className="mt-10 -mb-20 max-w-md basis-2/3 pr-8 md:-mt-18 md:-mb-36 md:pr-16 lg:basis-1/3 lg:pr-0">
+              <ImageBlob38Rotated
+                firstBlobClassName="fill-pink-light"
+                secondBlobClassName="fill-white"
+              >
+                <Image
+                  src={HeaderImage}
+                  sizes="(min-width: 640px) 530px, 100vw"
+                  placeholder="blur"
+                  alt="Sammlerinnen des Hamburger Zukunftsentscheids vor dem Millerntor-Stadion während des Volksbegehrens"
+                />
+              </ImageBlob38Rotated>
+            </figure>
           }
         >
           <h1>Mitmachen</h1>
@@ -189,7 +189,6 @@ export default function MitmachenPage() {
           quote={
             "Ich bin dabei, weil ich mich wirksam fühle und mit tollen Menschen zusammen die Welt retten kann."
           }
-          className="md:flex-row-reverse"
         />
       </Block>
       <Block>
@@ -286,13 +285,8 @@ export default function MitmachenPage() {
       </Block>
 
       <Block variant="green">
-        <figure className="absolute top-[70%] right-[-3%]">
-          <SectionBorderDecorationBlob33RightTop
-            firstBlobClassName={"fill-pink-light"}
-            secondBlobClassName={"fill-green-neon"}
-          />
-        </figure>
         <BlockQuote
+          quoteRight={true}
           imageSrc={QuoteAuthor}
           blobClassName={"fill-green-neon"}
           quoteSignClassName={"fill-white"}
@@ -303,6 +297,12 @@ export default function MitmachenPage() {
         />
       </Block>
       <Block variant="blue" className="gap-8">
+        <figure className="absolute -top-[50%] right-[-3%] hidden xl:block">
+          <SectionBorderDecorationBlob33RightTop
+            firstBlobClassName={"fill-pink-light"}
+            secondBlobClassName={"fill-green-neon"}
+          />
+        </figure>
         <SectionBorderDecorationBlob43LeftBottom
           firstBlobClassName="fill-green-dark"
           secondBlobClassName="fill-green-neon"

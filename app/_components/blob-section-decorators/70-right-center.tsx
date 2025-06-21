@@ -6,20 +6,18 @@ export default function SectionBorderDecorationBlob70RightCenter({
   secondBlobClassName,
 }: SectionBorderDecorationBlobProps) {
   return (
-    <figure className="absolute top-15 -right-16 aspect-square w-[190px] lg:-right-50 lg:w-[350px]">
+    <figure className="absolute top-15 -right-68 aspect-square w-[350px] lg:-right-68 lg:w-[350px]">
       <ResponsivePositionedBlob
         id={70}
         sizePercentage={{ width: 100 }}
-        rotation={-50}
-        mirror={true}
         position={{ top: "0%", right: "0%" }}
         className={firstBlobClassName}
       />
       <ResponsivePositionedBlob
         id={75}
-        sizePercentage={{ width: 28 }}
-        rotation={180}
-        position={{ top: "0%", right: "60%" }}
+        sizePercentage={{ width: 22 }}
+        rotation={210}
+        position={{ top: "0%", right: "70%" }}
         className={secondBlobClassName}
       />
     </figure>

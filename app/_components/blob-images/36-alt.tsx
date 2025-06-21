@@ -11,15 +11,13 @@ export default function ImageBlob36Alt({
 }: ImageBlobProps) {
   return (
     <figure className={twMerge("relative", className)}>
-      {/* TODO: position blob */}
       <ResponsivePositionedBlob
         id={41}
         className={twMerge("absolute", firstBlobClassName)}
-        position={{ left: "-35%", top: "0%" }}
+        position={{ left: "-32%", top: "0%" }}
         sizePercentage={{ height: 100 }}
       />
       <figure className="blob-[/blobs/36.svg]">{children}</figure>
-      {/* TODO: position blob */}
       <ResponsivePositionedBlob
         id={5}
         className={twMerge("absolute", secondBlobClassName)}
