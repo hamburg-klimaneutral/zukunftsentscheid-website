@@ -5,7 +5,7 @@ import SectionBorderDecorationBlob43LeftBottom from "@/app/_components/blob-sect
 import Link from "next/link";
 import IconGrid, { GridIcon } from "@/app/_components/icon-grid";
 
-export default function AblaufPage() {
+export default function EhrenamtPage() {
   return (
     <main>
       <Block variant="green">

@@ -6,7 +6,7 @@ import Link from "next/link";
 import SectionBorderDecorationBlob91RightCenter from "@/app/_components/blob-section-decorators/91-right-center";
 import SectionBorderDecorationBlob65LeftTop from "@/app/_components/blob-section-decorators/65-left-top";
 
-export default function AblaufPage() {
+export default function EhrenamtProjektManagementPage() {
   return (
     <main>
       <Block variant="green">

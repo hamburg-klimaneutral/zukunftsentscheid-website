@@ -4,7 +4,7 @@ import SectionBorderDecorationBlob43LeftBottom from "@/app/_components/blob-sect
 import Link from "next/link";
 import Image from "next/image";
 
-export default function AblaufPage() {
+export default function UeberUnsPage() {
   return (
     <main>
       <Block variant="green">
