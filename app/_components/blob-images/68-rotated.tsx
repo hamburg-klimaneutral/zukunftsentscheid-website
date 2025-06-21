@@ -14,7 +14,7 @@ export default function ImageBlob68Rotated({
       <ResponsivePositionedBlob
         id={81}
         className={twMerge("absolute", firstBlobClassName)}
-        position={{ left: "-26%", top: "-7%" }}
+        position={{ left: "-30%", top: "-7%" }}
         sizePercentage={{ height: 112 }}
       />
       <figure className="blob-[/blobs/68-rotated.svg]">{children}</figure>

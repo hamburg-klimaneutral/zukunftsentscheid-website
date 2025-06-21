@@ -20,6 +20,8 @@ import SectionBorderDecorationBlob43LeftBottom from "@/app/_components/blob-sect
 import SectionBorderDecorationBlob70RightCenter from "@/app/_components/blob-section-decorators/70-right-center";
 import ImageBlob38Rotated from "@/app/_components/blob-images/38-rotated";
 import HeaderImage from "@/app/_pictures/mitmachen.png";
+import ImageBlob67 from "@/app/_components/blob-images/67";
+import ImageBlob5Alt from "@/app/_components/blob-images/5-alt";
 
 interface ThisIsHowWeWinGridItemProps {
   title: string;
@@ -209,15 +211,16 @@ export default function MitmachenPage() {
             title="Haustürwahlkampf"
             href="/mitmachen/abc"
             asset={
-              <>
-                <figure className="blob-[/blobs/5.svg]">
-                  <Image
-                    src={HaustuerwahlkampfImage}
-                    placeholder="blur"
-                    alt="Haustürwahlkampf"
-                  />
-                </figure>
-              </>
+              <ImageBlob5Alt
+                firstBlobClassName="fill-green-dark"
+                secondBlobClassName="fill-blue-light"
+              >
+                <Image
+                  src={HaustuerwahlkampfImage}
+                  placeholder="blur"
+                  alt="Haustürwahlkampf"
+                />
+              </ImageBlob5Alt>
             }
           >
             Klimaschutz betrifft uns alle im Alltag, deshalb gehen wir bis vor
@@ -227,17 +230,17 @@ export default function MitmachenPage() {
             title="Infostände"
             href="/mitmachen/abc"
             asset={
-              <>
-                <figure className="blob-[/blobs/67.svg]">
-                  <Image
-                    className="h-auto w-full"
-                    style={{ objectFit: "contain" }}
-                    src={InfostaendeImage}
-                    placeholder="blur"
-                    alt="Infostände"
-                  />
-                </figure>
-              </>
+              <ImageBlob67
+                firstBlobClassName="fill-blue-light"
+                secondBlobClassName="fill-pink-dark"
+              >
+                <Image
+                  style={{ objectFit: "contain" }}
+                  src={InfostaendeImage}
+                  placeholder="blur"
+                  alt="Infostände"
+                />
+              </ImageBlob67>
             }
           >
             Wir sind präsent in ganz Hamburg, gesprächsbereit und haben eine
