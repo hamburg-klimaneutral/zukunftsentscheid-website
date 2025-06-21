@@ -11,6 +11,7 @@ export type TwoColumnBlockProps = {
     content: React.ReactNode;
     className?: string;
   };
+  appendChildren?: React.ReactNode;
   className?: string;
 };
 
@@ -25,9 +26,10 @@ export default function TwoColumnBlock({
   left,
   right,
   className,
+  appendChildren,
 }: TwoColumnBlockProps) {
   return (
-    <div className="relative">
+    <div className="relative overflow-x-clip">
       {/* backgrounds left + right */}
       <div
         className={twMerge(
@@ -60,14 +62,17 @@ export default function TwoColumnBlock({
         </section>
         <section
           className={twMerge(
-            "relative z-0 flex flex-col items-center gap-10 overflow-x-clip py-14 max-md:container sm:py-24",
+            "relative z-0 flex flex-col items-center gap-10 overflow-x-clip py-14 sm:py-24",
             VARIANTS[right.variant],
             right.className
           )}
         >
-          {right.content}
+          <div className="max-md:container">{right.content}</div>
         </section>
       </div>
+      {appendChildren && (
+        <div className="absolute top-0 right-0 h-full">{appendChildren}</div>
+      )}
     </div>
   );
 }

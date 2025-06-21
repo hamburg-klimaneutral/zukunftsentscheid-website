@@ -15,6 +15,13 @@ import {
   INFO_CHANNEL_INVITE_LINKS,
 } from "@/app/config";
 import SvgHhDistrictMapWithStylesAndLinks from "@/app/_svg/hh-district-map-with-styles-and-links";
+import SectionBorderDecorationBlob33RightTop from "@/app/_components/blob-section-decorators/33-right-top";
+import SectionBorderDecorationBlob43LeftBottom from "@/app/_components/blob-section-decorators/43-left-bottom";
+import SectionBorderDecorationBlob70RightCenter from "@/app/_components/blob-section-decorators/70-right-center";
+import ImageBlob38Rotated from "@/app/_components/blob-images/38-rotated";
+import HeaderImage from "@/app/_pictures/mitmachen.png";
+import ImageBlob67 from "@/app/_components/blob-images/67";
+import ImageBlob5Alt from "@/app/_components/blob-images/5-alt";
 
 interface ThisIsHowWeWinGridItemProps {
   title: string;
@@ -49,8 +56,24 @@ function ThisIsHowWeWinGridItem({
 export default function MitmachenPage() {
   return (
     <>
-      <Block variant="green">
-        <Hero asset={<></>}>
+      <Block variant="green" blockClassName="z-10">
+        <Hero
+          asset={
+            <figure className="mt-10 -mb-20 max-w-md basis-2/3 pr-8 md:-mt-18 md:-mb-36 md:pr-16 lg:basis-1/3 lg:pr-0">
+              <ImageBlob38Rotated
+                firstBlobClassName="fill-pink-light"
+                secondBlobClassName="fill-white"
+              >
+                <Image
+                  src={HeaderImage}
+                  sizes="(min-width: 640px) 530px, 100vw"
+                  placeholder="blur"
+                  alt="Sammlerinnen des Hamburger Zukunftsentscheids vor dem Millerntor-Stadion während des Volksbegehrens"
+                />
+              </ImageBlob38Rotated>
+            </figure>
+          }
+        >
           <h1>Mitmachen</h1>
           <h2 className="h1">
             Endlich sozialer Klimaschutz.
@@ -168,7 +191,6 @@ export default function MitmachenPage() {
           quote={
             "Ich bin dabei, weil ich mich wirksam fühle und mit tollen Menschen zusammen die Welt retten kann."
           }
-          className="md:flex-row-reverse"
         />
       </Block>
       <Block>
@@ -189,15 +211,16 @@ export default function MitmachenPage() {
             title="Haustürwahlkampf"
             href="/mitmachen/abc"
             asset={
-              <>
-                <figure className="blob-[/blobs/5.svg]">
-                  <Image
-                    src={HaustuerwahlkampfImage}
-                    placeholder="blur"
-                    alt="Haustürwahlkampf"
-                  />
-                </figure>
-              </>
+              <ImageBlob5Alt
+                firstBlobClassName="fill-green-dark"
+                secondBlobClassName="fill-blue-light"
+              >
+                <Image
+                  src={HaustuerwahlkampfImage}
+                  placeholder="blur"
+                  alt="Haustürwahlkampf"
+                />
+              </ImageBlob5Alt>
             }
           >
             Klimaschutz betrifft uns alle im Alltag, deshalb gehen wir bis vor
@@ -207,17 +230,17 @@ export default function MitmachenPage() {
             title="Infostände"
             href="/mitmachen/abc"
             asset={
-              <>
-                <figure className="blob-[/blobs/67.svg]">
-                  <Image
-                    className="h-auto w-full"
-                    style={{ objectFit: "contain" }}
-                    src={InfostaendeImage}
-                    placeholder="blur"
-                    alt="Infostände"
-                  />
-                </figure>
-              </>
+              <ImageBlob67
+                firstBlobClassName="fill-blue-light"
+                secondBlobClassName="fill-pink-dark"
+              >
+                <Image
+                  style={{ objectFit: "contain" }}
+                  src={InfostaendeImage}
+                  placeholder="blur"
+                  alt="Infostände"
+                />
+              </ImageBlob67>
             }
           >
             Wir sind präsent in ganz Hamburg, gesprächsbereit und haben eine
@@ -266,6 +289,7 @@ export default function MitmachenPage() {
 
       <Block variant="green">
         <BlockQuote
+          quoteRight={true}
           imageSrc={QuoteAuthor}
           blobClassName={"fill-green-neon"}
           quoteSignClassName={"fill-white"}
@@ -276,6 +300,16 @@ export default function MitmachenPage() {
         />
       </Block>
       <Block variant="blue" className="gap-8">
+        <figure className="absolute -top-[50%] right-[-3%] hidden xl:block">
+          <SectionBorderDecorationBlob33RightTop
+            firstBlobClassName={"fill-pink-light"}
+            secondBlobClassName={"fill-green-neon"}
+          />
+        </figure>
+        <SectionBorderDecorationBlob43LeftBottom
+          firstBlobClassName="fill-green-dark"
+          secondBlobClassName="fill-green-neon"
+        />
         <div className="max-w-xl space-y-4 text-center">
           <h2 className="h2">
             Unterstütze uns als ehrenamtlicher Professional
@@ -404,6 +438,12 @@ export default function MitmachenPage() {
             </div>
           ),
         }}
+        appendChildren={
+          <SectionBorderDecorationBlob70RightCenter
+            firstBlobClassName="fill-white"
+            secondBlobClassName="fill-blue-light"
+          />
+        }
       />
     </>
   );

@@ -11,22 +11,20 @@ export default function ImageBlob36Quote({
 }: ImageBlobProps) {
   return (
     <figure className={twMerge("relative", className)}>
-      {/* TODO: position blob */}
       <ResponsivePositionedBlob
         id={70}
         className={twMerge("absolute", firstBlobClassName)}
-        position={{ left: "-18%", top: "20%" }}
-        sizePercentage={{ height: 81 }}
+        position={{ left: "32%", bottom: "3%" }}
+        sizePercentage={{ height: 101 }}
       />
       <figure className="blob-[/blobs/36.svg]">{children}</figure>
-      {/* TODO: position image */}
       <figure
         className={twMerge(
-          "relative top-[7%] left-[25%] w-[30%]",
+          "absolute right-[-16%] bottom-[19%] w-[14%]",
           secondBlobClassName
         )}
       >
-        <SvgQuote viewBox="0 0 43 46" />
+        <SvgQuote viewBox="0 0 43 46" width="100%" height={undefined} />
       </figure>
     </figure>
   );

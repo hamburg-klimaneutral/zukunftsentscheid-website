@@ -10,21 +10,22 @@ export default function ImageBlob45Rotated({
 }: ImageBlobProps) {
   return (
     <figure className={twMerge("relative", className)}>
-      {/* TODO: position blob */}
       <ResponsivePositionedBlob
         id={52}
         className={twMerge("absolute", firstBlobClassName)}
-        position={{ left: "-18%", top: "20%" }}
-        sizePercentage={{ height: 81 }}
+        position={{ left: "12%", bottom: "0%" }}
+        mirror={true}
+        sizePercentage={{ height: 103 }}
+        rotation={-42}
       />
       <figure className="blob-[/blobs/45-rotated.svg]">{children}</figure>
-      {/* TODO: position blob */}
       <ResponsivePositionedBlob
         id={84}
         className={twMerge("absolute", secondBlobClassName)}
-        position={{ left: "32%", bottom: "8%" }}
-        rotation={-55.3}
-        sizePercentage={{ height: 16.8 }}
+        position={{ right: "-2%", bottom: "58%" }}
+        rotation={-40}
+        mirror={true}
+        sizePercentage={{ height: 12 }}
       ></ResponsivePositionedBlob>
     </figure>
   );

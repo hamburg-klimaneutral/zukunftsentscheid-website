@@ -6,28 +6,34 @@ interface TextQuoteProps {
   imageSrc: React.ComponentProps<typeof Image>["src"];
   author: string;
   quote: string;
-  className?: string;
   blobClassName: string;
   quoteSignClassName: string;
+  quoteRight?: boolean;
 }
 
 export default function BlockQuote({
   imageSrc,
   author,
   quote,
-  className,
   blobClassName,
   quoteSignClassName,
+  quoteRight = false,
 }: TextQuoteProps) {
   return (
     <>
       <div
         className={twMerge(
           "flex w-full flex-col items-center justify-between gap-18 md:flex-row",
-          className
+          !quoteRight && "gap-18 md:flex-row-reverse"
         )}
       >
-        <figure className="max-w-xs min-w-1/4 basis-1/2">
+        <figure
+          className={twMerge(
+            "relative max-w-70 md:w-1/3 md:max-w-md",
+            !quoteRight && "md:-left-12",
+            quoteRight && "md:-left-8 lg:-left-16 xl:-left-20"
+          )}
+        >
           <ImageBlob36Quote
             firstBlobClassName={blobClassName}
             secondBlobClassName={quoteSignClassName}
@@ -38,7 +44,7 @@ export default function BlockQuote({
 
         <div
           className={twMerge(
-            "relative flex flex-col items-start gap-4 whitespace-pre-line"
+            "flex basis-2/3 flex-col items-start gap-4 whitespace-pre-line"
           )}
         >
           <div className="space-y-4">

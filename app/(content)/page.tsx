@@ -12,8 +12,11 @@ import SignatureImage from "@/app/_pictures/unterschriften.png";
 import ClaimsOverview from "../_components/claims-overview";
 import ImageBlob36 from "@/app/_components/blob-images/36";
 import ImageBlob5 from "@/app/_components/blob-images/5";
-import SectionBorderDecorationBlob33 from "@/app/_components/blob-section-decorators/33";
+import SectionBorderDecorationBlob33RightTop from "@/app/_components/blob-section-decorators/33-right-top";
 import CompactTimeline from "@/app/_components/timeline-compact";
+import SectionBorderDecorationBlob55LeftTop from "@/app/_components/blob-section-decorators/55-left-top";
+import SectionBorderDecorationBlob8LeftTop from "@/app/_components/blob-section-decorators/8-left-top";
+import SectionBorderDecorationBlob57RightBottom from "@/app/_components/blob-section-decorators/57-right-bottom";
 
 export default function HomePage() {
   return (
@@ -34,7 +37,7 @@ export default function HomePage() {
       </Block>
 
       <Block>
-        <SectionBorderDecorationBlob33
+        <SectionBorderDecorationBlob33RightTop
           firstBlobClassName="fill-green-neon"
           secondBlobClassName="fill-white"
         />
@@ -90,6 +93,10 @@ export default function HomePage() {
       </Block>
 
       <Block variant="green">
+        <SectionBorderDecorationBlob55LeftTop
+          firstBlobClassName="fill-blue-light"
+          secondBlobClassName="fill-green-dark"
+        />
         <h2 className="h2 underline-3 max-w-xl text-center">
           6 gute Gründe für dein Ja!
         </h2>
@@ -183,6 +190,14 @@ export default function HomePage() {
       </Block>
 
       <Block variant="green" className="justify-around sm:flex-row">
+        <SectionBorderDecorationBlob8LeftTop
+          firstBlobClassName="fill-pink-light"
+          secondBlobClassName="fill-green-neon"
+        />
+        <SectionBorderDecorationBlob57RightBottom
+          firstBlobClassName="fill-white"
+          secondBlobClassName="fill-green-neon"
+        />
         <div className="teaser">
           <h2 className="h2">Spenden</h2>
           <p>

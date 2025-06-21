@@ -13,16 +13,16 @@ export default function ImageBlob36({
       <ResponsivePositionedBlob
         id={70}
         className={twMerge("absolute", firstBlobClassName)}
-        position={{ left: "-18%", top: "20%" }}
-        sizePercentage={{ height: 81 }}
+        position={{ left: "-20%", top: "0%" }}
+        sizePercentage={{ height: 100 }}
       />
       <figure className="blob-[/blobs/36.svg]">{children}</figure>
       <ResponsivePositionedBlob
         id={96}
         className={twMerge("absolute", secondBlobClassName)}
-        position={{ left: "32%", bottom: "8%" }}
+        position={{ left: "22%", bottom: "18%" }}
         rotation={-55.3}
-        sizePercentage={{ height: 16.8 }}
+        sizePercentage={{ height: 20 }}
       />
     </figure>
   );

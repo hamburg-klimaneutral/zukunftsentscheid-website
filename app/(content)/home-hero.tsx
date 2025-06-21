@@ -10,7 +10,7 @@ export default function HomeHero() {
   return (
     <Hero
       asset={
-        <figure className="relative z-0">
+        <figure className="relative z-0 -mt-6 -mb-32 -ml-12 basis-1/2 sm:-ml-0">
           <Image
             sizes="100vw"
             className="mb-12 h-auto w-full sm:mb-0 lg:-mb-3"
@@ -60,8 +60,8 @@ export default function HomeHero() {
         <mark className="long text-nowrap">besseres Klimaschutzgesetz!</mark>
       </h1>
       <p>Hamburg entscheidet fürs Klima - sei dabei!</p>
-      <Link className="button primary" href="/">
-        Jetzt Mitmachen
+      <Link className="button primary" href="/mitmachen">
+        Jetzt mitmachen
       </Link>
     </Hero>
   );

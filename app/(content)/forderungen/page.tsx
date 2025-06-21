@@ -2,10 +2,11 @@ import Hero from "@/app/_components/hero";
 import Block from "@/app/_components/block";
 import GetInvolved from "@/app/_components/getInvolved";
 import Image from "next/image";
-import HeaderImage from "@/app/_pictures/placeholders/369x433.png";
-import Sozialvertraeglichkeit from "@/app/_pictures/placeholders/3384x2512.png";
+import HeaderImage from "@/app/_pictures/forderungen.png";
+import SozialvertraeglichkeitImage from "@/app/_pictures/sozialvertraeglichkeit.png";
 import JaehrlicheZiele from "@/app/_pictures/placeholders/3276x2551.png";
 import Klimaneutralitaet2040 from "@/app/_pictures/placeholders/2731x2731.png";
+import WirBrauchenEinNeuesGesetzImage from "@/app/_pictures/forderungen_jetzt_ein_gesetz.png";
 import QuoteAuthor from "@/app/_pictures/placeholders/532.png";
 import ImageBlob36Alt from "@/app/_components/blob-images/36-alt";
 import ImageBlob88Rotated from "@/app/_components/blob-images/88-rotated";
@@ -14,9 +15,10 @@ import Link from "next/link";
 import BlockQuote from "@/app/_components/block-quote";
 import IconGrid, { GridIcon } from "@/app/_components/icon-grid";
 import ImageBlob36 from "@/app/_components/blob-images/36";
-import CollectImage from "@/app/_pictures/sammeln.png";
 import InfoBox from "@/app/_components/info-box";
 import ImageBlob45Rotated from "@/app/_components/blob-images/45-rotated";
+import SectionBorderDecorationBlob43LeftBottom from "@/app/_components/blob-section-decorators/43-left-bottom";
+import SectionBorderDecorationBlob70RightCenter from "@/app/_components/blob-section-decorators/70-right-center";
 
 export default function ForderungenPage() {
   return (
@@ -24,24 +26,25 @@ export default function ForderungenPage() {
       <Block variant="green" blockClassName="z-10">
         <Hero
           asset={
-            <ImageBlob45Rotated
-              firstBlobClassName="fill-pink-light"
-              secondBlobClassName="fill-green-neon"
-            >
-              {/* TODO: replace image and set alt tag */}
-              <Image
-                src={HeaderImage}
-                sizes="(min-width: 640px) 530px, 100vw"
-                placeholder="blur"
-                alt=""
-              />
-            </ImageBlob45Rotated>
+            <figure className="mt-10 -mb-20 max-w-md basis-2/3 pr-8 md:-mt-18 md:-mb-36 md:pr-16 lg:basis-1/3 lg:pr-0">
+              <ImageBlob45Rotated
+                firstBlobClassName="fill-pink-light"
+                secondBlobClassName="fill-green-neon"
+              >
+                <Image
+                  src={HeaderImage}
+                  sizes="(min-width: 640px) 530px, 100vw"
+                  placeholder="blur"
+                  alt="Eine Unterstützerin des Hamburger Zukunftsentscheids präsentiert einen Flyer"
+                />
+              </ImageBlob45Rotated>
+            </figure>
           }
         >
           <h1>Unsere Forderungen</h1>
-          <h2 className="h1 max-w-lg">
+          <h2 className="h1 max-w-[530px]">
             Gemeinsam machen wir Hamburgs Klimapolitik sozial, planbar und
-            verantwortungsbewusst!
+            verantwortungs&shy;bewusst!
           </h2>
         </Hero>
       </Block>
@@ -70,18 +73,17 @@ export default function ForderungenPage() {
                 width={53}
                 height={53}
                 className="absolute top-[28%] left-[28%] w-[45%]"
-                src="/icons/handshake.svg"
+                src="/icons/check.svg"
                 alt=""
                 aria-hidden
               />
             }
           >
-            {/* TODO: replace image and set alt tag */}
             <Image
-              src={Sozialvertraeglichkeit}
+              src={SozialvertraeglichkeitImage}
               sizes="(min-width: 640px) 530px, 100vw"
               placeholder="blur"
-              alt=""
+              alt="Symbolbild zur Sozialverträglichkeit: Menschen stehen im Kreis und legen in der Mitte ihre Hände aufeinander"
             />
           </ImageBlob68Rotated>
           <div>
@@ -192,6 +194,7 @@ export default function ForderungenPage() {
       </Block>
       <Block variant="green">
         <BlockQuote
+          quoteRight={true}
           author="Torben, 31, Ingenieur"
           quote="Ich bin dabei, weil ich weiß, wie die Energiewende aussehen soll und ich hier endlich anpacken kann!"
           blobClassName={"fill-pink-light"}
@@ -278,14 +281,14 @@ export default function ForderungenPage() {
       <Block>
         <div className="content-grid">
           <ImageBlob36
-            firstBlobClassName="fill-pink-light"
+            firstBlobClassName="fill-green-neon"
             secondBlobClassName="fill-blue-light"
           >
             <Image
-              src={CollectImage}
+              src={WirBrauchenEinNeuesGesetzImage}
               sizes="(min-width: 640px) 530px, 100vw"
               placeholder="blur"
-              alt="Das Team von Zukunftsentscheid Hamburg bei der Unterschriftensammlung"
+              alt=""
             />
           </ImageBlob36>
           <div className="teaser wide">
@@ -334,6 +337,10 @@ export default function ForderungenPage() {
       </Block>
 
       <Block variant="pinkLight">
+        <SectionBorderDecorationBlob43LeftBottom
+          firstBlobClassName="fill-white"
+          secondBlobClassName="fill-green-neon"
+        />
         <GetInvolved />
       </Block>
 
@@ -438,6 +445,10 @@ export default function ForderungenPage() {
       </Block>
 
       <Block>
+        <SectionBorderDecorationBlob70RightCenter
+          firstBlobClassName="fill-green-dark"
+          secondBlobClassName="fill-green-neon"
+        />
         <div className="max-w-lg text-center">
           <h2 className="h2 mb-4">Noch Fragen?</h2>
           <p>

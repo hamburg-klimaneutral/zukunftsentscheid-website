@@ -1,6 +1,9 @@
 import Block from "@/app/_components/block";
 import { PRESS_RELEASES } from "@/app/(content)/presse/items";
 import PressReleaseItem from "@/app/(content)/presse/item";
+import SectionBorderDecorationBlob33Header from "@/app/_components/blob-section-decorators/33-header";
+import SectionBorderDecorationBlob65LeftTop from "@/app/_components/blob-section-decorators/65-left-top";
+import SectionBorderDecorationBlob91RightCenter from "@/app/_components/blob-section-decorators/91-right-center";
 
 export default function PressePage() {
   return (
@@ -10,6 +13,21 @@ export default function PressePage() {
       </Block>
 
       <Block className="max-w-5xl">
+        <figure className="absolute top-10 right-0">
+          <SectionBorderDecorationBlob33Header
+            firstBlobClassName="fill-blue-light"
+            secondBlobClassName="fill-pink-light"
+          />
+        </figure>
+        <SectionBorderDecorationBlob65LeftTop
+          firstBlobClassName="fill-pink-light"
+          secondBlobClassName="fill-green-neon"
+        />
+        <SectionBorderDecorationBlob91RightCenter
+          firstBlobClassName="fill-pink-light"
+          secondBlobClassName="fill-green-neon"
+        />
+
         <p className="max-w-xl text-center">
           Unser Presseteam erreichst du per Mail an{" "}
           <a
@@ -29,6 +47,7 @@ export default function PressePage() {
           </a>
           .
         </p>
+
         {PRESS_RELEASES.map((item) => (
           <PressReleaseItem key={item.title} pressRelease={item} />
         ))}
