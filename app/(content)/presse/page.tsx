@@ -13,10 +13,12 @@ export default function PressePage() {
       </Block>
 
       <Block className="max-w-5xl">
-        <SectionBorderDecorationBlob33Header
-          firstBlobClassName="fill-blue-light"
-          secondBlobClassName="fill-pink-light"
-        />
+        <figure className="absolute top-10 right-0">
+          <SectionBorderDecorationBlob33Header
+            firstBlobClassName="fill-blue-light"
+            secondBlobClassName="fill-pink-light"
+          />
+        </figure>
         <SectionBorderDecorationBlob65LeftTop
           firstBlobClassName="fill-pink-light"
           secondBlobClassName="fill-green-neon"
