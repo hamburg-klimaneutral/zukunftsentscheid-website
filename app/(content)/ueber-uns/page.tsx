@@ -9,7 +9,7 @@ export default function AblaufPage() {
     <main>
       <Block variant="green">
         <h1>Das sind wir.</h1>
-        <h1 className="h1 text-center">Gemeinsam für eine bessere Politik</h1>
+        <h2 className="h1 text-center">Gemeinsam für eine bessere Politik</h2>
       </Block>
 
       <Block>
